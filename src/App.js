@@ -1,36 +1,21 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import './App.css';
-import Menu from './components/menu/menu';
-import ProRiders from './components/proRiders/proRiders';
+import Home from './components/Home/Home'
+import ProRiders from './components/ProRiders/ProRiders';
+import Nav from './components/Navigation/Nav';
 
-
-function App(pageName) {
+function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      <Menu />
-      </header>
-      <body>
-      <ProRiders />
-      </body>
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+        <Route path="/Home" component={Home} />
+        <Route path="/proriders" component={ProRiders} />
+      </div>
+    </Router>
   );
 }
 
 export default App;
-
-
-
-
-// <img src={logo} className="App-logo" alt="logo" />
-//   <p>
-//     Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//   <a
-//     className="App-link"
-//     href="https://reactjs.org"
-//     target="_blank"
-//     rel="noopener noreferrer"
-//   >
-//     Learn React
-//         </a>
