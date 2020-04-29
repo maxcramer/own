@@ -11,8 +11,10 @@ function App() {
     <Router>
       <div className="App">
         <Nav />
-        <Route path="/Home" component={Home} />
-        <Route path="/proriders" component={ProRiders} />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/proRiders" component={ProRiders} />        
+          </Switch>
       </div>
     </Router>
   );
