@@ -13,6 +13,15 @@ function Nav() {
         <Link to="/proriders">
           <li>Pro Riders</li>
         </Link>
+        <Link to="/news">
+          <li>News</li>
+        </Link>
+        <Link to="/boardcare">
+          <li>Board Care</li>
+        </Link>
+        <Link to="/ridingtips">
+          <li>Riding Tips</li>
+        </Link>
       </ul>
     </nav>
   );
