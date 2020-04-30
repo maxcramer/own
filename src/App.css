@@ -17,3 +17,7 @@ nav {
   align-items: center;
   list-style: none;
 }
+
+#nav_logo {
+  width: 14%;
+}
