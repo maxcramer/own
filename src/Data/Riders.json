@@ -1,4 +1,5 @@
-[
+{
+  "riders": [
   {
     "id": "",
     "name": "Chris Richardson",
@@ -27,3 +28,4 @@
     "Fb": ""
   }
 ]
+}
