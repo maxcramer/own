@@ -1,21 +1,30 @@
 import React from 'react';
 import { articles } from '../../Data/Articles';
 
-
 function News() {
-  for (var i = 0; i < articles.length; i++) {
-    var obj = articles[i];
-    console.table('Author Name is:', obj.Author);
-  }
-  // console.log('articles author is:', Articles.Author);
-  return (
-    <div>
-      <h1>News</h1>
-      <h2>{obj.Title}</h2>
-      <h3>{obj.Author}</h3>
-      <p>{obj.Content}</p>
-    </div>
-  );
+  var Articles = articles;
+  // console.log(Articles);
+  // for (var i = 0; i < articles.length; i++) {
+    //   var obj = articles[i];
+    // console.log('Author Name is:', articles.Author);
+    return (
+      <div>
+        <h1>News</h1>
+        <ul>
+          {Articles.map((id, Author, dateUpload, Title, Content) => {
+            console.log(id);
+          return <li key={id}>{Articles.Author}</li>;
+          })}
+        </ul>
+      </div>
+    );
+// }
 }
 
 export default News;
+ 
+
+// NOTES //
+// Look into react For Loops (this is currenlty vanilla js for loop)
+
+// id, Author, dateUpload, Title, Content;
