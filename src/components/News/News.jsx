@@ -1,5 +1,6 @@
 import React from 'react';
-import Articles from './Articles';
+import Article from './Articles';
+
 
 function News() {
     return (
@@ -7,7 +8,7 @@ function News() {
         <h1>News</h1>
         <div>
         <ul>
-          < Articles />
+          <Article />
         </ul>
         </div>
       </div>
