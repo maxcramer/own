@@ -3,19 +3,18 @@ import {Articles} from '../../Data/Articles.js';
 
 function ArticleList() {
   return (
-    <div>
         <ul>
           {Articles.Articles.map( article => {
               console.log(article);
             return (
               <div key={article.id}>
-                <p>{article.content}</p>
-                <p>{article.author}</p>
+                <h3>{article.Title}</h3>
+                <p>{article.Content}</p>
+                <p>{article.Author}</p>
               </div>
             );
-          })};
+          })}
         </ul>
-    </div>
   );
 }
 
