@@ -1,5 +1,5 @@
 import React from 'react';
-import Article from './Articles';
+import ArticleList from './Posts';
 
 
 function News() {
@@ -7,9 +7,9 @@ function News() {
       <div>
         <h1>News</h1>
         <div>
-        <ul>
-          <Article />
-        </ul>
+          <ul>
+            <ArticleList />
+          </ul>
         </div>
       </div>
     );

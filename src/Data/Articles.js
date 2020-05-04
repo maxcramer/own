@@ -1,5 +1,5 @@
-{
-  "Articles": [
+export const Articles = {
+  Articles: [
     {
       "id": "1",
       "Author": "Frank",
