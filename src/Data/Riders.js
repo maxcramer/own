@@ -1,7 +1,7 @@
-{
-  "riders": [
+export const Riders ={
+  Riders: [
   {
-    "id": "",
+    "id": "1",
     "name": "Chris Richardson",
     "location": "Dummy Location",
     "Competitions": "",
@@ -10,7 +10,7 @@
     "Fb": ""
   },
   {
-    "id": "",
+    "id": "2",
     "name": "Max Cramer",
     "location": "London, UK",
     "Competitions": "Non",
@@ -19,7 +19,7 @@
     "Fb": ""
   },
   {
-    "id": "",
+    "id": "3",
     "name": "Jeff McCosker",
     "location": "Sacramento, CA, USA",
     "Competitions": "Non",

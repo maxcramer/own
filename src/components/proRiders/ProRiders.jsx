@@ -1,19 +1,17 @@
 import React from 'react';
-import { riders } from "../../Data/Riders";
-
-// console.log(riders);
+import RiderList from './RiderDetails';
 
 function ProRiders() {
-  for (var i = 0; i < riders.length; i++) {
-    var obj = riders[i];
-    console.log("The pro riders are:", obj.name);
-    return (
+  return (
+    <div>
+      <h2>Pro Riders</h2>
       <div>
-        <h1>Pro Riders</h1>
-        <h3>{obj.name}</h3>
+        <ul>
+          <RiderList />
+        </ul>
       </div>
-    );
-  }
+    </div>
+  )
 }
 
 export default ProRiders;
