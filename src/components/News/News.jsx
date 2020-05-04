@@ -16,9 +16,3 @@ function News() {
 }
 
 export default News;
- 
-
-// NOTES //
-// Look into react For Loops (this is currenlty vanilla js for loop)
-
-// id, Author, dateUpload, Title, Content;

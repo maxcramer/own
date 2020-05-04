@@ -20,9 +20,3 @@ function ArticleList() {
 
 export default ArticleList;
 
-
-
-// Articles.map(function(Article, id, author) {
-//   console.log(Article);
-//   // return <Article key={Article.id} />;
-// });
