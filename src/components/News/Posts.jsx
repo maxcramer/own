@@ -1,7 +1,6 @@
 import React from 'react';
 import {Articles} from '../../Data/Articles.js';
-import { Link } from 'react-router-dom';
-
+import SinglePost from './SinglePost';
 
 function ArticleList() {
   return (
@@ -10,12 +9,10 @@ function ArticleList() {
               console.log(article);
             return (
               <div key={article.id}>
-                  <h3>{article.Title}</h3>
-                  <p>{article.Content}</p>
-                  <p>{article.Author}</p>
-                <Link to="/articles/article{id}">
-                  Read More
-                </Link>
+                <h3>{article.Title}</h3>
+                <p>{article.Content}</p>
+                <p>{article.Author}</p>
+                <button onClick={SinglePost}>Read More</button>
               </div>
             );
           })}

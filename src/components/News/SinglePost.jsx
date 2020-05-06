@@ -1,20 +1,23 @@
 import React from 'react';
 import { Articles } from '../../Data/Articles.js';
+import Posts from './Posts';
 
 
-function SinglePost() {
+function SinglePost(props) {
+    console.log("Running single post component");
   return (
     <ul>
-      {Articles.Articles.id(article => {
-        console.log(article);
+        <p>SINGLE POST PAGE</p>
+      {/* {Articles.Articles.filter(article => {
+        console.log(article.id);
         return (
-          <div key={article.id}>
-            <h3>{article.Title}</h3>
-            <p>{article.Content}</p>
-            <p>{article.Author}</p>
+          <div key={props.article.id}>
+            <h3>{props.article.Title}</h3>
+            <p>{props.article.Content}</p>
+            <p>{props.article.Author}</p>
           </div>
         );
-      })}
+      })} */}
     </ul>
   );
 }
