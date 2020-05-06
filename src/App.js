@@ -8,7 +8,7 @@ import Nav from './components/Navigation/Nav';
 import RidingTips from './components/RidingTips/RidingTips';
 import News from './components/News/News';
 import BoardCare from './components/BoardCare/BoardCare';
-// import SinglePost from './components/News/SinglePost';
+import NewsSinglePost from './components/News/NewsSinglePost/NewsSinglePost';
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
           <Route path="/ridingtips" component={RidingTips} />
           <Route path="/news" component={News} />
           <Route path="/boardcare" component={BoardCare} />
+          <Route path="/article/:articleId" component={NewsSinglePost} />
         </Switch>
       </div>
     </Router>

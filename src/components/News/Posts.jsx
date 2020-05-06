@@ -5,17 +5,9 @@ import SinglePost from './SinglePost';
 function ArticleList() {
   return (
         <ul>
-          {Articles.Articles.map( article => {
-              console.log(article);
-            return (
-              <div key={article.id}>
-                <h3>{article.Title}</h3>
-                <p>{article.Content}</p>
-                <p>{article.Author}</p>
-                <button onClick={SinglePost}>Read More</button>
+              <div>
+                <SinglePost />
               </div>
-            );
-          })}
         </ul>
   );
 }

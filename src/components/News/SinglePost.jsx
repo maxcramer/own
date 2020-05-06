@@ -3,23 +3,36 @@ import { Articles } from '../../Data/Articles.js';
 import Posts from './Posts';
 
 
-function SinglePost(props) {
-    console.log("Running single post component");
-  return (
-    <ul>
-        <p>SINGLE POST PAGE</p>
-      {/* {Articles.Articles.filter(article => {
-        console.log(article.id);
+class SinglePost extends React.Component {
+    // super() {}
+    constructor(props) {
+        super(props)
+        // console.log("Running single post component");
+        this.state = { readMore: false }
+
+        this.showReadMore = this.showReadMore.bind(this)
+    }
+    
+
+    showReadMore() {
+        this.setState({ readMore: true })
+    }
+
+    render() {
         return (
-          <div key={props.article.id}>
-            <h3>{props.article.Title}</h3>
-            <p>{props.article.Content}</p>
-            <p>{props.article.Author}</p>
-          </div>
+          <ul>
+            {Articles.Articles.map((article) => (
+                <div key={article.id}>
+                  <h3>{article.Title}</h3>
+                  <p>{article.Content}</p>
+                  <p>{article.Author}</p>
+                  {this.state.readMore && (<p>show extra readmore stuff</p>)}
+                  <button onClick={this.showReadMore}>ReadMore</button>
+                </div>
+            ))}
+          </ul>
         );
-      })} */}
-    </ul>
-  );
+    }
 }
 
 export default SinglePost;
