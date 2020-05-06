@@ -1,6 +1,6 @@
 import React from 'react';
 import {Articles} from '../../Data/Articles.js';
-import PostItem from './PostItem'
+import PostItem from './FullPostItem'
 
 // class
 const PostsList = () => {
