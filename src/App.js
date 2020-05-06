@@ -21,7 +21,6 @@ function App() {
           <Route path="/ridingtips" component={RidingTips} />
           <Route path="/news" component={News} />
           <Route path="/boardcare" component={BoardCare} />
-          <Route path="/article/:articleId" component={NewsSinglePost} />
         </Switch>
       </div>
     </Router>
