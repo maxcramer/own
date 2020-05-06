@@ -1,6 +1,6 @@
 import React from 'react';
-
-function BoardCare() {
+// d
+const BoardCare = () =>  {
   return (
     <div>
       <h1>BoardCare</h1>
