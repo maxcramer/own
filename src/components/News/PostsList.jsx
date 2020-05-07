@@ -1,17 +1,21 @@
 import React from 'react';
-import {Articles} from '../../Data/Articles.js';
+import { Articles } from '../../Data/Articles';
 import PostItem from './FullPostItem'
 
 // class
 const PostsList = () => {
   return (
-        <ul>
-          {Articles.map( article => {
-            return (
-                <PostItem key={article.key} article={article} onclick={() => console.log('boom')} />
-            );
-          })}
-        </ul>
+    <ul>
+      {Articles.articles.map(article => {
+        return (
+          <PostItem
+            key={article.key}
+            article={article}
+            onclick={() => console.log('boom')}
+          />
+        );
+      })}
+    </ul>
   );
 }
 
