@@ -18,6 +18,9 @@ function Nav() {
         <Link to="/news">
           <li>News</li>
         </Link>
+        <Link to="/news2">
+          <li>News 2</li>
+        </Link>
         <Link to="/proriders">
           <li>Pro Riders</li>
         </Link>

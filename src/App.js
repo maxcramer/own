@@ -8,7 +8,8 @@ import Nav from './components/Navigation/Nav';
 import RidingTips from './components/RidingTips/RidingTips';
 import News from './components/News/News';
 import BoardCare from './components/BoardCare/BoardCare';
-import NewsSinglePost from './components/News/NewsSinglePost/NewsSinglePost';
+// import NewsSinglePost from './components/News/NewsSinglePost/NewsSinglePost';
+import News2 from './components/News2/News2';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           {/* <Route path="/proriders" component={ProRiders} /> */}
           <Route path="/ridingtips" component={RidingTips} />
           <Route path="/news" component={News} />
+          <Route path="/news2" component={News2} />
           <Route path="/boardcare" component={BoardCare} />
         </Switch>
       </div>

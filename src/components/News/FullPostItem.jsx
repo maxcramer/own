@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Articles } from '../../Data/Articles';
+import { Articles, a, all } from '../../Data/Articles';
 // link to - 
 const PostsItem = (props) => {
   // console.log(props)
@@ -13,7 +13,7 @@ const PostsItem = (props) => {
                   {
                     Articles.all().map(a => (
                       <li key={a.id}>
-                        <Link to={`/news/${a.id}`}>{a.Title}</Link>
+                        <Link to={`/articles/${a.id}`}>{a.Title}</Link>
                       </li>
                     ))
                   }
