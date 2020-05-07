@@ -1,11 +1,12 @@
 import React from 'react';
-import PostList from './PostList';
+import FullPostList from './FullPostList';
+
 
 function News() {
   return (
     <div>
       <h1>News</h1>
-      <PostList />
+      <FullPostList />
     </div>
   );
 }

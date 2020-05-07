@@ -18,7 +18,7 @@ function Nav() {
         <Link to="/news">
           <li>News</li>
         </Link>
-        <Link to="/news2">
+        <Link to="/postlist">
           <li>News 2</li>
         </Link>
         <Link to="/proriders">

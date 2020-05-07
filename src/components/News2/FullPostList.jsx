@@ -3,14 +3,14 @@ import {Link} from 'react-router-dom';
 
 import {Articles} from '../../Data/Articles';
 
-const PostList = () => (
+const FullPostList = () => (
     <div>
         <ul>
             {
                 Articles.all().map(a => (
                     <li key={a.id}>
                         <h3>{a.Title}</h3>
-                        <Link to={`/news/${a.id}`}>{a.Author}</Link>
+                        <Link to={`/postlist/${a.id}`}>{a.Author}</Link>
                     </li>
                 ))
             }
@@ -18,4 +18,7 @@ const PostList = () => (
     </div>
 )
 
-export default PostList;
+export default FullPostList;
+
+
+
