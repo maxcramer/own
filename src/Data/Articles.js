@@ -24,7 +24,7 @@ export const Articles = {
   ],
   all: function() { return this.articles },
   get: function(id) {
-    const isArticle = a => a.id === id
+    const isArticle = a => a.id == id
     return this.articles.find(isArticle)
   }
 };
