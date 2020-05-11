@@ -7,7 +7,7 @@ const FullRiderList = () => (
   <div>
     <ul>
       {
-        Riders.all().map(r => (
+          Riders.all().map(r => (
             <li key={r.id}>
                 <h3>{r.location}</h3>
                 <Link to={`/proriders/${r.id}`}>{r.name}</Link>
