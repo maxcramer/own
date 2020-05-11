@@ -4,11 +4,11 @@ import { Switch, Route } from 'react-router-dom';
 import FullRiderList from './FullRiderList';
 import Rider from './Rider';
 
-const ProRoutes = () => (
+const ProList = () => (
   <Switch>
-    <Route exact path='/proriders' componet={FullRiderList}/>
-    <Route path='/proriders/:id' component={Rider}/>
+    <Route exact path='/prolist' componet={FullRiderList}/>
+    <Route path='/prolist/:id' component={Rider}/>
   </Switch>
 )
 
-export default ProRoutes;
+export default ProList;

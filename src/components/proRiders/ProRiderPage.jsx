@@ -1,7 +1,7 @@
 import React from 'react';
 import FullRiderList from './FullRiderList';
 
-function ProRiders() {
+function ProRidersPage() {
     return (
         <div>
             <h1>Pro Rider Interviews</h1>
@@ -10,4 +10,4 @@ function ProRiders() {
     )
 }
 
-export default ProRiders;
+export default ProRidersPage;
