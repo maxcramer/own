@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import {Articles} from '../../Data/Articles';
+import {Articles} from '../../../Data/Articles';
 
 const FullPostList = () => (
     <div>

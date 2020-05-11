@@ -1,5 +1,5 @@
 import React from 'react';
-import FullRiderList from './FullRiderList';
+import FullRiderList from './pros/FullRiderList';
 
 function ProRidersPage() {
     return (

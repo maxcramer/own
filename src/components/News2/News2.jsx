@@ -1,5 +1,5 @@
 import React from 'react';
-import FullPostList from './FullPostList';
+import FullPostList from './posts/FullPostList';
 
 
 function News() {

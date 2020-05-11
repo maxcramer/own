@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import {Riders} from '../../Data/Riders';
+import {Riders} from '../../../Data/Riders';
 
 const FullRiderList = () => (
   <div>
