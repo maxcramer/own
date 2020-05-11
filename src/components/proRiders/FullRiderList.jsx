@@ -10,7 +10,7 @@ const FullRiderList = () => (
         Riders.all().map(r => (
             <li key={r.id}>
               <h3>{r.location}</h3>
-              <Link to={`/riderlist/${r.id}`}>{r.name}</Link>
+              <Link to={`/prolist/${r.id}`}>{r.name}</Link>
             </li>
         ))
     }

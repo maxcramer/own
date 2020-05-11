@@ -6,7 +6,7 @@ import Rider from './Rider';
 
 const ProList = () => (
   <Switch>
-    <Route exact path='/prolist' componet={FullRiderList}/>
+    <Route exact path='/prolist' component={FullRiderList}/>
     <Route path='/prolist/:id' component={Rider}/>
   </Switch>
 )
