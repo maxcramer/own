@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 import {Riders} from '../../Data/Riders';
 
@@ -15,6 +16,7 @@ const Rider = (props) => {
             <h1>Pro rider single page </h1>
             <h2>{Rider.name}</h2>
             <h3>{Rider.location}</h3>
+            <Link to={'/prolist'}>Go Back</Link>
         </div>
     )
 }

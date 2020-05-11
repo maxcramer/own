@@ -2,7 +2,6 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import News from './News2';
-import FullPostList from './FullPostList';
 import Post from './Post';
 
 const PostList = () => (

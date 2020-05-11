@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 import {Articles} from '../../Data/Articles';
 
@@ -16,6 +17,7 @@ const Post = (props) => {
             <h1>{Post.Title}</h1>
             <h3>{Post.Author}</h3>
             <p>{Post.Content}</p>
+            <Link to={'/postlist'}>Go Back</Link>
         </div>
     )
 }
