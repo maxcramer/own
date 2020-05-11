@@ -5,10 +5,10 @@ import FullRiderList from './FullRiderList';
 import Rider from './Rider';
 
 const ProRoutes = () => (
-    <Switch>
-        <Route exact path='/proriderlist' componet={FullRiderList} />
-        <Route path='/proriderlist/:id' component={Rider} />
-    </Switch>
-   )
+  <Switch>
+    <Route exact path='/proriders' componet={FullRiderList}/>
+    <Route path='/proriders/:id' component={Rider}/>
+  </Switch>
+)
 
 export default ProRoutes;

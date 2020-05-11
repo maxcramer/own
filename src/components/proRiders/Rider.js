@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Riders } from '../../Data/Riders';
+import {Riders} from '../../Data/Riders';
 
 const Rider = (props) => {
     console.log("Reached the rider page");
