@@ -1,5 +1,5 @@
 import React from 'react';
-import ProRoutes from './proRoutes';
+import ProRoutes from './ProRoutes';
 
 function ProRiders() {
     return (

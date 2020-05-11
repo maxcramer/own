@@ -6,9 +6,9 @@ import Rider from './Rider';
 
 const ProRoutes = () => (
     <Switch>
-        <Route exact path='/prorider' componet={FullRiderList} />
-        <Route path='/prorider/:id' component={Rider} />
+        <Route exact path='/proriderlist' componet={FullRiderList} />
+        <Route path='/proriderlist/:id' component={Rider} />
     </Switch>
-)
+   )
 
 export default ProRoutes;

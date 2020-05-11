@@ -8,7 +8,7 @@ const Post = (props) => {
         parseInt(props.match.params.id)
     )
     if(!Post) {
-        return <div>Sorry, but the player was not found</div>;
+        return <div>Sorry, but the Article was not found</div>;
     }
     return (
         <div>
