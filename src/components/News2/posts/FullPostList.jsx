@@ -10,6 +10,7 @@ const FullPostList = () => (
                 Articles.all().map(a => (
                     <li key={a.id}>
                         <h3>{a.Title}</h3>
+                        <h3>{a.Date}</h3>
                         <Link to={`/postlist/${a.id}`}>{a.Author}</Link>
                     </li>
                 ))
