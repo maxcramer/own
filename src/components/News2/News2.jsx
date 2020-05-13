@@ -1,14 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 import FullPostList from './posts/FullPostList';
 
 import SortPosts from './posts/SortPost';
 
 
 class News extends React.Component {
-  constructor() {
-    super();
-    SortPosts();
-  }
+  // constructor() {
+  //   super();
+  //   SortPosts();
+  // }
   render() {
     return (
       <div>

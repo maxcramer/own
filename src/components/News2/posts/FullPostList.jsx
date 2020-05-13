@@ -3,7 +3,9 @@ import {Link} from 'react-router-dom';
 
 import {Articles} from '../../../Data/Articles';
 
-const FullPostList = () => (
+class FullPostList extends React.Component {
+    render() {
+        return (
     <div>
         <ul>
             {
@@ -17,7 +19,11 @@ const FullPostList = () => (
             }
         </ul>
     </div>
-)
+
+        )
+
+    }
+}
 
 export default FullPostList;
 
