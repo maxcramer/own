@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../App.css';
+// import '../../App.css';
 import {Link} from 'react-router-dom';
 import logo from '../../Images/OWN_logo.png';
-
+import './menu.css';
 
 // import OWN_logo from '../../Images/OWN_logo';
 
@@ -16,10 +16,10 @@ function Nav() {
           <li>Home</li>
         </Link>
         <Link to="/postlist">
-          <li>News</li>
+          <li>All Articles</li>
         </Link>
         <Link to="/prolist">
-          <li>Pro Riders</li>
+          <li>Pro Rider Interviews</li>
         </Link>
         <Link to="/boardcare">
           <li>Board Care</li>
