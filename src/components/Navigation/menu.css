@@ -17,10 +17,12 @@ nav {
 
 #nav_logo {
   width: 14%;
+  padding: 15px 0px;
 }
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 a:hover {
