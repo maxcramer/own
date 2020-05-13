@@ -8,7 +8,7 @@ import {Articles} from '../../../Data/Articles';
 // export default SortedList;
 
 function sortedPosts() {
-    Articles.articles.slice().sort((a, b) => b.date - a.date);
+    Articles.articles.sort((a, b) => b.date - a.date);
 } 
 
 export default sortedPosts;
