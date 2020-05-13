@@ -8,6 +8,7 @@ import {Articles} from '../../../Data/Articles';
 // export default SortedList;
 
 function sortedPosts() {
+    console.log("sortedPosts function is running");
     Articles.articles.sort((a, b) => b.date - a.date);
 } 
 

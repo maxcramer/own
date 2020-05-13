@@ -5,10 +5,6 @@ import SortPosts from './posts/SortPost';
 
 
 class News extends React.Component {
-  // constructor() {
-  //   super();
-  //   SortPosts();
-  // }
   render() {
     return (
       <div>

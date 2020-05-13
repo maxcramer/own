@@ -2,8 +2,13 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import {Articles} from '../../../Data/Articles';
+import sortedPosts from './SortPost';
 
 class FullPostList extends React.Component {
+    constructor() {
+        super();
+        sortedPosts();
+    }
     render() {
         return (
     <div>
