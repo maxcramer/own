@@ -2,10 +2,13 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import {Riders} from '../../../Data/Riders';
+import sortRiders from './SortRiders';
+
 
 class FullRiderList extends React.Component {
   constructor() {
     super();
+    sortRiders();
   }
   render() {
     return (
@@ -23,7 +26,6 @@ class FullRiderList extends React.Component {
     }
     </ul>
   </div>
-
     )
   }
 };
