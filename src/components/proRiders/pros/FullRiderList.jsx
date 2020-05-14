@@ -9,8 +9,9 @@ const FullRiderList = () => (
       {
         Riders.all().map(r => (
             <li key={r.id}>
-              <h3>{r.location}</h3>
-              <Link to={`/prolist/${r.id}`}>{r.name}</Link>
+              <h3>Interview with {r.name}</h3>
+              <p>{r.dateUpload.toLocaleDateString()}</p>
+              <Link to={`/prolist/${r.id}`}>Read Interview</Link>
             </li>
         ))
     }
