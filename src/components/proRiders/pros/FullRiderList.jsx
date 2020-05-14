@@ -3,7 +3,12 @@ import {Link} from 'react-router-dom';
 
 import {Riders} from '../../../Data/Riders';
 
-const FullRiderList = () => (
+class FullRiderList extends React.Component {
+  constructor() {
+    super();
+  }
+  render() {
+    return (
   <div>
     <ul>
       {
@@ -18,6 +23,9 @@ const FullRiderList = () => (
     }
     </ul>
   </div>
-);
+
+    )
+  }
+};
 
 export default FullRiderList;
