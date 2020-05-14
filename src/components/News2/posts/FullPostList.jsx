@@ -16,7 +16,7 @@ class FullPostList extends React.Component {
         <ul class="post_list">
             {
                 Articles.all().map(a => (
-                    <li key={a.id}>
+                    <li key={a.id} className="full_post">
                         <div class="post_header">
                             <h2>{a.Title}</h2>
                             <h3>Written By {a.Author}</h3>

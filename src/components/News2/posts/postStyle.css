@@ -9,3 +9,8 @@
     margin: 0 13.5%;
     padding-left: 0;
 }
+
+.full_post {
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgrey;
+}
