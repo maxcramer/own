@@ -21,8 +21,12 @@ class FullPostList extends React.Component {
                             <h2>{a.Title}</h2>
                             <h3>Written By {a.Author}</h3>
                         </div>
+                        <div className="post_content">
+                            <img className="post_image" src={a.image} alt="onewheel image"/>
+                            <p className="post_article">{a.Content}</p>
+                        </div>
                         <p>{a.date.toLocaleDateString()}</p>
-                        <Link to={`/postlist/${a.id}`}>Read More</Link>
+                        <Link className="read_more_tag" to={`/postlist/${a.id}`}>Read More</Link>
                     </li>
                 ))
             }
