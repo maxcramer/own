@@ -17,16 +17,19 @@ class FullPostList extends React.Component {
             {
                 Articles.all().map(a => (
                     <li key={a.id} className="full_post">
-                        <div class="post_header">
-                            <h2>{a.Title}</h2>
-                            <h3>Written By {a.Author}</h3>
-                        </div>
                         <div className="post_content">
                             <img className="post_image" src={a.image} alt="onewheel image"/>
-                            <p className="post_article">{a.Content}</p>
+                            <div className="title_content">
+                                <h2 className="post_title">{a.Title}</h2>
+                                 <p className="post_article">{a.Content}</p>
+                            </div>
                         </div>
-                        <p>{a.date.toLocaleDateString()}</p>
-                        <Link className="read_more_tag" to={`/postlist/${a.id}`}>Read More</Link>
+                            <div className="about_post">
+                                <p>Written By {a.Author}</p>
+                                <p>Uploaded on {a.date.toLocaleDateString()}</p>
+                                <Link className="read_more_tag" to={`/postlist/${a.id}`}>Read More</Link>
+                            </div>
+                            <div className="post_border"></div>
                     </li>
                 ))
             }
