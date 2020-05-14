@@ -2,11 +2,11 @@ export const Riders ={
   riders: [
     {
       id: 1,
-      name: "Chris Richardson",
+      name: "Bodhi Harrison",
       location: "Dummy Location",
       dateUpload: new Date('May 05, 2019 03:24:00'),
-      Competitions: "",
-      Sponsonrs: "",
+      Competitions: "R4TR 2019 Freestyle - 1st Place",
+      Sponsonrs: "Flux Mvmnt | The Float Life | Onewheel",
       Ig: "",
       Fb: ""
     },

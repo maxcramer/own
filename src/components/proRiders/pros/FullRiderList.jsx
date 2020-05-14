@@ -10,6 +10,7 @@ const FullRiderList = () => (
         Riders.all().map(r => (
             <li key={r.id}>
               <h3>Interview with {r.name}</h3>
+              <h4>Sponsorship: {r.Sponsonrs}</h4>
               <p>{r.dateUpload.toLocaleDateString()}</p>
               <Link to={`/prolist/${r.id}`}>Read Interview</Link>
             </li>
