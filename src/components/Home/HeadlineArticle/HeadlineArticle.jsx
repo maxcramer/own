@@ -9,6 +9,7 @@ class HeadlineArticle extends React.Component {
     constructor() {
         super();
         sortedPostsHeadline();
+        // HeadlineFilter();
     }
 
     render() {
@@ -16,10 +17,12 @@ class HeadlineArticle extends React.Component {
             <div>
                 <h2>Headline</h2>
                 {
-                    <div key={sortedPostsHeadline.id}>
-                        <h3>{sortedPostsHeadline.date.toLocaleDateString()}</h3>
-                        <h3>{sortedPostsHeadline.Title}</h3>
-                    </div>
+                    Articles.all().map(a => (
+                        <div key={a.id}>
+                            <h3>{a.date.toLocaleDateString()}</h3>
+                            <h3>{a.Title}</h3>
+                        </div>
+                    ))
                 }
             </div>
         )
