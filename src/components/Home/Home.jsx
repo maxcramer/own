@@ -11,6 +11,7 @@ function Home() {
       <h3 className="latest_news_title">Latest News</h3>
       <HeadlineArticle />
       <SubArticles />
+      <h3 className="latest_interviews_title">Latest Pro Rider Interviews</h3>
     </div>
   );
 }
