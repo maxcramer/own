@@ -2,4 +2,31 @@
     max-width: 1360px;
     display: flex;
     flex-direction: row;
+    margin: 0 10%;
+}
+
+.headline_img {
+    height: 311px;
+    width: 656px;
+    padding-right: 22px;
+}
+
+.headline_title {
+    margin-top: 0;
+    font-size: 35px;
+    margin-bottom: 0;
+}
+
+.headline_article {
+    max-height: 237px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.headline_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 30px;
 }

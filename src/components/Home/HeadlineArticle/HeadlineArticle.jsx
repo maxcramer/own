@@ -14,13 +14,15 @@ class HeadlineArticle extends React.Component {
         return (
             <div className="headline_container">
                 <div>
-                    <img src={recentArticle.image} alt="article image"/>
+                    <img className="headline_img" src={recentArticle.image} alt="article image"/>
                 </div>
                 <div className="headline_text">
-                    <h2>Headline</h2>
-                    <h3>{recentArticle.Title}</h3>
-                    <h3>{recentArticle.Author}</h3>
-                    <p>{recentArticle.date.toLocaleString()}</p>
+                    <h2 className="headline_title">{recentArticle.Title}</h2>
+                    <div className="headline_info">
+                        <h4>Written By {recentArticle.Author}</h4>
+                        <p>Uploaded on {recentArticle.date.toLocaleString()}</p>
+                    </div>
+                    <p className="headline_article">{recentArticle.Content}</p>
                 </div>
             </div>
         )
