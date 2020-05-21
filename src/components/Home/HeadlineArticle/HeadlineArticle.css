@@ -18,9 +18,10 @@
 }
 
 .headline_article {
-    max-height: 237px;
+    max-height: 217px;
     overflow: hidden;
     margin-top: 5px;
+    margin-bottom: 2px;
 }
 
 .headline_info {

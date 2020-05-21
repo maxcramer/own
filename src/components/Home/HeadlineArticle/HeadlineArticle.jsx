@@ -23,6 +23,8 @@ class HeadlineArticle extends React.Component {
                         <p>Uploaded on {recentArticle.date.toLocaleString()}</p>
                     </div>
                     <p className="headline_article">{recentArticle.Content}</p>
+                    <Link className="read_more_tag" to={`/postlist/${recentArticle.id}`}>Read More</Link>
+
                 </div>
             </div>
         )
