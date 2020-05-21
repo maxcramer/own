@@ -1,4 +1,4 @@
-export const Riders ={
+export const Riders = {
   riders: [
     {
       id: 1,
