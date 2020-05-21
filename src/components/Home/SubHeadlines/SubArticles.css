@@ -3,13 +3,15 @@
     flex-direction: row;
     max-width: 1360px;
     margin: 0 10%;
+    flex-wrap: wrap;
 }
 
 .single_Sub_Article {
     display: flex;
     flex-direction: column;
-    width: 31%;
+    width: 30%;
     padding: 1% 1.5%;
+    height: 440px;
 }
 
 .Sub_Article_Img {
@@ -17,9 +19,9 @@
 }
 
 .Sub_Article_Content {
-    height: 16.5%;
+    height: 20.5%;
     overflow: hidden;
-    margin-top: 0;
+    margin: 0px 0 0px 0px;
 }
 
 .Sub_Article_Auth_Date {
@@ -33,5 +35,5 @@
 .read_more_tag {
     color: blue;
     text-decoration: underline;
-    /* font-size: 20px; */
+    margin-top: 1.5%;
 }

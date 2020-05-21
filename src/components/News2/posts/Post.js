@@ -17,7 +17,7 @@ const Post = (props) => {
             <h1>{Post.Title}</h1>
             <h3>{Post.Author}</h3>
             <p>{Post.Content}</p>
-            <Link to={'/postlist'}>Go Back</Link>
+            <Link to={'/postlist'}>See All Articles</Link>
         </div>
     )
 }

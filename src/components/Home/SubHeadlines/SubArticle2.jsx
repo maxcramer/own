@@ -10,19 +10,18 @@ class SubArticleTwo extends React.Component {
     }
     render() {
         const subArticleTwo = Articles.articles.sort((a, b) => b.date - a.date)[2]
-
-        return (
-            <div className="single_Sub_Article">
-                <h2>{subArticleTwo.Title}</h2>
-                <img className="Sub_Article_Img" src={subArticleTwo.image} alt="" />
-                <div className="Sub_Article_Auth_Date">
-                    <h4>By {subArticleTwo.Author}</h4>
-                    <p>Uploaded {subArticleTwo.date.toLocaleString()}</p>
+            return (
+                <div className="single_Sub_Article">
+                    <h2>{subArticleTwo.Title}</h2>
+                    <img className="Sub_Article_Img" src={subArticleTwo.image} alt="" />
+                    <div className="Sub_Article_Auth_Date">
+                        <h4>By {subArticleTwo.Author}</h4>
+                        <p>Uploaded {subArticleTwo.date.toLocaleString()}</p>
+                    </div>
+                    <p className="Sub_Article_Content">{subArticleTwo.Content}</p> 
+                    <Link className="read_more_tag" to={`/postlist/${subArticleTwo.id}`}>Read More</Link> 
                 </div>
-                <p className="Sub_Article_Content">{subArticleTwo.Content}</p> 
-                <Link className="read_more_tag" to={`/postlist/${subArticleTwo.id}`}>Read More</Link> 
-            </div>
-        )
+            )
     }
 };
 
