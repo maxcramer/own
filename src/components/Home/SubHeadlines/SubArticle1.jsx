@@ -15,8 +15,11 @@ class SubArticleOne extends React.Component {
             <div className="single_Sub_Article">
                 <h2>{recentArticleOne.Title}</h2>
                 <img className="Sub_Article_Img" src={recentArticleOne.image} alt=""/>
-                <h2>{recentArticleOne.Author}</h2> 
-                <p>{recentArticleOne.Content}</p>               
+                <div className="Sub_Article_Auth_Date">
+                    <h4>By {recentArticleOne.Author}</h4> 
+                    <p>Uploaded {recentArticleOne.date.toLocaleString()}</p>
+                </div>
+                <p className="Sub_Article_Content">{recentArticleOne.Content}</p>               
             </div>
         )
     }

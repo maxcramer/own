@@ -16,3 +16,14 @@
     height: 200px;
 }
 
+.Sub_Article_Content {
+    height: 16%;
+    overflow: hidden;
+}
+
+.Sub_Article_Auth_Date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
