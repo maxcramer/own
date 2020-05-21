@@ -5,6 +5,12 @@ nav {
     min-height: 10vh;
     /* background-color: aquamarine; */
     border-bottom: 0.5px solid lightgrey;
+    position: fixed;
+    z-index: 100;
+    background-color: white;
+    left: 0;
+    top: 0;
+    border-top: 0;
 }
 
 .nav-links {
