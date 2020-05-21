@@ -17,8 +17,9 @@
 }
 
 .Sub_Article_Content {
-    height: 16%;
+    height: 16.5%;
     overflow: hidden;
+    margin-top: 0;
 }
 
 .Sub_Article_Auth_Date {
@@ -26,4 +27,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    height: 45px;
+}
+
+.read_more_tag {
+    color: blue;
+    text-decoration: underline;
+    /* font-size: 20px; */
 }

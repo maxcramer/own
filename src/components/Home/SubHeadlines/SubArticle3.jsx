@@ -20,6 +20,7 @@ class SubArticleThree extends React.Component {
                     <p>Uploaded {subArticleThree.date.toLocaleString()}</p>
                 </div>
                 <p className="Sub_Article_Content">{subArticleThree.Content}</p>  
+                <Link className="read_more_tag" to={`/postlist/${subArticleThree.id}`}>Read More</Link> 
             </div>
         )
     }

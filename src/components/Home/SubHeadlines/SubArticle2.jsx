@@ -19,7 +19,8 @@ class SubArticleTwo extends React.Component {
                     <h4>By {subArticleTwo.Author}</h4>
                     <p>Uploaded {subArticleTwo.date.toLocaleString()}</p>
                 </div>
-                <p className="Sub_Article_Content">{subArticleTwo.Content}</p>  
+                <p className="Sub_Article_Content">{subArticleTwo.Content}</p> 
+                <Link className="read_more_tag" to={`/postlist/${subArticleTwo.id}`}>Read More</Link> 
             </div>
         )
     }
