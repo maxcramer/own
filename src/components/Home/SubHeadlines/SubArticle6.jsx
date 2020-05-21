@@ -10,7 +10,7 @@ class SubArticleSix extends React.Component {
     }
     render() {
         const subArticleSix = Articles.articles.sort((a, b) => b.date - a.date)[6]
-        if (subArticleSix === true) {
+        if (subArticleSix) {
             return (
                 <div className="single_Sub_Article">
                     <h2>{subArticleSix.Title}</h2>
