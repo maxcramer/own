@@ -5,9 +5,6 @@ import { Articles } from '../../../Data/Articles';
 import './SubArticles.css';
 
 class SubArticleSix extends React.Component {
-    constructor() {
-        super();
-    }
     render() {
         const subArticleSix = Articles.articles.sort((a, b) => b.date - a.date)[6]
         if (subArticleSix) {

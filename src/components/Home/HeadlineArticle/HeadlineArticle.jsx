@@ -5,11 +5,9 @@ import {Articles} from '../../../Data/Articles';
 import './HeadlineArticle.css';
 
 class HeadlineArticle extends React.Component {
-    constructor() {
-        super();
-    }
     render() {
         const recentArticle = Articles.articles.sort((a, b) => b.date - a.date)[0]
+        if(recentArticle) {
             return (
                 <div className="headline_container">
                     <div>
@@ -27,6 +25,10 @@ class HeadlineArticle extends React.Component {
                     </div>
                 </div>
             )
+
+        } else {
+            return null;
+        }
     }
 };
 

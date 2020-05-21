@@ -5,11 +5,9 @@ import { Articles } from '../../../Data/Articles';
 import './SubArticles.css';
 
 class SubArticleTwo extends React.Component {
-    constructor() {
-        super();
-    }
     render() {
         const subArticleTwo = Articles.articles.sort((a, b) => b.date - a.date)[2]
+        if(subArticleTwo) {
             return (
                 <div className="single_Sub_Article">
                     <h2>{subArticleTwo.Title}</h2>
@@ -22,6 +20,10 @@ class SubArticleTwo extends React.Component {
                     <Link className="read_more_tag" to={`/postlist/${subArticleTwo.id}`}>Read More</Link> 
                 </div>
             )
+
+        } else {
+            return null;
+        }
     }
 };
 
