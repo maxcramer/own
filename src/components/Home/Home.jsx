@@ -8,6 +8,7 @@ function Home() {
   return (
     <div>
       <h1 className="homepage_title">OneWheel News</h1>
+      <h3 className="latest_news_title">Latest News</h3>
       <HeadlineArticle />
       <SubArticles />
     </div>
