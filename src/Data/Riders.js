@@ -16,7 +16,7 @@ export const Riders ={
       location: "London, UK",
       dateUpload: new Date('August 17, 2019 03:24:00'),
       Competitions: "Non",
-      Sponsonrs: "Wick Boards | HopBar UK | SkatetecUK | OWN",
+      Sponsonrs: "Personal Electric Transport UK | HopBar UK | OWN",
       Ig: "http://instagram.com/m__row",
       Fb: ""
     },
