@@ -6,7 +6,7 @@
     height: 200px;
     border: 0.5px solid lightgray;
     border-radius: 34px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .pro_rider_interview {
@@ -29,16 +29,29 @@
     align-items: center;
     justify-content: space-between;
 }
-/* 
+
 .rider_name {
-    margin-right: 10%;
-} */
+    margin: 0;
+}
+
+.upload_date {
+    margin: 0;
+}
 
 .sponsors {
     margin: 0;
 }
 
+.sponsor_location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+}
+
 .interview {
     height: 91px;
     overflow: hidden;
+    margin-top: 3px;
 }
