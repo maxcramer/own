@@ -22,7 +22,7 @@ nav {
 }
 
 #nav_logo {
-  width: 14%;
+  width: 100%;
   padding: 15px 0px;
 }
 
@@ -33,4 +33,8 @@ a {
 
 a:hover {
     color: lightgrey;
+}
+
+.nav_logo_link {
+  width: 11%;
 }

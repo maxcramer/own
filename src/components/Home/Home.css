@@ -1,5 +1,5 @@
 .homepage_title {
-    margin: 2% 10%;
+    margin: 0 10%;
 }
 
 .latest_news_title {
@@ -13,7 +13,3 @@
     border-bottom: 0.5px solid lightgrey;
     padding-bottom: 10px;
 }
-
-/* .homepage_container {
-    margin-top: 8%;
-} */

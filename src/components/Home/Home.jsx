@@ -8,7 +8,8 @@ import './Home.css';
 function Home() {
   return (
     <div className="homepage_container">
-      <h1 className="homepage_title">OneWheel News</h1>
+      <h1 className="homepage_title">Onewheel News</h1>
+      <h5 className="homepage_title">The Home of the Onewheel Community News</h5>
       <h3 className="latest_news_title">Latest News</h3>
       <HeadlineArticle />
       <SubArticles />

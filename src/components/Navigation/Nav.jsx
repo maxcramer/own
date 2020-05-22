@@ -10,7 +10,9 @@ import './menu.css';
 function Nav() {
   return (
     <nav>
-      <img id="nav_logo" src={logo} alt="logo" />
+      <Link className="nav_logo_link" to="/">
+        <img id="nav_logo" src={logo} alt="logo" />
+      </Link>
       <ul className="nav-links">
         <Link to="/">
           <li>Home</li>
