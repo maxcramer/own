@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import { Riders } from '../../../Data/Riders';
 import IG from '../../../Images/Instagram-Icon.png'
@@ -19,6 +20,7 @@ class InterviewTwo extends React.Component {
                         <h4>Location: {recentInterviewTwo.location}</h4>
                     </div>
                     <p className="interview">{recentInterviewTwo.Interview}</p>
+                    <Link className="read_interview" to={`/prolist/${recentInterviewTwo.id}`}>Read Interview</Link>
                     <div className="pro_socials">
                         <a href={recentInterviewTwo.Ig}>
                             <img className="ig_link" src={IG} alt="" />
