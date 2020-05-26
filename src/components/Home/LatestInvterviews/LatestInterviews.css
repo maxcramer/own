@@ -4,9 +4,7 @@
 
 .rider_image {
     height: 200px;
-    /* border: 0.5px solid lightgray; */
-    /* border-radius: 34px; */
-    /* margin-top: 20px; */
+    width: 200px;
 }
 
 .pro_rider_interview {

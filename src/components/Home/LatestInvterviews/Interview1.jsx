@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 
 import {Riders} from '../../../Data/Riders';
 import IG from '../../../Images/Instagram-Icon.png'
