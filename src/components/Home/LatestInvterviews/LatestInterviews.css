@@ -52,8 +52,22 @@
     height: 91px;
     overflow: hidden;
     margin-top: 3px;
+    margin-bottom: 10px;
 }
 
 .ig_link {
     height: 35px;
+}
+
+.interviews_list_link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.read_interview {
+    padding-bottom: 15px;
+    color: blue;
+    text-decoration: underline;
 }

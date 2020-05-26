@@ -2,7 +2,7 @@ import React from 'react';
 import HeadlineArticle from './HeadlineArticle/HeadlineArticle';
 import SubArticles from './SubHeadlines/SubHeadlinesComponent';
 import LatestInterviews from './LatestInvterviews/LatestInterviewComponent';
-
+import {Link} from 'react-router-dom';
 import './Home.css';
 
 function Home() {
@@ -13,7 +13,12 @@ function Home() {
       <h3 className="latest_news_title">Latest News</h3>
       <HeadlineArticle />
       <SubArticles />
+      <div className="interview_div_title">
       <h3 className="latest_interviews_title">Latest Pro Rider Interviews</h3>
+      <Link to="/prolist">
+          <h3 className="latest_interviews_title interviews_list_link">All Interviews</h3>
+      </Link>
+      </div>
       <LatestInterviews />
     </div>
   );
