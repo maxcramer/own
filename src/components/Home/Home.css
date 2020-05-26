@@ -2,11 +2,22 @@
     margin: 0 10%;
 }
 
-.latest_news_title {
+/* .latest_news_title {
     margin: 20px 10%;
     border-bottom: 0.5px solid lightgrey;
     padding-bottom: 10px;
+} */
+
+.articles_div_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 10%;
+    border-bottom: 0.5px solid lightgrey;
+    padding-bottom: 10px;
+    height: 45px;
 }
+
  .latest_interviews_title {
     margin-bottom: 10px;
 } 
