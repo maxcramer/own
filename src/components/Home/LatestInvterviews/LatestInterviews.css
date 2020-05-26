@@ -4,8 +4,8 @@
 
 .rider_image {
     height: 200px;
-    border: 0.5px solid lightgray;
-    border-radius: 34px;
+    /* border: 0.5px solid lightgray; */
+    /* border-radius: 34px; */
     /* margin-top: 20px; */
 }
 
@@ -54,4 +54,8 @@
     height: 91px;
     overflow: hidden;
     margin-top: 3px;
+}
+
+.ig_link {
+    height: 35px;
 }
