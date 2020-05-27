@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 
 import {Articles} from '../../../Data/Articles';
+import LikeButton from '../../LikeButton/LikeButton';
 import './postStyle.css';
 
 const Post = (props) => {
@@ -22,6 +23,7 @@ const Post = (props) => {
             </div>
             <p className="single_post_content">{Post.Content}</p>
             <Link className="read_more_tag" to={'/postlist'}>See All Articles</Link>
+            <LikeButton />
         </div>
     )
 }

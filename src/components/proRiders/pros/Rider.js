@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import LikeButton from '../../LikeButton/LikeButton';
 
+import LikeButton from '../../LikeButton/LikeButton';
 import {Riders} from '../../../Data/Riders';
 import '../proRiders.css';
 import IG from '../../../Images/Instagram-Icon.png'
