@@ -1,0 +1,73 @@
+.interview_home_container {
+    margin: 0 15%;
+}
+
+.rider_image {
+    height: 200px;
+    width: 200px;
+}
+
+.pro_rider_interview {
+    display: flex; 
+    flex-direction: row;
+    padding-bottom: 3%;
+    margin: 5% 0;
+    border-bottom: 0.5px solid lightgray;
+}
+
+.rider_info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5%;
+}
+
+.rider_name_location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rider_name {
+    margin: 0;
+}
+
+.upload_date {
+    margin: 0;
+}
+
+.sponsors {
+    margin: 0;
+}
+
+.sponsor_location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+}
+
+.interview {
+    height: 56px;
+    overflow: hidden;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+.ig_link {
+    height: 45px;
+}
+
+.interviews_list_link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.read_interview {
+    padding-bottom: 15px;
+    color: blue;
+    text-decoration: underline;
+}
