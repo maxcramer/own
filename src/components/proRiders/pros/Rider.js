@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import LikeButton from '../../LikeButton/LikeButton';
 
 import {Riders} from '../../../Data/Riders';
 import '../proRiders.css';
@@ -33,6 +34,7 @@ const Rider = (props) => {
                 <p>{Rider.Interview}</p>            
             </div>
             <Link className="under_article_nav_button" to={'/prolist'}>All Interviews</Link>
+            <LikeButton />
         </div>
     )
 }
