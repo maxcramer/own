@@ -32,7 +32,7 @@ const Rider = (props) => {
                 <img className="interview_single_page_img" src={Rider.Logo} alt="" />
                 <p>{Rider.Interview}</p>            
             </div>
-            <Link to={'/prolist'}>Go Back</Link>
+            <Link className="under_article_nav_button" to={'/prolist'}>All Interviews</Link>
         </div>
     )
 }

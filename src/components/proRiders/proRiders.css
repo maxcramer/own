@@ -79,7 +79,7 @@
 }
 
 .interview_single_page_container {
-    margin: 0 10%;
+    margin: 0% 10% 4%;
 }
 
 .interview_single_page_rider_info {
@@ -115,4 +115,13 @@
     display: flex;
     flex-direction: row;
     align-items: baseline;
+}
+
+.under_article_nav_button {
+    color: blue;
+    text-decoration: underline;
+}
+
+.under_article_nav_button:hover {
+    color: lightgray
 }
