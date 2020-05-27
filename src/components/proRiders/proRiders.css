@@ -71,3 +71,24 @@
     color: blue;
     text-decoration: underline;
 }
+
+.interview_single_page_img {
+    height: 300px;
+    float: left;
+    margin: 0px 7px 5px 0;
+}
+
+.interview_single_page_container {
+    margin: 0 10%;
+}
+
+.interview_single_page_rider_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.interview_single_page_font_weight {
+    font-weight: 500;
+}
