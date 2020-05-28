@@ -94,3 +94,10 @@
 .single_post_content {
     margin-top: 0;
 }
+
+.cta_single_post {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+}

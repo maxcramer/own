@@ -33,8 +33,10 @@ const Rider = (props) => {
                 <img className="interview_single_page_img" src={Rider.Logo} alt="" />
                 <p>{Rider.Interview}</p>            
             </div>
-            <Link className="under_article_nav_button" to={'/prolist'}>All Interviews</Link>
-            <LikeButton />
+            <div className="interview_single_page_cta">
+                <Link className="under_article_nav_button" to={'/prolist'}>All Interviews</Link>
+                <LikeButton />
+            </div>
         </div>
     )
 }

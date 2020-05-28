@@ -22,8 +22,11 @@ const Post = (props) => {
                 <h3 className="single_post_author">Uploaded {Post.date.toLocaleDateString()}</h3>  
             </div>
             <p className="single_post_content">{Post.Content}</p>
-            <Link className="read_more_tag" to={'/postlist'}>See All Articles</Link>
-            <LikeButton />
+            <div className="cta_single_post">
+                <Link className="read_more_tag" to={'/postlist'}>See All Articles</Link>
+                <LikeButton />
+            
+            </div>
         </div>
     )
 }

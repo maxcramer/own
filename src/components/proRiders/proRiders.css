@@ -125,3 +125,9 @@
 .under_article_nav_button:hover {
     color: lightgray
 }
+
+.interview_single_page_cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

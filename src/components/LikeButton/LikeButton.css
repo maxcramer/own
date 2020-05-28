@@ -1,0 +1,12 @@
+.like_button {
+    background-color: white !important;
+    border: none !important;
+}
+
+.like_button_img {
+    height: 30px;
+}
+
+.like_button_container {
+    display: flex;
+}
