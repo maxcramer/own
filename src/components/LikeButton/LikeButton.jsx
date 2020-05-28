@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom'
 
 
 firebase.initializeApp({
-    databaseURL: 'https://react-firebase-sandbox.firebaseio.com'
+  databaseURL: 'https://onewheelnews.firebaseio.com'
 });
 
 const { connect } = firebase;
