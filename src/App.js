@@ -8,6 +8,20 @@ import Nav from './components/Navigation/Nav';
 import RidingTips from './components/RidingTips/RidingTips';
 import BoardCare from './components/BoardCare/BoardCare';
 import PostList from './components/News2/PostList';
+import * as firebase from 'firebase/app';
+
+
+firebase.initializeApp({
+  apiKey: 'AIzaSyBJNjzH9tWs-JbTEwPv8drNxu33kEwidnM',
+  authDomain: 'onewheelnews.firebaseapp.com',
+  databaseURL: 'https://onewheelnews.firebaseio.com',
+  projectId: 'onewheelnews',
+  storageBucket: 'onewheelnews.appspot.com',
+  messagingSenderId: '828691903330',
+  appId: '1:828691903330:web:f142486a957cc7520ff23b',
+  measurementId: 'G-SZ8LJV3VJP'
+});
+
 
 function App() {
   return (

@@ -1,31 +1,74 @@
-import * as firebase from 'firebase/app'
+import * as firebase from 'firebase/app';
 import React from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
 
-
-
-firebase.initializeApp({
-  databaseURL: 'https://onewheelnews.firebaseio.com'
-});
-
-const { connect } = firebase;
-
-const Counter = ({ count, setCount }) => (
+const ConnectedCounter = ({ count, setCount }) => (
   <div>
     <p>Count: {count || 0}</p>
-    <button onClick={() => setCount(count - 1)}>Decrement</button>
-    <button onClick={() => setCount(count + 1)}>Increment</button>
+    <button
+      onClick={async () => {
+        var db = firebase.firestore();
+        let setDoc = db
+          .collection('counts')
+          .doc('likes')
+          .set(count - 1);
+      }}
+    >
+      Decrement
+    </button>
+    <button
+      onClick={async () => {
+        var db = firebase.firestore();
+        let setDoc = db
+          .collection('counts')
+          .doc('likes')
+          .set(count + 1);
+      }}
+    >
+      Increment
+    </button>
   </div>
 );
 
-const ConnectedCounter = connect((props, ref) => ({
-  count: 'counterValue',
-  setCount: count => ref('counterValue').set(count)
-}))(Counter);
+// const ConnectedCounter = connect((props, ref) => ({
+//   count: 'counterValue',
+//   setCount: count => ref('counterValue').set(count)
+// }))(Counter);
 
 export default ConnectedCounter;
 
 ReactDOM.render(<ConnectedCounter />, document.getElementById('root'));
+
+
+
+// import * as firebase from 'firebase/app'
+// import React from 'react';
+// import ReactDOM from 'react-dom'
+
+
+
+// firebase.initializeApp({
+//   databaseURL: 'https://onewheelnews.firebaseio.com'
+// });
+
+// const { connect } = firebase;
+
+// const Counter = ({ count, setCount }) => (
+//   <div>
+//     <p>Count: {count || 0}</p>
+//     <button onClick={() => setCount(count - 1)}>Decrement</button>
+//     <button onClick={() => setCount(count + 1)}>Increment</button>
+//   </div>
+// );
+
+// const ConnectedCounter = connect((props, ref) => ({
+//   count: 'counterValue',
+//   setCount: count => ref('counterValue').set(count)
+// }))(Counter);
+
+// export default ConnectedCounter;
+
+// ReactDOM.render(<ConnectedCounter />, document.getElementById('root'));
 
 // import React from 'react';
 // import * as firebase from 'firebase/app';
