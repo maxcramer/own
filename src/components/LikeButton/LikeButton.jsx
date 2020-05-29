@@ -6,8 +6,8 @@ import { Articles } from '../../Data/Articles';
 
 const ConnectedCounter = ({ count, setCount }) => (
   <div>
-    <p>Count: {Articles.likes || 0}</p>
-    <button
+    <p>Count: {Articles.articles.likes || 0}</p>
+    {/* <button
       onClick={async () => {
         var db = firebase.firestore();
         let setDoc = db
@@ -17,14 +17,14 @@ const ConnectedCounter = ({ count, setCount }) => (
       }}
     >
       Decrement
-    </button>
+    </button> */}
     <button
       onClick={async () => {
-        var db = firebase.firestore();
+        var db = firebase.firestore(Articles.articles.likes);
         let setDoc = db
           .collection('counts')
           .doc('likes')
-          .set(Articles.likes + 1);
+          .set(Articles.articles.likes + 1);
       }}
     >
       Increment
