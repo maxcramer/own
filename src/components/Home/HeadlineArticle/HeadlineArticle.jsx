@@ -16,8 +16,8 @@ class HeadlineArticle extends React.Component {
                     <div className="headline_text">
                         <h2 className="headline_title">{recentArticle.Title}</h2>
                         <div className="headline_info">
-                            <h4>By {recentArticle.Author}</h4>
-                            <p>Uploaded on {recentArticle.date.toLocaleString()}</p>
+                            <h4 className="mobile_author">By {recentArticle.Author}</h4>
+                            <p className="mobile_date">Uploaded on {recentArticle.date.toLocaleString()}</p>
                         </div>
                         <p className="headline_article">{recentArticle.Content}</p>
                         <Link className="read_more_tag" to={`/postlist/${recentArticle.id}`}>Read More</Link>

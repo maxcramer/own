@@ -13,7 +13,7 @@ class FullPostList extends React.Component {
     render() {
         return (
     <div>
-        <ul class="post_list">
+        <ul className="post_list">
             {
                 Articles.all().map(a => (
                     <li key={a.id} className="full_post">
