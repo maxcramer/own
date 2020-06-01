@@ -74,6 +74,10 @@
 
 
 @media screen and (max-width: 550px) {
+    .read_interview {
+        padding-bottom: 4px !important;
+    }
+
     .pro_rider_interview {
         flex-direction: column !important;
     }
