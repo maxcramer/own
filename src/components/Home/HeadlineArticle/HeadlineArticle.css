@@ -42,26 +42,27 @@
 }
 
 @media screen and (max-width: 550px) {
- .headline_container{
-     flex-direction: column;
- }   
+    .headline_container{
+        flex-direction: column;
+    }   
 
- .headline_img {
-     width: 100%;
-     height: auto;
- }
+    .headline_img {
+        width: 100%;
+        height: auto;
+    }
 
- .headline_info {
-     flex-direction: column;
-     align-items: unset;
-     max-height: 100%;
- }
+    .headline_info {
+        flex-direction: column;
+        align-items: unset;
+        max-height: 100%;
+    }
 
- .mobile_author {
-     margin: 4px 0;
- }
+    .mobile_author {
+        margin: 4px 0;
+    }
 
-.mobile_date {
-    margin: 4px 0;
-}
+    .mobile_date {
+        margin: 4px 0;
+    }
+
 }

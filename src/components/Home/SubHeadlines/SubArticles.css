@@ -29,11 +29,38 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 45px;
+    max-height: 45px;
 }
 
 .read_more_tag {
     color: blue;
     text-decoration: underline;
     margin-top: 1.5%;
+}
+
+@media screen and (max-width: 550px) {
+    .Sub_Articles {
+        flex-direction: column;
+        max-width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .single_Sub_Article {
+        width: 100%;
+    }
+
+    .Sub_Article_Auth_Date {
+        flex-direction: column;
+        align-items: unset;
+        max-height: 100%;
+    }
+
+
+    .Sub_Article_Author {
+        margin: 4px 0;
+    }
+
+    .Sub_Article_Date {
+        margin: 4px 0;
+    }
 }

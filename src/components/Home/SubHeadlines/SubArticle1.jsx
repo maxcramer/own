@@ -13,8 +13,8 @@ class SubArticleOne extends React.Component {
                     <h2>{recentArticleOne.Title}</h2>
                     <img className="Sub_Article_Img" src={recentArticleOne.image} alt=""/>
                     <div className="Sub_Article_Auth_Date">
-                        <h4>By {recentArticleOne.Author}</h4> 
-                        <p>Uploaded {recentArticleOne.date.toLocaleString()}</p>
+                        <h4 className="Sub_Article_Author">By {recentArticleOne.Author}</h4> 
+                        <p className="Sub_Article_Date">Uploaded {recentArticleOne.date.toLocaleString()}</p>
                     </div>
                     <p className="Sub_Article_Content">{recentArticleOne.Content}</p>     
                     <Link className="read_more_tag" to={`/postlist/${recentArticleOne.id}`}>Read More</Link>          
