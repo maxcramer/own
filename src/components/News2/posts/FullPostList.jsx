@@ -25,8 +25,8 @@ class FullPostList extends React.Component {
                             </div>
                         </div>
                             <div className="about_post">
-                                <p>Written By {a.Author}</p>
-                                <p>Uploaded on {a.date.toLocaleDateString()}</p>
+                                <p className="post_date_author">Written By {a.Author}</p>
+                                <p className="post_date_author">Uploaded on {a.date.toLocaleDateString()}</p>
                                 <Link className="read_more_tag" to={`/postlist/${a.id}`}>Read More</Link>
                             </div>
                             <div className="post_border"></div>
