@@ -8,28 +8,34 @@ class InterviewTwo extends React.Component {
     render() {
         const recentInterviewTwo = Riders.riders.sort((a, b) => b.dateUpload - a.dateUpload)[1]
         return (
-            <div className="pro_rider_interview">
-                <img className="rider_image" src={recentInterviewTwo.Logo} alt="" />
-                <div className="rider_info">
-                    <div className="rider_name_location">
-                        <h2 className="rider_name">{recentInterviewTwo.name}</h2>
-                        <h6 className="upload_date">Date Uploaded: {recentInterviewTwo.dateUpload.toLocaleString()}</h6>
-                    </div>
-                    <div className="sponsor_location">
-                        <h4 className="sponsors">Sponsors: {recentInterviewTwo.Sponsonrs}</h4>
-                        <h4>Location: {recentInterviewTwo.location}</h4>
-                    </div>
-                    <p className="interview">{recentInterviewTwo.Interview}</p>
-                    <Link className="read_interview" to={`/prolist/${recentInterviewTwo.id}`}>Read Interview</Link>
-                    <div className="pro_socials">
-                        <a href={recentInterviewTwo.Ig}>
-                            <img className="ig_link" src={IG} alt="" />
-                        </a>
-                        <p>{recentInterviewTwo.Fb}</p>
-                    </div>
-                </div>
+          <div className="pro_rider_interview">
+            <img className="rider_image" src={recentInterviewTwo.Logo} alt="" />
+            <div className="rider_info">
+              <div className="rider_name_location">
+                <h2 className="rider_name">{recentInterviewTwo.name}</h2>
+                <h6 className="upload_date">
+                  Date Uploaded:{' '}
+                  {recentInterviewTwo.dateUpload.toLocaleString()}
+                </h6>
+              </div>
+              <div className="sponsor_location">
+                <h4 className="sponsors">
+                  Sponsors: {recentInterviewTwo.Sponsonrs}
+                </h4>
+                <h4 className="location">
+                  Location: {recentInterviewTwo.location}
+                </h4>
+              </div>
+              <p className="interview">{recentInterviewTwo.Interview}</p>
+              <Link
+                className="read_interview"
+                to={`/prolist/${recentInterviewTwo.id}`}
+              >
+                Read Interview
+              </Link>
             </div>
-        )
+          </div>
+        );
     }
 };
 

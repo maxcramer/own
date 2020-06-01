@@ -18,16 +18,10 @@ class InterviewThree extends React.Component {
                     </div>
                     <div className="sponsor_location">
                         <h4 className="sponsors">Sponsors: {recentInterviewThree.Sponsonrs}</h4>
-                        <h4>Location: {recentInterviewThree.location}</h4>
+                        <h4 className="location">Location: {recentInterviewThree.location}</h4>
                     </div>
                     <p className="interview">{recentInterviewThree.Interview}</p>
                     <Link className="read_interview" to={`/prolist/${recentInterviewThree.id}`}>Read Interview</Link>
-                    <div className="pro_socials">
-                        <a href={recentInterviewThree.Ig}>
-                            <img className="ig_link" src={IG} alt="" />
-                        </a>
-                        <p>{recentInterviewThree.Fb}</p>
-                    </div>
                 </div>
             </div>
         )

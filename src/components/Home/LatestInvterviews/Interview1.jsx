@@ -19,16 +19,10 @@ class InterviewOne extends React.Component {
                     </div>
                     <div className="sponsor_location">
                         <h4 className="sponsors">Sponsors: {recentInterview.Sponsonrs}</h4>
-                        <h4>Location: {recentInterview.location}</h4>   
+                        <h4 className="location">Location: {recentInterview.location}</h4>   
                     </div>
                     <p className="interview">{recentInterview.Interview}</p>  
                     <Link className="read_interview" to={`/prolist/${recentInterview.id}`}>Read Interview</Link>
-                    <div className="pro_socials">
-                        <a href={recentInterview.Ig}>
-                            <img className="ig_link" src={IG} alt=""/>
-                        </a>
-                        <p>{recentInterview.Fb}</p>
-                    </div>
                 </div>
             </div>
         )

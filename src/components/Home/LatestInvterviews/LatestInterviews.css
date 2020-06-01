@@ -73,4 +73,42 @@
 }
 
 
+@media screen and (max-width: 550px) {
+    .pro_rider_interview {
+        flex-direction: column !important;
+    }
 
+    .rider_image {
+        height: 100% !important;
+        width: 100% !important;
+    }
+
+    .rider_name_location {
+        flex-direction: column !important;
+        align-items: unset !important;
+    }
+
+    .rider_name {
+        padding-bottom: 10px;
+    }
+
+    .upload_date {
+        padding-bottom: 5px;
+    }
+
+    .sponsor_location {
+        font-size: 15px;
+        flex-direction: column !important;
+        height: 65px !important;
+        align-items: unset !important;
+    }
+
+    .location {
+        margin-top: 5px;
+    }
+
+    .rider_info {
+        margin: 0 !important;
+    }
+
+}
