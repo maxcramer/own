@@ -15,7 +15,7 @@ class FullRiderList extends React.Component {
   render() {
     return (
   <div>
-    <ul>
+    <ul className="pro_rider_list">
       {
         Riders.all().map(r => (
             <div className="interview_home_container">
@@ -29,16 +29,10 @@ class FullRiderList extends React.Component {
                     </div>
                     <div className="sponsor_location">
                       <h4 className="sponsors">Sponsors: {r.Sponsonrs}</h4>
-                      <h4>Location: {r.location}</h4>
+                      <h4 className="location">Location: {r.location}</h4>
                     </div>
                     <p className="interview">{r.Interview}</p>
                     <Link className="read_interview" to={`/prolist/${r.id}`}>Read Interview</Link>
-                    <div className="pro_socials">
-                      <a href={r.Ig}>
-                        <img className="ig_link" src={IG} alt="" />
-                      </a>
-                      <p>{r.Fb}</p>
-                    </div>
                   </div>
                 </div>
               </li>
