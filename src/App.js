@@ -29,7 +29,7 @@ function App() {
   })
   return (
     <Router>
-        <div className="App" style={{ height: '100%' }}>
+        <div style={{ height: '100%' }}>
           <Nav />
           <SideDrawer />
           <div className="below_navbar">
