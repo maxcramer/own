@@ -39,6 +39,7 @@ const Nav = props => (
     <nav className="navbar_navigation">
       <div></div>
       <div className="navbar_logo"><a href="/">The Logo</a></div>
+      <div className="spacer"></div>
       <div className="navbar_navigation-items">
         <ul>
           <Link to="/">
