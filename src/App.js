@@ -8,8 +8,10 @@ import Nav from './components/Navigation/Nav';
 import RidingTips from './components/RidingTips/RidingTips';
 import BoardCare from './components/BoardCare/BoardCare';
 import PostList from './components/News2/PostList';
+import SideDrawer from './components/SideDrawer/SideDrawer';
 import firebase from 'firebase';
 import 'firebase/firestore';
+
 
 
 
@@ -27,18 +29,19 @@ function App() {
   })
   return (
     <Router>
-    <div className="App">
-      <Nav />
-        <div className="below_navbar">
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/prolist" component={ProList} />
-            <Route path="/ridingtips" component={RidingTips} />
-            <Route path="/postlist" component={PostList} />
-            <Route path="/boardcare" component={BoardCare} />
-          </Switch>
+        <div className="App" style={{ height: '100%' }}>
+          <Nav />
+          <SideDrawer />
+          <div className="below_navbar">
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/prolist" component={ProList} />
+              <Route path="/ridingtips" component={RidingTips} />
+              <Route path="/postlist" component={PostList} />
+              <Route path="/boardcare" component={BoardCare} />
+            </Switch>
+          </div>
         </div>
-      </div>
     </Router>
   );
 }

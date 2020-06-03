@@ -3,6 +3,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import logo from '../../Images/OWN_logo.png';
 import './menu.css';
+import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 
 // import OWN_logo from '../../Images/OWN_logo';
 
@@ -37,7 +38,9 @@ import './menu.css';
 const Nav = props => (
   <header className="navbar">
     <nav className="navbar_navigation">
-      <div></div>
+      <div>
+        <DrawerToggleButton />
+      </div>
       <div className="navbar_logo"><a href="/">The Logo</a></div>
       <div className="spacer"></div>
       <div className="navbar_navigation-items">

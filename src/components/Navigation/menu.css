@@ -14,6 +14,10 @@
   padding: 0 1rem;
 }
 
+.navbar_logo {
+  margin-left: 1rem;
+}
+
 .navbar_logo a {
   color: lightgray;
   text-decoration: none;
