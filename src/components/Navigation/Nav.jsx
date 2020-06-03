@@ -39,7 +39,7 @@ const Nav = props => (
   <header className="navbar">
     <nav className="navbar_navigation">
       <div>
-        <DrawerToggleButton />
+        <DrawerToggleButton click={props.drawerClickHandler}/>
       </div>
       <div className="navbar_logo"><a href="/">The Logo</a></div>
       <div className="spacer"></div>
