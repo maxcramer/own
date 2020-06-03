@@ -44,29 +44,27 @@ class App extends Component {
   }
 
   render() {
-    let sideDrawer;
     let backdrop;
 
     if(this.state.sideDrawerOpen) {
-      sideDrawer = <SideDrawer />
       backdrop = <Backdrop click={this.backdropClickHandler} />;
     }
     return (
       <Router>
-          <div style={{ height: '100%' }}>
-            <Nav drawerClickHandler={this.drawerToggleClickHandler}/>
-            {sideDrawer}
-            {backdrop}
-            <div className="below_navbar">
-              <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/prolist" component={ProList} />
-                <Route path="/ridingtips" component={RidingTips} />
-                <Route path="/postlist" component={PostList} />
-                <Route path="/boardcare" component={BoardCare} />
-              </Switch>
-            </div>
+        <div style={{ height: '100%' }}>
+          <Nav drawerClickHandler={this.drawerToggleClickHandler} />
+          <SideDrawer show={this.state.sideDrawerOpen}/>
+          {backdrop}
+          <div className="below_navbar">
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/prolist" component={ProList} />
+              <Route path="/ridingtips" component={RidingTips} />
+              <Route path="/postlist" component={PostList} />
+              <Route path="/boardcare" component={BoardCare} />
+            </Switch>
           </div>
+        </div>
       </Router>
     );
   }

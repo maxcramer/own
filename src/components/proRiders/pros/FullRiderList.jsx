@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 import {Riders} from '../../../Data/Riders';
@@ -7,7 +7,7 @@ import IG from '../../../Images/Instagram-Icon.png';
 import '../proRiders.css';
 
 
-class FullRiderList extends React.Component {
+class FullRiderList extends Component {
   constructor() {
     super();
     sortRiders();
@@ -25,7 +25,7 @@ class FullRiderList extends React.Component {
                   <div className="rider_info">
                     <div className="rider_name_location">
                       <h2 className="rider_name">{r.name}</h2>
-                      <h6 class="upload_date">Date Uploaded: {r.dateUpload.toLocaleString()}</h6>
+                      <h6 className="upload_date">Date Uploaded: {r.dateUpload.toLocaleString()}</h6>
                     </div>
                     <div className="sponsor_location">
                       <h4 className="sponsors">Sponsors: {r.Sponsonrs}</h4>
