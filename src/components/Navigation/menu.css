@@ -48,3 +48,19 @@
 .spacer {
   flex: 1;
 }
+
+@media (max-width: 550px) {
+  .navbar_navigation-items {
+    display: none;
+  }
+}
+
+@media (min-width: 550px) {
+  .navbar_toggle-button {
+    display: none;
+  }
+
+  .navbar_logo {
+    margin-left: 0;
+  }
+}

@@ -38,7 +38,7 @@ import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 const Nav = props => (
   <header className="navbar">
     <nav className="navbar_navigation">
-      <div>
+      <div className="navbar_toggle-button">
         <DrawerToggleButton click={props.drawerClickHandler}/>
       </div>
       <div className="navbar_logo"><a href="/">The Logo</a></div>
