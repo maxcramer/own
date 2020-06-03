@@ -9,3 +9,9 @@ ul {
 .below_navbar {
   margin-top: 8%;
 }
+
+@media screen and (max-width: 550px) {
+  .below_navbar {
+    margin-top: 24%;
+  }
+}
