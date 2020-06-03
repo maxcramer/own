@@ -178,4 +178,27 @@
         margin: 0 !important;
     }
 
+    .interview_single_page_img {
+        height: auto;
+        width: 100%;
+        margin: 32px 0 10px 0;
+    }
+
+    .interview_single_page_title_container {
+        flex-direction: column;
+    }
+
+    .interview_single_page_rider_info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .interview_single_page_upload_date {
+        margin: 5px 0;
+    }
+
+    .interview_single_page_font_weight {
+        margin: 2px 0;
+    }
+
 }

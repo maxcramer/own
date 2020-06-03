@@ -27,8 +27,8 @@ function App() {
   })
   return (
     <Router>
-      <div className="App">
-        <Nav />
+    <div className="App">
+      <Nav />
         <div className="below_navbar">
           <Switch>
             <Route path="/" exact component={Home} />
