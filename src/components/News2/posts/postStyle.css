@@ -134,4 +134,10 @@
     .post_date_author {
         margin: 5px 0;
     }
+
+    .single_post_author_upload  {
+        height: 20px;
+        padding-top: 15px;
+    }
+
 }
