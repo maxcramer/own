@@ -136,6 +136,12 @@
     justify-content: space-between;
 }
 
+@media (max-width: 950px) {
+    .interview {
+        height: 75px;
+    }
+}
+
 @media screen and (max-width: 550px) {
     .read_interview {
         padding-bottom: 4px !important;
