@@ -154,6 +154,11 @@
     .interview_single_page_font_weight {
         margin: 5px 0 0 0;
     }
+
+    .rider_image {
+        width: 35%;
+        height: 210px !important;
+    }
 }
 
 @media screen and (max-width: 550px) {
