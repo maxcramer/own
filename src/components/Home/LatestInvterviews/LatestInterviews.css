@@ -93,10 +93,6 @@
     .location {
         margin: 3px 0;
     }
-
-    /* .interview {
-        height: 90px !important;
-    } */
 }
 
 @media screen and (max-width: 550px) {
