@@ -137,8 +137,22 @@
 }
 
 @media (max-width: 950px) {
+    .interview_single_page_title_container {
+        height: 45px;
+    }
+
     .interview {
         height: 75px;
+    }
+
+    .interview_single_page_rider_info {
+        flex-direction: column;
+        align-items: unset;
+        height: auto;
+    }
+
+    .interview_single_page_font_weight {
+        margin: 5px 0 0 0;
     }
 }
 
@@ -192,6 +206,7 @@
 
     .interview_single_page_title_container {
         flex-direction: column;
+        height: 75px;
     }
 
     .interview_single_page_rider_info {
