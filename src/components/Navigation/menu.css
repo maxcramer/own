@@ -1,10 +1,12 @@
 .navbar {
   position: fixed;
   width: 100%;
-  background: red;
   top: 0;
   left: 0;
   height: 56px;
+  padding-bottom: 13px;
+  box-shadow: 0 2px 7px lightgrey;
+  background: white;
 }
 
 .navbar_navigation {
@@ -18,10 +20,9 @@
   margin-left: 1rem;
 }
 
-.navbar_logo a {
-  color: lightgray;
-  text-decoration: none;
-  font-size: 1.5rem;
+.navbar_logo a img {
+    height: 45px;
+    margin: 13px 0px 0px 20px;
 }
 
 .navbar_navigation-items ul {
@@ -36,13 +37,13 @@
 }
 
 .navbar_navigation-items a {
-  color: lightgray;
+  color: darkgray;
   text-decoration: none;
 }
 
 .navbar_navigation-items a:hover,
 .navbar_navigation-items a:active {
-  color: darkgray;
+  color: lightgray;
 }
 
 .spacer {
@@ -50,8 +51,17 @@
 }
 
 @media (max-width: 550px) {
+  .navbar {
+    padding-bottom: 0;
+  }
+
   .navbar_navigation-items {
     display: none;
+  }
+
+  .navbar_logo a img {
+    height: 30px;
+    margin: 0
   }
 }
 
