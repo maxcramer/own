@@ -21,8 +21,7 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
+    margin-top: 80px;
 }
 
 .side-drawer li {
@@ -30,14 +29,15 @@
 }
 
 .side-drawer a {
-    color: lightgray;
+    color: darkgray;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 40px;
+    padding-bottom: 20px;
 }
 
 .side-drawer a:hover,
 .side-drawer a:active {
-    color: darkgray;
+    color: lightgray;
 }
 
 @media (min-width: 550px) {

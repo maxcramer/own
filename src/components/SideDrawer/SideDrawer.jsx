@@ -19,7 +19,7 @@ const sideDrawer = props => {
         <li>All Articles</li>
       </Link>
       <Link to="/prolist">
-        <li>Pro Rider Interviews</li>
+        <li>Interviews</li>
       </Link>
     </ul>
   </nav>
