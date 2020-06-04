@@ -49,7 +49,7 @@
 }
 
 .interview {
-    height: 56px;
+    height: 90px;
     overflow: hidden;
     margin-top: 3px;
     margin-bottom: 5px;
@@ -70,6 +70,33 @@
     padding-bottom: 15px;
     color: blue;
     text-decoration: underline;
+}
+
+@media (max-width: 950px) {
+    .rider_name_location {
+        flex-direction: column !important;
+        align-items: unset !important;
+        margin-bottom: 5px;
+    }
+
+    .sponsor_location {
+        flex-direction: column !important;
+        align-items: unset !important;
+        height: 25% !important;
+        display: contents;
+    }
+
+    .rider_image {
+        height: auto !important;
+    }
+
+    .location {
+        margin: 3px 0;
+    }
+
+    /* .interview {
+        height: 90px !important;
+    } */
 }
 
 @media screen and (max-width: 550px) {
