@@ -72,7 +72,6 @@
     text-decoration: underline;
 }
 
-
 @media screen and (max-width: 550px) {
     .read_interview {
         padding-bottom: 4px !important;

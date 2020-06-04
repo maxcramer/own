@@ -76,7 +76,7 @@
     .headline_container{
         flex-direction: column;
         height: 400px;
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
     }   
 
     .headline_text {
@@ -84,7 +84,7 @@
     }
 
     .headline_article {
-        height: 35%;
+        height: 47%;
     }
 
     .headline_img {
