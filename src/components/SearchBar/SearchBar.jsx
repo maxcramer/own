@@ -16,6 +16,11 @@ class SearchBar extends React.Component {
         }
     }
 
+    handleOnInputChange = (event) => {
+      const query = event.target.value;
+      console.log("The query is", query);   
+    };
+
     render() {
         return(
             <div className="searchBar-container">
@@ -26,6 +31,7 @@ class SearchBar extends React.Component {
                         value=""
                         id="search-input"
                         placeholder="Search"
+                        onChange={this.handleOnInputChange}
                     />
                     <img id="search-icon" src={SearchIcon} alt=""/>
                 </label>
