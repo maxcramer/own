@@ -1,60 +1,62 @@
 import React from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
-import SearchIcon from '../../Images/search-icon.png';
-import './SearchBar.css';
+// import SearchIcon from '../../Images/search-icon.png';
+// import './SearchBar.css';
 
-class SearchBar extends React.Component {
+// class SearchBar extends React.Component {
 
-    constructor(props) {
-        super(props); 
+//     constructor(props) {
+//         super(props); 
 
-        this.state = {
-            query: '',
-            results: {},
-            loading: false,
-            message: ''
-        }
+//         this.state = {
+//             query: '',
+//             results: {},
+//             loading: false,
+//             message: ''
+//         }
 
-        this.cancel = '';
-    }
+//         this.cancel = '';
+//     }
 
-    fetchSearchResult = (query) => {
-        const searchURL = `localhost:3000${query}`;
+//     fetchSearchResult = (query) => {
+//         const searchURL = `localhost:3000${query}`;
 
-        if( this.cancel ) {
-            this.cancel.cancel()
-        }
+//         if( this.cancel ) {
+//             this.cancel.cancel()
+//         }
 
-        this.cancel = axios.CancelToken.source();
-    }
+//         this.cancel = axios.CancelToken.source();
 
-    handleOnInputChange = (event) => {
-        const query = event.target.value;
-        this.setState({ query, loading: true, message: '' });
-        // console.log(query);
-    };
+//         axios.get()
+//     }
 
-    render() {
-        const { query } = this.state;
-        console.log(this.state);
-        return(
-            <div className="searchBar-container">
-                {/* <h2 className="searchBar_heading">Live search React</h2> */}
-                <label className="search-label" htmlFor="search-input">
-                    <input 
-                        type="text"
-                        value={query}
-                        name="query"
-                        id="search-input"
-                        placeholder="Search"
-                        onChange={this.handleOnInputChange}
-                    />
-                    <img id="search-icon" src={SearchIcon} alt=""/>
-                </label>
-            </div>
-        )
-    }
-}
+//     handleOnInputChange = (event) => {
+//         const query = event.target.value;
+//         this.setState({ query, loading: true, message: '' });
+//         // console.log(query);
+//     };
 
-export default SearchBar;
+//     render() {
+//         const { query } = this.state;
+//         console.log(this.state);
+//         return(
+//             <div className="searchBar-container">
+//                 {/* <h2 className="searchBar_heading">Live search React</h2> */}
+//                 <label className="search-label" htmlFor="search-input">
+//                     <input 
+//                         type="text"
+//                         value={query}
+//                         name="query"
+//                         id="search-input"
+//                         placeholder="Search"
+//                         onChange={this.handleOnInputChange}
+//                     />
+//                     <img id="search-icon" src={SearchIcon} alt=""/>
+//                 </label>
+//             </div>
+//         )
+//     }
+// }
+
+// export default SearchBar;
