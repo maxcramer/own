@@ -31,7 +31,6 @@ class App extends Component {
 
   state = {
     sideDrawerOpen: false,
-    filterString: ''
   }
 
   drawerToggleClickHandler = () => {
@@ -42,12 +41,6 @@ class App extends Component {
 
   backdropClickHandler = () => {
     this.setState({sideDrawerOpen: false});
-  }
-
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({filterString: 'Max'});
-    }, 2000);
   }
 
   render() {
