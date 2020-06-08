@@ -17,18 +17,22 @@ class SearchBar extends React.Component {
     }
 
     handleOnInputChange = (event) => {
-      const query = event.target.value;
-      console.log("The query is", query);   
+        const query = event.target.value;
+        this.setState({query});
+        console.log(query);
     };
 
     render() {
+        const { query } = this.state;
+        
         return(
             <div className="searchBar-container">
                 {/* <h2 className="searchBar_heading">Live search React</h2> */}
                 <label className="search-label" htmlFor="search-input">
                     <input 
                         type="text"
-                        value=""
+                        value={query}
+                        name="query"
                         id="search-input"
                         placeholder="Search"
                         onChange={this.handleOnInputChange}
