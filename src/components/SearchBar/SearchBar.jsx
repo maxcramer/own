@@ -12,7 +12,7 @@ function SearchBar() {
 
     React.useEffect(() => {
         const results = Articles.articles.filter(article => 
-            article.toString().toLowerCase().includes(searchTerm)
+            article.Title.toString().toLowerCase().includes(searchTerm)
             );
             setSearchResults(results);
     }, [searchTerm])
