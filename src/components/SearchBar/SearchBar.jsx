@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 import SearchIcon from '../../Images/search-icon.png';
 import './SearchBar.css';
@@ -14,17 +15,29 @@ class SearchBar extends React.Component {
             loading: false,
             message: ''
         }
+
+        this.cancel = '';
+    }
+
+    fetchSearchResult = (query) => {
+        const searchURL = `localhost:3000${query}`;
+
+        if( this.cancel ) {
+            this.cancel.cancel()
+        }
+
+        this.cancel = axios.CancelToken.source();
     }
 
     handleOnInputChange = (event) => {
         const query = event.target.value;
-        this.setState({query});
-        console.log(query);
+        this.setState({ query, loading: true, message: '' });
+        // console.log(query);
     };
 
     render() {
         const { query } = this.state;
-        
+        console.log(this.state);
         return(
             <div className="searchBar-container">
                 {/* <h2 className="searchBar_heading">Live search React</h2> */}
