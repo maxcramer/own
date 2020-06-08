@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import logo from '../../Images/OWN_logo.png';
 import './menu.css';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
+import SearchBar from '../SearchBar/SearchBar';
 
 // import OWN_logo from '../../Images/OWN_logo';
 
@@ -54,6 +55,7 @@ const Nav = props => (
           <Link to="/prolist">
              <li>Pro Rider Interviews</li>
           </Link>
+          <SearchBar />
         </ul>
       </div>
     </nav>
