@@ -11,11 +11,27 @@ function SearchBar() {
     };
 
     React.useEffect(() => {
-        const results = Articles.articles.filter(article => 
-            article.Title.toString().toLowerCase().includes(searchTerm.toLocaleLowerCase())
-            );
+        const results = Articles.articles.filter(
+          article =>
+            article.Title.toString()
+              .toLowerCase()
+              .includes(searchTerm.toLocaleLowerCase()) ||
+            article.Author.toString()
+              .toLowerCase()
+              .includes(searchTerm.toLocaleLowerCase()) ||
+            article.date
+              .toString()
+              .toLowerCase()
+              .includes(searchTerm.toLocaleLowerCase()) ||
+            article.Content.toString()
+              .toLowerCase()
+              .includes(searchTerm.toLocaleLowerCase())
+        );
             setSearchResults(results);
     }, [searchTerm])
+
+
+
 
     return (
       <div>
