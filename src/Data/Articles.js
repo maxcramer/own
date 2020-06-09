@@ -4,7 +4,7 @@ export const Articles = {
              id: 1,
              Author: 'Frank',
              date: new Date('December 17, 1995 03:24:00'),
-             Title: 'IpsumLorem',
+             Title: 'FranksTitle',
              image:
                'https://i.pcmag.com/imagery/articles/00nTZO2Io9Oqcf2YPFTX3fZ-6.fit_scale.size_2698x1517.v1569484810.jpg',
              Content:
@@ -15,7 +15,7 @@ export const Articles = {
              id: 2,
              Author: 'Pete',
              date: new Date('December 17, 2020 03:24:00'),
-             Title: 'IpsumLorem',
+             Title: 'PetesTitle',
              image: 'https://i.ytimg.com/vi/vSUqafNe1vg/maxresdefault.jpg',
              Content:
                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -25,7 +25,7 @@ export const Articles = {
              id: 3,
              Author: 'Dave',
              date: new Date('December 17, 2015 03:24:00'),
-             Title: 'IpsumLorem',
+             Title: 'DavesTitle',
              image:
                'https://jetsurfingnation.com/wp-content/uploads/2019/04/onewheel-intro.jpg',
              Content:
@@ -47,7 +47,7 @@ export const Articles = {
              id: 5,
              Author: 'gan',
              date: new Date('December 17, 1990 03:24:00'),
-             Title: 'IpsumLorem',
+             Title: 'GansTitle',
              image:
                'https://i.pinimg.com/originals/55/14/f0/5514f0c8c9af2b910d75145c700e8e4c.jpg',
              Content:
@@ -58,7 +58,7 @@ export const Articles = {
              id: 6,
              Author: 'foop',
              date: new Date('December 17, 1980 03:24:00'),
-             Title: 'IpsumLorem',
+             Title: 'FoopsTitle',
              image: 'https://i.ytimg.com/vi/SUtF20E0nz0/maxresdefault.jpg',
              Content:
                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',

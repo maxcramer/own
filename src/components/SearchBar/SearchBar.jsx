@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {Articles} from '../../Data/Articles';
+import {Riders} from '../../Data/Riders';
 
 function SearchBar() {
     const [searchTerm, setSearchTerm] = React.useState('');
@@ -30,7 +31,27 @@ function SearchBar() {
             setSearchResults(results);
     }, [searchTerm])
 
-
+    if(searchTerm) {
+        return (
+             <div>
+        <input
+          type="text"
+          placeholder="Search"
+          value={searchTerm}
+          onChange={handleChange}
+        />
+        
+          <ul>
+            {searchResults.map(article => (
+                <li key={article.id}>
+                {[article.Title]}
+                {[article.Author]}
+              </li>
+            ))}
+          </ul>
+            </div>
+        );
+    }
 
 
     return (
@@ -41,11 +62,7 @@ function SearchBar() {
           value={searchTerm}
           onChange={handleChange}
         />
-        <ul>
-            {searchResults.map(article => (
-                <li>{[article.Title]}</li>
-            ))}
-        </ul>
+        
       </div>
     );
 } 
