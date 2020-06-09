@@ -19,14 +19,16 @@ function SearchBar() {
               .includes(searchTerm.toLocaleLowerCase()) ||
             article.Author.toString()
               .toLowerCase()
-              .includes(searchTerm.toLocaleLowerCase()) ||
-            article.date
-              .toString()
-              .toLowerCase()
-              .includes(searchTerm.toLocaleLowerCase()) ||
-            article.Content.toString()
-              .toLowerCase()
-              .includes(searchTerm.toLocaleLowerCase())
+              .includes(searchTerm.toLocaleLowerCase()) 
+            //   ||
+            // article.date
+            //   .toString()
+            //   .toLowerCase()
+            //   .includes(searchTerm.toLocaleLowerCase()) 
+            //   ||
+            // article.Content.toString()
+            //   .toLowerCase()
+            //   .includes(searchTerm.toLocaleLowerCase())// THIS WILL ALLOW THE SEARCH BAR TO SEARCH THROUGH ARTICLE CONTENT, TO MUCH?
         );
             setSearchResults(results);
     }, [searchTerm])
