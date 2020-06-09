@@ -37,7 +37,7 @@ function SearchBar() {
                 .toLowerCase()
                 .includes(searchTerm.toLocaleLowerCase())
         )
-            setSearchResults(results1, results2);
+            setSearchResults([...results1, ...results2]);
     }, [searchTerm])
 
     if(searchTerm) {
