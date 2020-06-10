@@ -1,14 +1,17 @@
-#search-icon {
-    height: 15px;
+/* #search-icon {
+    height: 30px;
+    width: 30px;
     cursor: pointer;
-}
+} */
 
 .search-results {
     display: flex;
     flex-direction: column;
     background: white;
     border: 1px solid lightgrey;
-    width: 10.5%;
+    border-top: none;
+    width: 153px;
+    box-shadow: 0px 2px 5px lightgrey;
 }
 
 .search-results-list-item {

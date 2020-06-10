@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
 
 import SearchImg from '../../Images/search-icon.png';
 import {Articles} from '../../Data/Articles';
@@ -13,6 +14,12 @@ function SearchBar() {
     const handleChange = event => {
       setSearchTerm(event.target.value);
     };
+
+  // function isRider() {
+  //   return (
+  //     results2 ? `/prolist/${fullSearchResults.id}` : `/postlist/${fullSearchResults.id}`
+  //   )
+  //   }
 
     React.useEffect(() => {
         const results1 = Articles.articles.filter(
@@ -33,21 +40,21 @@ function SearchBar() {
             // article.Content.toString()
             //   .toLowerCase()
             //   .includes(searchTerm.toLocaleLowerCase())// THIS WILL ALLOW THE SEARCH BAR TO SEARCH THROUGH ARTICLE CONTENT, TO MUCH?
-        );
+            );
+              
         const results2 = Riders.riders.filter(
             rider => 
                 rider.Title.toString()
                 .toLowerCase()
                 .includes(searchTerm.toLocaleLowerCase())
-        )
+                )
+                
+                const fullSearchResults =  results1.concat(results2);
+                fullSearchResults.sort((a, b) => (a.Title > b.Title) ? 1 : ((b.Title > a.Title) ? -1 : 0));
+                console.log(fullSearchResults);
 
-        const fullSearchResults =  results1.concat(results2);
-        fullSearchResults.sort((a, b) => (a.Title > b.Title) ? 1 : ((b.Title > a.Title) ? -1 : 0));
-        console.log(fullSearchResults);
-
-            setSearchResults(fullSearchResults);
-        }, [searchTerm])
-
+                setSearchResults(fullSearchResults);
+              }, [searchTerm])
     if(searchTerm) {
         return (
           <div>
@@ -60,9 +67,14 @@ function SearchBar() {
             {/* <img src={SearchImg} alt=""/> */}
             <ul className="search-results">
               {searchResults.map(fullSearchResults => (
-                <li className="search-results-list-item" key={fullSearchResults.id}>
-                  {fullSearchResults.Title}
-                </li>
+                <Link >
+                  <li
+                    className="search-results-list-item"
+                    key={fullSearchResults.id}
+                  >
+                    {fullSearchResults.Title}
+                  </li>
+                </Link>
               ))}
             </ul>
           </div>
