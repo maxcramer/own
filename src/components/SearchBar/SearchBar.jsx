@@ -54,12 +54,11 @@ function SearchBar() {
               value={searchTerm}
               onChange={handleChange}
             />
-
+            {/* <img src={SearchImg} alt=""/> */}
             <ul>
               {searchResults.map(fullSearchResults => (
                 <li key={fullSearchResults.id}>
                   {fullSearchResults.Title}
-                  {/* {fullSearchResults.name} */}
                 </li>
               ))}
             </ul>

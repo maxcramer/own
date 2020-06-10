@@ -14,7 +14,7 @@ class InterviewOne extends React.Component {
                 <img className="rider_image" src={recentInterview.Logo} alt=""/>
                 <div className="rider_info">
                     <div className="rider_name_location">
-                        <h2 className="rider_name">{recentInterview.name}</h2>
+                        <h2 className="rider_name">{recentInterview.Title}</h2>
                         <h6 className="upload_date">Date Uploaded: {recentInterview.dateUpload.toLocaleString()}</h6>
                     </div>
                     <div className="sponsor_location">

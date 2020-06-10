@@ -12,7 +12,7 @@ class InterviewTwo extends React.Component {
             <img className="rider_image" src={recentInterviewTwo.Logo} alt="" />
             <div className="rider_info">
               <div className="rider_name_location">
-                <h2 className="rider_name">{recentInterviewTwo.name}</h2>
+                <h2 className="rider_name">{recentInterviewTwo.Title}</h2>
                 <h6 className="upload_date">
                   Date Uploaded:{' '}
                   {recentInterviewTwo.dateUpload.toLocaleString()}

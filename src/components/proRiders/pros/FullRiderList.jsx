@@ -24,7 +24,7 @@ class FullRiderList extends Component {
                   <img className="rider_image" src={r.Logo} alt="" />
                   <div className="rider_info">
                     <div className="rider_name_location">
-                      <h2 className="rider_name">{r.name}</h2>
+                      <h2 className="rider_name">{r.Title}</h2>
                       <h6 className="upload_date">Date Uploaded: {r.dateUpload.toLocaleString()}</h6>
                     </div>
                     <div className="sponsor_location">

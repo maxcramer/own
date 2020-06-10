@@ -13,7 +13,7 @@ class InterviewThree extends React.Component {
                 <img className="rider_image" src={recentInterviewThree.Logo} alt="" />
                 <div className="rider_info">
                     <div className="rider_name_location">
-                        <h2 className="rider_name">{recentInterviewThree.name}</h2>
+                        <h2 className="rider_name">{recentInterviewThree.Title}</h2>
                         <h6 className="upload_date">Date Uploaded: {recentInterviewThree.dateUpload.toLocaleString()}</h6>
                     </div>
                     <div className="sponsor_location">

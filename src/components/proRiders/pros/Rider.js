@@ -18,7 +18,7 @@ const Rider = (props) => {
         <div className="interview_single_page_container">
             <div className="interview_single_page_title_container">
                 <div className="title_without_date">
-                    <h2 className="interview_single_page_name">{Rider.name}</h2>
+                    <h2 className="interview_single_page_name">{Rider.Title}</h2>
                     <a className="interview_single_page_ig_link_tag" href={Rider.Ig}>
                         <img className="interview_single_page_ig_link" src={IG} alt="" />
                     </a>
