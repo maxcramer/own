@@ -37,33 +37,33 @@ function SearchBar() {
                 .toLowerCase()
                 .includes(searchTerm.toLocaleLowerCase())
         )
-            setSearchResults([...results1, ...results2]);
-    }, [searchTerm])
+
+        const fullSearchResults =  results1.concat(results2);
+        fullSearchResults.sort();
+
+            setSearchResults(fullSearchResults);
+        }, [searchTerm])
 
     if(searchTerm) {
         return (
-             <div>
-        <input
-          type="text"
-          placeholder="Search"
-          value={searchTerm}
-          onChange={handleChange}
-        />
-        
-          <ul>
-            {searchResults.map(article => (
-                <li key={article.id}>
-                {[article.Title]}
-                {[article.Author]}
-              </li>
-            ))}
-            {searchResults.map(rider => (
-                <li key={rider.id}>
-                    {[rider.name]}
+          <div>
+            <input
+              type="text"
+              placeholder="Search"
+              value={searchTerm}
+              onChange={handleChange}
+            />
+
+            <ul>
+              {searchResults.map(fullSearchResults => (
+                <li key={fullSearchResults.id}>
+                  {[fullSearchResults.Title]}
+                  {[fullSearchResults.Author]}
+                  {fullSearchResults.name}
                 </li>
-            ))}
-          </ul>
-            </div>
+              ))}
+            </ul>
+          </div>
         );
     } else {
         return (
