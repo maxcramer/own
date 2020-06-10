@@ -25,11 +25,21 @@
     margin: 13px 0px 0px 20px;
 }
 
+.navbar_navigation-items {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  float: right;
+  right: 40px;
+}
+
 .navbar_navigation-items ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
+  position: fixed;
+  right: 45px;
 }
 
 .navbar_navigation-items li {
@@ -50,6 +60,11 @@
   flex: 1;
 }
 
+#search-icon {
+  display: none;
+}
+
+
 @media (max-width: 550px) {
   .navbar {
     padding-bottom: 0;
@@ -62,6 +77,12 @@
   .navbar_logo a img {
     height: 30px;
     margin: 0
+  }
+
+  #search-icon {
+    height: 30px;
+    width: 30px;
+    display: flex;
   }
 }
 

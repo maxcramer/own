@@ -5,6 +5,8 @@ import SearchImg from '../../Images/search-icon.png';
 import {Articles} from '../../Data/Articles';
 import {Riders} from '../../Data/Riders';
 
+import './SearchBar.css';
+
 function SearchBar() {
     const [searchTerm, setSearchTerm] = React.useState('');
     const [searchResults, setSearchResults] = React.useState([]);
@@ -17,10 +19,11 @@ function SearchBar() {
           article =>
             article.Title.toString()
               .toLowerCase()
-              .includes(searchTerm.toLocaleLowerCase()) ||
-            article.name.toString()
-              .toLowerCase()
               .includes(searchTerm.toLocaleLowerCase()) 
+            //   ||
+            // article.name.toString()
+            //   .toLowerCase()
+            //   .includes(searchTerm.toLocaleLowerCase()) 
             //   ||
             // article.date
             //   .toString()
@@ -55,9 +58,9 @@ function SearchBar() {
               onChange={handleChange}
             />
             {/* <img src={SearchImg} alt=""/> */}
-            <ul>
+            <ul className="search-results">
               {searchResults.map(fullSearchResults => (
-                <li key={fullSearchResults.id}>
+                <li className="search-results-list-item" key={fullSearchResults.id}>
                   {fullSearchResults.Title}
                 </li>
               ))}

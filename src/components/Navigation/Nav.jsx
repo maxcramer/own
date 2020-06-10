@@ -6,6 +6,8 @@ import './menu.css';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 import SearchBar from '../SearchBar/SearchBar';
 
+import SearchIcon from '../../Images/search-icon.png';
+
 // import OWN_logo from '../../Images/OWN_logo';
 
 
@@ -40,20 +42,25 @@ const Nav = props => (
   <header className="navbar">
     <nav className="navbar_navigation">
       <div className="navbar_toggle-button">
-        <DrawerToggleButton click={props.drawerClickHandler}/>
+        <DrawerToggleButton click={props.drawerClickHandler} />
       </div>
-      <div className="navbar_logo"><Link to="/"><img src={logo} alt=""/></Link></div>
+      <div className="navbar_logo">
+        <Link to="/">
+          <img src={logo} alt="" />
+        </Link>
+      </div>
       <div className="spacer"></div>
+      <img id="search-icon" src={SearchIcon} alt=""/>
       <div className="navbar_navigation-items">
         <ul>
           <Link to="/">
-             <li>Home</li>
+            <li>Home</li>
           </Link>
           <Link to="/postlist">
-             <li>All Articles</li>
+            <li>All Articles</li>
           </Link>
           <Link to="/prolist">
-             <li>Pro Rider Interviews</li>
+            <li>Pro Rider Interviews</li>
           </Link>
           <SearchBar />
         </ul>
