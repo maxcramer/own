@@ -33,13 +33,13 @@ function SearchBar() {
         );
         const results2 = Riders.riders.filter(
             rider => 
-                rider.name.toString()
+                rider.Title.toString()
                 .toLowerCase()
                 .includes(searchTerm.toLocaleLowerCase())
         )
 
         const fullSearchResults =  results1.concat(results2);
-        fullSearchResults.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
+        fullSearchResults.sort((a, b) => (a.Title > b.Title) ? 1 : ((b.Title > a.Title) ? -1 : 0));
         console.log(fullSearchResults);
 
             setSearchResults(fullSearchResults);
@@ -59,7 +59,7 @@ function SearchBar() {
               {searchResults.map(fullSearchResults => (
                 <li key={fullSearchResults.id}>
                   {fullSearchResults.Title}
-                  {fullSearchResults.name}
+                  {/* {fullSearchResults.name} */}
                 </li>
               ))}
             </ul>

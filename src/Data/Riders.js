@@ -2,7 +2,7 @@ export const Riders = {
   riders: [
     {
       id: 1,
-      name: "Bodhi Harrison",
+      Title: "Bodhi Harrison",
       location: "Dummy Location",
       dateUpload: new Date('May 05, 2019 03:24:00'),
       Competitions: "R4TR 2019 Freestyle - 1st Place",
@@ -14,7 +14,7 @@ export const Riders = {
     },
     {
       id: 2,
-      name: "Max Cramer",
+      Title: "Max Cramer",
       location: "London, UK",
       dateUpload: new Date('August 17, 2019 03:24:00'),
       Competitions: "Non",
@@ -26,7 +26,7 @@ export const Riders = {
     },
     {
       id: 3,
-      name: "Jeff McCosker",
+      Title: "Jeff McCosker",
       location: "Sacramento, CA, USA",
       dateUpload: new Date('June 29, 1995 03:24:00'),
       Competitions: "Non",
