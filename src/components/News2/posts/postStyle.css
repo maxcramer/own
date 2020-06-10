@@ -74,7 +74,7 @@
     width: 100%;
 }
 
-.single_post_author {
+.single_post_name {
     font-weight: 400;
     margin-top: 5px;
 }
@@ -84,7 +84,7 @@
     margin-top: 5px;
 }
 
-.single_post_author_upload {
+.single_post_name_upload {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -150,11 +150,11 @@
 
     }
 
-    .post_date_author {
+    .post_date_name {
         margin: 5px 0;
     }
 
-    .single_post_author_upload  {
+    .single_post_name_upload  {
         height: 20px;
         padding-top: 15px;
     }

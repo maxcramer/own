@@ -12,7 +12,7 @@ class SubArticleThree extends React.Component {
                     <h2>{subArticleThree.Title}</h2>
                     <img className="Sub_Article_Img" src={subArticleThree.image} alt="" />
                     <div className="Sub_Article_Auth_Date">
-                        <h4 className="Sub_Article_Author">By {subArticleThree.Author}</h4>
+                        <h4 className="Sub_Article_name">By {subArticleThree.name}</h4>
                         <p className="Sub_Article_Date">Uploaded {subArticleThree.date.toLocaleString()}</p>
                     </div>
                     <p className="Sub_Article_Content">{subArticleThree.Content}</p>  

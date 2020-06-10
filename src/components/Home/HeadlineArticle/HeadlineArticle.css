@@ -64,7 +64,7 @@
     max-height: 35px;
 }
 
-    .mobile_author,
+    .mobile_name,
     .mobile_date {
         margin: 0;
     }
@@ -98,7 +98,7 @@
         max-height: 100%;
     }
 
-    .mobile_author {
+    .mobile_name {
         margin: 4px 0;
     }
 

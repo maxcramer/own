@@ -2,7 +2,7 @@ export const Articles = {
          articles: [
            {
              id: 4,
-             Author: 'Frank',
+             name: 'Frank',
              date: new Date('December 17, 1995 03:24:00'),
              Title: 'FranksTitle',
              image:
@@ -13,7 +13,7 @@ export const Articles = {
            },
            {
              id: 5,
-             Author: 'Pete',
+             name: 'Pete',
              date: new Date('December 17, 2020 03:24:00'),
              Title: 'PetesTitle',
              image: 'https://i.ytimg.com/vi/vSUqafNe1vg/maxresdefault.jpg',
@@ -23,7 +23,7 @@ export const Articles = {
            },
            {
              id: 6,
-             Author: 'Dave',
+             name: 'Dave',
              date: new Date('December 17, 2015 03:24:00'),
              Title: 'DavesTitle',
              image:
@@ -34,7 +34,7 @@ export const Articles = {
            },
            {
              id: 7,
-             Author: 'Max',
+             name: 'Max',
              date: new Date('November 17, 2020 03:24:00'),
              Title: 'STFU Clara!',
              image:
@@ -45,7 +45,7 @@ export const Articles = {
            },
            {
              id: 8,
-             Author: 'gan',
+             name: 'Gan',
              date: new Date('December 17, 1990 03:24:00'),
              Title: 'GansTitle',
              image:
@@ -56,7 +56,7 @@ export const Articles = {
            },
            {
              id: 9,
-             Author: 'foop',
+             name: 'Foop',
              date: new Date('December 17, 1980 03:24:00'),
              Title: 'FoopsTitle',
              image: 'https://i.ytimg.com/vi/SUtF20E0nz0/maxresdefault.jpg',

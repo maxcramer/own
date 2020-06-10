@@ -17,9 +17,9 @@ const Post = (props) => {
       <div className="single_post_page">
         <img className="single_post_img" src={Post.image} alt="" />
         <h1 className="single_post_title">{Post.Title}</h1>
-        <div className="single_post_author_upload">
-          <h3 className="single_post_author">By {Post.Author}</h3>
-          <h3 className="single_post_author">
+        <div className="single_post_name_upload">
+          <h3 className="single_post_name">By {Post.name}</h3>
+          <h3 className="single_post_name">
             Uploaded {Post.date.toLocaleDateString()}
           </h3>
         </div>

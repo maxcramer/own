@@ -18,7 +18,7 @@ function SearchBar() {
             article.Title.toString()
               .toLowerCase()
               .includes(searchTerm.toLocaleLowerCase()) ||
-            article.Author.toString()
+            article.name.toString()
               .toLowerCase()
               .includes(searchTerm.toLocaleLowerCase()) 
             //   ||
@@ -39,7 +39,8 @@ function SearchBar() {
         )
 
         const fullSearchResults =  results1.concat(results2);
-        fullSearchResults.sort();
+        fullSearchResults.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
+        console.log(fullSearchResults);
 
             setSearchResults(fullSearchResults);
         }, [searchTerm])
@@ -57,8 +58,7 @@ function SearchBar() {
             <ul>
               {searchResults.map(fullSearchResults => (
                 <li key={fullSearchResults.id}>
-                  {[fullSearchResults.Title]}
-                  {[fullSearchResults.Author]}
+                  {fullSearchResults.Title}
                   {fullSearchResults.name}
                 </li>
               ))}
