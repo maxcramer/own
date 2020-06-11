@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// import SearchBar from '../SearchBar/SearchBar';
+
 import './SideDrawer.css';
 
 const sideDrawer = props => {

@@ -8,35 +8,6 @@ import SearchBar from '../SearchBar/SearchBar';
 
 import SearchIcon from '../../Images/search-icon.png';
 
-// import OWN_logo from '../../Images/OWN_logo';
-
-
-// function Nav() {
-//   return (
-//     <nav>
-//       <Link className="nav_logo_link" to="/">
-//         <img id="nav_logo" src={logo} alt="logo" />
-//       </Link>
-//       <ul className="nav-links">
-//         <Link to="/">
-//           <li>Home</li>
-//         </Link>
-//         <Link to="/postlist">
-//           <li>All Articles</li>
-//         </Link>
-//         <Link to="/prolist">
-//           <li>Pro Rider Interviews</li>
-//         </Link>
-//         <Link to="/boardcare">
-//           <li>Board Care</li>
-//         </Link>
-//         <Link to="/ridingtips">
-//           <li>Riding Tips</li>
-//         </Link>
-//       </ul>
-//     </nav>
-//   );
-// }
 
 const Nav = props => (
   <header className="navbar">
@@ -50,7 +21,10 @@ const Nav = props => (
         </Link>
       </div>
       <div className="spacer"></div>
-      <img id="search-icon" src={SearchIcon} alt=""/>
+      {/* <img id="search-icon" src={SearchIcon} alt="" /> */}
+      <div id="search-bar_mobile">
+        <SearchBar />
+      </div>
       <div className="navbar_navigation-items">
         <ul>
           <Link to="/">

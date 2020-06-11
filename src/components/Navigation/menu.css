@@ -60,7 +60,7 @@
   flex: 1;
 }
 
-#search-icon {
+#search-bar_mobile {
   display: none;
 }
 
@@ -79,10 +79,18 @@
     margin: 0
   }
 
-  #search-icon {
-    height: 30px;
-    width: 30px;
+  #search-bar_mobile {
     display: flex;
+    position: absolute;
+    right: 15px;
+    width: 150px;
+    top: 11px;
+  }
+
+  #search-bar_mobile input {
+    height: 25px;
+    font-size: 20px;
+    width: 140px;
   }
 }
 
