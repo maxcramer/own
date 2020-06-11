@@ -67,10 +67,12 @@ function SearchBar() {
             {/* <img src={SearchImg} alt=""/> */}
             <ul className="search-results">
               {searchResults.map(fullSearchResults => (
-                <Link >
+                <Link
+                  to={fullSearchResults.Articles ? `/postlist/${fullSearchResults.id}` : `/prolist/${fullSearchResults.id}`}
+                >
                   <li
                     className="search-results-list-item"
-                    key={fullSearchResults.id}
+                    key={fullSearchResults}
                   >
                     {fullSearchResults.Title}
                   </li>
