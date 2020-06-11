@@ -68,7 +68,11 @@ function SearchBar() {
             <ul className="search-results">
               {searchResults.map(fullSearchResults => (
                 <Link
-                  to={fullSearchResults.Articles ? `/postlist/${fullSearchResults.id}` : `/prolist/${fullSearchResults.id}`}
+                  to={
+                    fullSearchResults.Interview
+                      ? `/prolist/${fullSearchResults.id}`
+                      : `/postlist/${fullSearchResults.id}`
+                  }
                 >
                   <li
                     className="search-results-list-item"
