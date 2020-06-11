@@ -31,6 +31,7 @@
   position: absolute;
   float: right;
   right: 40px;
+  font-size: 20px;
 }
 
 .navbar_navigation-items ul {
@@ -90,7 +91,20 @@
   #search-bar_mobile input {
     height: 25px;
     font-size: 20px;
-    width: 140px;
+    width: 94%;
+  }
+
+  .search-results {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    width: 98%;
+  }
+
+  .search-results a {
+    text-decoration: none;
+    font-size: 18px;
+    color: darkgray;
   }
 }
 
