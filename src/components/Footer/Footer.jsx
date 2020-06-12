@@ -8,6 +8,7 @@ const Footer = props => (
     <div id="about-quick-links">
       <div id="about-container">
         <h4>About</h4>
+        <p id="about-content">Onewheel News is all about bringing you the latest news from the Onewheel Community, from Pro Rider interviews, the latest & greatest releases from the amazing third party vendors, who's throwing the big tricks and whats going on in the community. We are in no way affiliated with future motion the makers of onewheel, though they make one of the worlds best products ever!</p>
       </div>
       <div id="quick-links">
         <h4>Quick Links</h4>
@@ -24,7 +25,7 @@ const Footer = props => (
       </div>
     </div>
     <div id="socials-copyright">
-      <p>
+      <p id="copyright">
         Copyright Ⓒ 2020 All Rights Reserved By Onewheel News | No affiliation
         with Future Motion
       </p>
