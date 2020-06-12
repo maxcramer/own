@@ -10,6 +10,7 @@ import BoardCare from './components/BoardCare/BoardCare';
 import PostList from './components/News2/PostList';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
+import Footer from './components/Footer/Footer';
 import firebase from 'firebase';
 import 'firebase/firestore';
 
@@ -64,6 +65,7 @@ class App extends Component {
               <Route path="/boardcare" component={BoardCare} />
             </Switch>
           </div>
+          <Footer />
         </div>
       </Router>
     );
