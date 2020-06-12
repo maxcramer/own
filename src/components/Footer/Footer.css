@@ -6,6 +6,11 @@
     color: lightgrey;
     display: flex;
     flex-direction: column;
+    padding: 1.5% 0;
+}
+
+#footer-container h4 {
+    margin: 0;
 }
     /* align-self: to */
 
@@ -14,7 +19,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0px 15%;
+    margin: 10px 15%;
 }
 
 #socials-copyright {
@@ -23,10 +28,15 @@
     align-items: center;
     margin: 0 15%;
     justify-content: space-between;
+    border-top: 0.5px solid lightgrey;
 }
 
 
 #ig-logo {
     height: 35px;
     width: 35px;
+}
+
+#quick-links-list {
+    padding-left: 0;
 }
