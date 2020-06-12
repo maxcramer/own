@@ -2,6 +2,31 @@
     background: #212020;
     width: 100%;
     bottom: 0;
-    height: 75px;
-    color: white;
+    height: 170px;
+    color: lightgrey;
+    display: flex;
+    flex-direction: column;
+}
+    /* align-self: to */
+
+
+#about-quick-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 15%;
+}
+
+#socials-copyright {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 15%;
+    justify-content: space-between;
+}
+
+
+#ig-logo {
+    height: 35px;
+    width: 35px;
 }
