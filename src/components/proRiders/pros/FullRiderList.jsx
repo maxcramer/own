@@ -18,8 +18,8 @@ class FullRiderList extends Component {
     <ul className="pro_rider_list">
       {
         Riders.all().map(r => (
-            <div className="interview_home_container">
-              <li key={r.id}>
+            <div key={r.id} className="interview_home_container">
+              <li>
                 <div className="pro_rider_interview">
                   <img className="rider_image" src={r.Logo} alt="" />
                   <div className="rider_info">

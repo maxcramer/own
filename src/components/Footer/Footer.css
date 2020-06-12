@@ -33,16 +33,18 @@
 
 
 #ig-logo {
-    height: 35px;
-    width: 35px;
+    height: 20px;
+    width: 20px;
 }
 
 #quick-links-list {
     padding-left: 0;
+    margin: 0;
 }
 
 #about-container {
     width: 50%;
+    /* border-right: 0.5px solid lightgrey; */
 }
 
 #about-content {
