@@ -15,31 +15,22 @@ function SearchBar() {
     setSearchTerm(event.target.value);
   };
 
-  // function isRider() {
-  //   return (
-  //     results2 ? `/prolist/${fullSearchResults.id}` : `/postlist/${fullSearchResults.id}`
-  //   )
-  //   }
+  function clearSearch() {
+    document.getElementById('list-item').addEventListener('click', int());  
+  }
+
+  function int() {
+    console.log("running functions on click of li item");
+  }
+
 
   React.useEffect(() => {
+
     const results1 = Articles.articles.filter(
       article =>
         article.Title.toString()
           .toLowerCase()
           .includes(searchTerm.toLocaleLowerCase())
-      //   ||
-      // article.name.toString()
-      //   .toLowerCase()
-      //   .includes(searchTerm.toLocaleLowerCase())
-      //   ||
-      // article.date
-      //   .toString()
-      //   .toLowerCase()
-      //   .includes(searchTerm.toLocaleLowerCase()) // THIS BREAKS IT ON SOME LETTERS SUCH AS A, C & G, WHY? Because its reading the string "Greenwich Mean Time", so technically all!
-      //   ||
-      // article.Content.toString()
-      //   .toLowerCase()
-      //   .includes(searchTerm.toLocaleLowerCase())// THIS WILL ALLOW THE SEARCH BAR TO SEARCH THROUGH ARTICLE CONTENT, TO MUCH?
     );
 
     const results2 = Riders.riders.filter(rider =>
@@ -54,8 +45,11 @@ function SearchBar() {
     );
     console.log(fullSearchResults);
 
+    
     setSearchResults(fullSearchResults);
+
   }, [searchTerm]);
+
   if (searchTerm) {
     return (
       <div>
@@ -63,12 +57,13 @@ function SearchBar() {
           type="text"
           placeholder="Search"
           value={searchTerm}
+          // id="input"
           onChange={handleChange}
         />
         {/* <img src={SearchImg} alt=""/> */}
         <ul className="search-results">
           {searchResults.map(fullSearchResults => (
-            <li className="search-results-list-item" key={fullSearchResults.id}>
+            <li onClick={clearSearch()} id="list-item" className="search-results-list-item" key={fullSearchResults.id}>
               <Link to={fullSearchResults.Interview ? `/prolist/${fullSearchResults.id}` : `/postlist/${fullSearchResults.id}` }>
                 {fullSearchResults.Title}
               </Link>
