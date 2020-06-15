@@ -19,12 +19,10 @@ function SearchBar() {
   const clearSearch = () => {
     console.log("running clear search");
     const input = document.getElementById('input');
-    const ul = document.getElementById('search-results').style.display = "none";
+    document.getElementById('search-results').style.display = "none";
     input.value = '';
-    // ul.style.display = hidden;
     console.log("the search value is now ", input.value);
   }
-
 
   React.useEffect(() => {
 
