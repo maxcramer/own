@@ -15,12 +15,16 @@ function SearchBar() {
     setSearchTerm(event.target.value);
   };
 
-  function clearSearch() {
-    document.getElementById('list-item').addEventListener('click', int());  
+  const clearSearch = () => {
+    console.log("running clear search");
+    // const input = document.querySelector('input');
+    // input.value = '';
   }
 
   function int() {
-    console.log("running functions on click of li item");
+    let input = document.querySelector('input');
+    input.value = '';
+    console.log(input.value)
   }
 
 
@@ -63,13 +67,9 @@ function SearchBar() {
         {/* <img src={SearchImg} alt=""/> */}
         <ul className="search-results">
           {searchResults.map(fullSearchResults => (
-            <li
-              onClick="clearSearch()"
-              id="list-item"
-              className="search-results-list-item"
-              key={fullSearchResults.id}
-            >
+            <li className="search-results-list-item" key={fullSearchResults.id}>
               <Link
+                onClick={clearSearch}
                 to={
                   fullSearchResults.Interview
                     ? `/prolist/${fullSearchResults.id}`
