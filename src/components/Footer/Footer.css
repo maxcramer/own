@@ -22,6 +22,10 @@
     margin: 10px 15%;
 }
 
+#quick-links {
+    margin-right: 12rem;
+}
+
 #socials-copyright {
     display: flex;
     flex-direction: row;
@@ -40,6 +44,12 @@
 #quick-links-list {
     padding-left: 0;
     margin: 0;
+}
+
+#quick-links-list li {
+    color: lightgray;
+    text-decoration: none;
+    margin: 10px 0;
 }
 
 #about-container {
