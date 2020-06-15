@@ -17,15 +17,15 @@ function SearchBar() {
 
   const clearSearch = () => {
     console.log("running clear search");
-    // const input = document.querySelector('input');
-    // input.value = '';
+    const input = document.getElementById('input');
+    input.value = '';
   }
 
-  function int() {
-    let input = document.querySelector('input');
-    input.value = '';
-    console.log(input.value)
-  }
+  // function int() {
+  //   const input = document.querySelector('input');
+  //   this.input.value = '';
+  //   console.log(input.value)
+  // }
 
 
   React.useEffect(() => {
@@ -61,7 +61,7 @@ function SearchBar() {
           type="text"
           placeholder="Search"
           value={searchTerm}
-          // id="input"
+          id="input"
           onChange={handleChange}
         />
         {/* <img src={SearchImg} alt=""/> */}
