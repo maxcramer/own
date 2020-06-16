@@ -5,6 +5,8 @@ import SearchImg from '../../Images/search-icon.png';
 import { Articles } from '../../Data/Articles';
 import { Riders } from '../../Data/Riders';
 import './SearchBar.css';
+
+
 function SearchBar() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [searchResults, setSearchResults] = React.useState([]);
@@ -16,7 +18,7 @@ function SearchBar() {
     setSearchResults([]);
   };
   React.useEffect(() => {
-    if (searchTerm !== '') {
+ if (searchTerm !== "") {
       const results1 = Articles.articles.filter(article =>
         article.Title.toString()
           .toLowerCase()
@@ -32,8 +34,9 @@ function SearchBar() {
         a.Title > b.Title ? 1 : b.Title > a.Title ? -1 : 0
       );
       console.log(fullSearchResults);
-      setSearchResults(fullSearchResults);
-    }
+      return setSearchResults(fullSearchResults);
+    } 
+    setSearchResults([]);
   }, [searchTerm]);
   return (
     <div>
