@@ -27,8 +27,10 @@ jobs:
 
     - name: Build project
       run: |
-        npm ci
+        npm install
         npm run build
+      env:
+        CI: ""
 
     - name: Deploy project
       run: firebase deploy --only hosting --token {{secrets.FIREBASE_TOKEN}}
