@@ -21,10 +21,10 @@ const ConnectedCounter = ({ count, setCount }) => (
     <button
       onClick={async () => {
         var db = firebase.firestore(Articles.articles.likes);
-        let setDoc = db
-          .collection('counts')
-          .doc('likes')
-          .set(Articles.articles.likes + 1);
+        // let setDoc = db
+        //   .collection('counts')
+        //   .doc('likes')
+        //   .set(Articles.articles.likes + 1);
       }}
     >
       Increment
@@ -96,7 +96,7 @@ ReactDOM.render(<ConnectedCounter />, document.getElementById('root'));
 //     count: 'counterValue',
 //     setCount: count => ref('counterValue').set(count),
 // }))(Counter)
-    
+
 
 // export default ConnectedCounter;
     // class Counter extends React.Component {
