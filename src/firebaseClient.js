@@ -2,6 +2,8 @@ import firebase from 'firebase';
 
 let db;
 
+const data = {};
+
 const setup = () => {
 	if (!firebase.apps.length) {
 		firebase.initializeApp({
@@ -26,9 +28,9 @@ const getCollection = async collectionName => {
 };
 
 const loadDatabase = async () => {
-	const articles = await getCollection('articles');
-	const riderInterviews = await getCollection('riderInterviews');
-	return { articles, riderInterviews };
+	if (!data.articles) data.articles = await getCollection('articles');
+	if (!data.riderInterviews) data.riderInterviews = await getCollection('riderInterviews');
+	return data;
 };
 
 export default {
