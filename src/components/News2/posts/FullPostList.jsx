@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import {Articles} from '../../../Data/Articles';
+import firebaseClient from '../../../firebaseClient';
 import sortedPosts from './SortPost';
 import './postStyle.css';
 
@@ -9,13 +9,27 @@ class FullPostList extends React.Component {
     constructor() {
         super();
         sortedPosts();
-    }
+	}
+
+	state = {
+		data: {
+			articles: []
+		}
+	  }
+
+	async componentDidMount() {
+		firebaseClient.setup()
+		const data = await firebaseClient.loadDatabase();
+		console.log('data: ', data);
+		this.setState({ data });
+	  }
+
     render() {
         return (
     <div>
         <ul className="post_list">
             {
-                Articles.all().map(a => (
+                this.state.data.articles.map(a => (
                     <li key={a.id} className="full_post">
                         <div className="post_content">
                             <img className="post_image" src={a.image} alt="onewheel image"/>
@@ -26,7 +40,7 @@ class FullPostList extends React.Component {
                         </div>
                             <div className="about_post">
                                 <p className="post_date_name">Written By {a.name}</p>
-                                <p className="post_date_name">Uploaded on {a.date.toLocaleDateString()}</p>
+                                <p className="post_date_name">Uploaded on {new Date(a.date.seconds).toLocaleDateString()}</p>
                                 <Link className="read_more_tag" to={`/postlist/${a.id}`}>Read More</Link>
                             </div>
                             <div className="post_border"></div>
