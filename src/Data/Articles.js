@@ -36,7 +36,7 @@ export const Articles = {
              id: 7,
              name: 'Max',
              date: new Date('November 17, 2020 03:24:00'),
-             Title: 'STFU Clara!',
+             Title: 'Yay Clara!',
              image:
                'https://i0.wp.com/www.stokelife.guru/wp-content/uploads/2019/04/Screenshot-2019-04-03-23.05.07.png?fit=895%2C539',
              Content:
