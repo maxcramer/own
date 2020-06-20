@@ -3,7 +3,7 @@ name: firebase-deploy
 on:
   push:
     branches:
-      - feat/saturday-sesh
+      - master
 
 
 jobs:
@@ -30,10 +30,7 @@ jobs:
         npm install
         npm run build
       env:
-        CI: ""
-
-    # - name: Deploy project
-    #   run: firebase deploy --only hosting --token {{secrets.FIREBASE_TOKEN}}
+        CI: "" #this is needed for the build to pass if there are warnings but no errors
 
     - name: Deploy to Firebase
       uses: w9jds/firebase-action@master
