@@ -16,7 +16,7 @@ class Post extends React.Component {
 	async componentDidMount() {
 		firebaseClient.setup()
 		const data = await firebaseClient.loadDatabase();
-		console.log('data: ', data);
+
 		this.setState({ data });
 	  }
 
