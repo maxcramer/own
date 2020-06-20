@@ -14,21 +14,25 @@ import Footer from './components/Footer/Footer';
 import firebase from 'firebase';
 import 'firebase/firestore';
 
-
-
-
+const setupFirebase = () => {
+  firebase.initializeApp({
+    apiKey: 'AIzaSyBJNjzH9tWs-JbTEwPv8drNxu33kEwidnM',
+    authDomain: 'onewheelnews.firebaseapp.com',
+    databaseURL: 'https://onewheelnews.firebaseio.com',
+    projectId: 'onewheelnews',
+    storageBucket: 'onewheelnews.appspot.com',
+    messagingSenderId: '828691903330',
+    appId: '1:828691903330:web:f142486a957cc7520ff23b',
+    measurementId: 'G-SZ8LJV3VJP'
+  });
+}
 
 class App extends Component {
-  // firebase.initializeApp({
-  //   apiKey: 'AIzaSyBJNjzH9tWs-JbTEwPv8drNxu33kEwidnM',
-  //   authDomain: 'onewheelnews.firebaseapp.com',
-  //   databaseURL: 'https://onewheelnews.firebaseio.com',
-  //   projectId: 'onewheelnews',
-  //   storageBucket: 'onewheelnews.appspot.com',
-  //   messagingSenderId: '828691903330',
-  //   appId: '1:828691903330:web:f142486a957cc7520ff23b',
-  //   measurementId: 'G-SZ8LJV3VJP'
-  // })
+
+  constructor() {
+    super();
+    if (!firebase.apps.length) setupFirebase();
+  }
 
   state = {
     sideDrawerOpen: false,
