@@ -34,7 +34,6 @@ jobs:
 
     - name: Deploy project
       run: firebase deploy --only hosting --token {{secrets.FIREBASE_TOKEN}}
-      env:
 
     # - name: Deploy to Firebase
     #   uses: w9jds/firebase-action@master
