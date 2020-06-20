@@ -1,4 +1,4 @@
-import React from 'react';
+import React from './node_modules/react';
 import FullRiderList from './pros/FullRiderList';
 
 function ProRidersPage() {

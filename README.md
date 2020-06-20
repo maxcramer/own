@@ -1,10 +1,13 @@
 # OneWheel News
-A new site for all things Onewheel.
+A new site for all things Onewheel, built in react and hosted on Firebase.
 
 ## Inspired By
 - https://blog.pshrmn.com/simple-react-router-v4-tutorial/
 - https://levelup.gitconnected.com/understanding-react-higher-order-components-by-example-95e8c47c8006
 - Based on High Order Components, layout and nav
+
+## Analytics
+
 
 ## Roadmap
 - host on firebase
