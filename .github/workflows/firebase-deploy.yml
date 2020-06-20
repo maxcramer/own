@@ -30,14 +30,15 @@ jobs:
         npm ci
         npm run build
 
-    - name: Deploy project
-      run: firebase deploy --only hosting --token {{secrets.FIREBASE_TOKEN}}
-      env:
-        CI: false
-
-    # - name: Deploy to Firebase
-    #   uses: w9jds/firebase-action@master
-    #   with:
-    #     args: deploy --only hosting
+    # - name: Deploy project
+    #   run: firebase deploy --only hosting --token {{secrets.FIREBASE_TOKEN}}
     #   env:
-    #     FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+    #     CI: false
+
+    - name: Deploy to Firebase
+      uses: w9jds/firebase-action@master
+      with:
+        args: deploy --only hosting
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        CI: ""
