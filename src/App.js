@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import './App.css';
 import Home from './components/Home/Home'
-import ProList from './components/ProRiders/ProList';
+import ProList from './components/proRiders/ProList';
 import Nav from './components/Navigation/Nav';
 import RidingTips from './components/RidingTips/RidingTips';
 import BoardCare from './components/BoardCare/BoardCare';
