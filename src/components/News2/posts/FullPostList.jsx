@@ -14,7 +14,6 @@ class FullPostList extends React.Component {
 	async componentDidMount() {
         firebaseClient.setup()
 		const data = await firebaseClient.loadDatabase();
-		// console.log('data: ', data);
         this.setState({ data });
         data.articles.sort((a, b) => b.date - a.date);
       }
@@ -28,7 +27,7 @@ class FullPostList extends React.Component {
                 this.state.data.articles.map(a => (
                     <li key={a.Author} className="full_post">
                         <div className="post_content">
-                            <img className="post_image" src={a.image} alt="onewheel image"/>
+                            <img className="post_image" src={a.image} alt="onewheel_image"/>
                             <div className="title_content">
                                 <h2 className="post_title">{a.Title}</h2>
                                  <p className="post_article">{a.Content}</p>
