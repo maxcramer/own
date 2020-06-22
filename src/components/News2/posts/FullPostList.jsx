@@ -2,31 +2,27 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import firebaseClient from '../../../firebaseClient';
-import sortedPosts from './SortPost';
 import './postStyle.css';
 
 class FullPostList extends React.Component {
-    constructor() {
-        super();
-        sortedPosts();
-	}
-
 	state = {
 		data: {
 			articles: []
 		}
-	  }
-
+    }
+    
 	async componentDidMount() {
-		firebaseClient.setup()
+        firebaseClient.setup()
 		const data = await firebaseClient.loadDatabase();
-		console.log('data: ', data);
-		this.setState({ data });
-	  }
-
-    render() {
-        return (
-    <div>
+		// console.log('data: ', data);
+        this.setState({ data });
+        data.articles.sort((a, b) => b.date - a.date);
+      }
+      
+      
+      render() {
+          return (
+              <div>
         <ul className="post_list">
             {
                 this.state.data.articles.map(a => (
