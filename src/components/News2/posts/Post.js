@@ -21,7 +21,9 @@ class Post extends React.Component {
 	  }
 
 	render() {
-		const Post = this.state.data.articles.find(article => article.id = this.props.match.params.id);
+		const Post = this.state.data.articles.find(
+      article => (article.id === parseInt(this.props.match.params.id))
+    );
 		if(!Post) {
 
 			return <div>Sorry, but the Article was not found</div>;
@@ -32,7 +34,7 @@ class Post extends React.Component {
 			<img className="single_post_img" src={Post.image} alt="" />
 			<h1 className="single_post_title">{Post.Title}</h1>
 			<div className="single_post_name_upload">
-			  <h3 className="single_post_name">By {Post.name}</h3>
+			  <h3 className="single_post_name">By {Post.Author}</h3>
 			  <h3 className="single_post_name">
 				Uploaded {new Date(Post.date.seconds).toLocaleDateString()}
 			  </h3>
