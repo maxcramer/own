@@ -14,10 +14,9 @@ class FullPostList extends React.Component {
 	async componentDidMount() {
         firebaseClient.setup()
 		const data = await firebaseClient.loadDatabase();
-        this.setState({ data });
         data.articles.sort((a, b) => b.date - a.date);
+        this.setState({ data });
       }
-      
       
       render() {
           return (
@@ -35,7 +34,7 @@ class FullPostList extends React.Component {
                         </div>
                             <div className="about_post">
                                 <p className="post_date_name">Written By {a.Author}</p>
-                                <p className="post_date_name">Uploaded on {new Date(a.date.seconds).toLocaleDateString()}</p>
+                                <p className="post_date_name">Uploaded on {new Date(a.date).toDateString()}</p>
                                 <Link className="read_more_tag" to={`/postlist/${a.id}`}>Read More</Link>
                             </div>
                             <div className="post_border"></div>
