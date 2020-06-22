@@ -30,7 +30,7 @@ class FullPostList extends React.Component {
         <ul className="post_list">
             {
                 this.state.data.articles.map(a => (
-                    <li key={a.id} className="full_post">
+                    <li key={a.Author} className="full_post">
                         <div className="post_content">
                             <img className="post_image" src={a.image} alt="onewheel image"/>
                             <div className="title_content">
@@ -39,7 +39,7 @@ class FullPostList extends React.Component {
                             </div>
                         </div>
                             <div className="about_post">
-                                <p className="post_date_name">Written By {a.name}</p>
+                                <p className="post_date_name">Written By {a.Author}</p>
                                 <p className="post_date_name">Uploaded on {new Date(a.date.seconds).toLocaleDateString()}</p>
                                 <Link className="read_more_tag" to={`/postlist/${a.id}`}>Read More</Link>
                             </div>
