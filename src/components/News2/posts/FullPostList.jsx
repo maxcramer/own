@@ -14,15 +14,19 @@ class FullPostList extends React.Component {
 	async componentDidMount() {
         firebaseClient.setup()
 		const data = await firebaseClient.loadDatabase();
-        data.articles.sort((a, b) => b.date - a.date);
         this.setState({ data });
+        data.articles.sort(function (a, b){
+            var dateA = new Date(a.date), dateB = new Date(b.date)
+            return dateB - dateA;
+        });
       }
+      
       
       render() {
           return (
               <div>
         <ul className="post_list">
-            {
+            { 
                 this.state.data.articles.map(a => (
                     <li key={a.Author} className="full_post">
                         <div className="post_content">

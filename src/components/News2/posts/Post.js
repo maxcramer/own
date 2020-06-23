@@ -36,7 +36,7 @@ class Post extends React.Component {
 			<div className="single_post_name_upload">
 			  <h3 className="single_post_name">By {Post.Author}</h3>
 			  <h3 className="single_post_name">
-				Uploaded {new Date(Post.date.seconds).toLocaleDateString()}
+				Uploaded {new Date(Post.date).toDateString()}
 			  </h3>
 			</div>
 			<p className="single_post_content">{Post.Content}</p>
