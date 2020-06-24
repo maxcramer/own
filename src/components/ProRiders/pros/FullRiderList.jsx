@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom';
 // import sortRiders from './SortRiders';
 
 import firebaseClient from '../../../firebaseClient';
-import IG from '../../../Images/Instagram-Icon.png';
 import '../proRiders.css';
 
 
@@ -14,37 +13,38 @@ class FullRiderList extends Component {
     data: {
       riderInterviews: []
     }
-  };
+  }
 
   async componentDidMount() {
     firebaseClient.setup();
     const data = await firebaseClient.loadDatabase();
     this.setState({ data });
-    // data.riderInterviews.sort(function(a, b) {
-    //   var dateA = new Date(a.dateUploaded),
-    //     dateB = new Date(b.dateUploaded);
-    //   return dateB - dateA;
-    // });
+    data.riderInterviews.sort(function(a, b){
+      var dateA = new Date(a.date),
+        dateB = new Date(b.date);
+      return dateB - dateA;
+    });
   }
 
+  
   render() {
     return (
       <div>
         <ul className="pro_rider_list">
           {this.state.data.riderInterviews.map(r => (
-            <div key={r.id} className="interview_home_container">
+            <div key={r.Sponsors} className="interview_home_container">
               <li>
                 <div className="pro_rider_interview">
                   <img className="rider_image" src={r.Logo} alt="" />
                   <div className="rider_info">
                     <div className="rider_name_location">
-                      <h2 className="rider_name">{r.Title}</h2>
-                      <h6 className="upload_date">
-                        Date Uploaded: {new Date(r.dateUpload).toDateString()}
-                      </h6>
+                      <h2 className="rider_name">{r.Name}</h2>
+                      <p className="upload_date">
+                        Date Uploaded: {new Date(r.date).toDateString()}
+                      </p>
                     </div>
                     <div className="sponsor_location">
-                      <h4 className="sponsors">Sponsors: {r.Sponsonrs}</h4>
+                      <h4 className="sponsors">Sponsors: {r.Sponsors}</h4>
                       <h4 className="location">Location: {r.location}</h4>
                     </div>
                     <p className="interview">{r.Interview}</p>

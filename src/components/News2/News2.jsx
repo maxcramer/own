@@ -1,6 +1,7 @@
 import React from 'react';
 import FullPostList from './posts/FullPostList';
 import { Articles } from '../../Data/Articles';
+// import firebaseClient from '../../../firebaseClient';
 
 class News extends React.Component {
   render() {

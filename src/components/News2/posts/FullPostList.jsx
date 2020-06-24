@@ -19,10 +19,10 @@ class FullPostList extends React.Component {
             var dateA = new Date(a.date), dateB = new Date(b.date)
             return dateB - dateA;
         });
-      }
-      
-      
-      render() {
+    }
+    
+    
+    render() {
           return (
               <div>
         <ul className="post_list">
