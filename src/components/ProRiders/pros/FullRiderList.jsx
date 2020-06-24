@@ -21,7 +21,7 @@ class FullRiderList extends Component {
     this.setState({ data });
     data.riderInterviews.sort(function(a, b){
       var dateA = new Date(a.date),
-        dateB = new Date(b.date);
+        dateB = new Date(b.date)
       return dateB - dateA;
     });
   }
