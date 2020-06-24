@@ -5,6 +5,10 @@ import firebaseClient from '../../../firebaseClient';
 import './postStyle.css';
 
 class FullPostList extends React.Component {
+    constructor() {
+        super()
+    }
+
 	state = {
 		data: {
 			articles: []

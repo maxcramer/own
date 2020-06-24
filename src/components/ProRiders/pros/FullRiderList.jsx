@@ -9,24 +9,27 @@ import '../proRiders.css';
 
 
 class FullRiderList extends Component {
+  constructor() {
+    super();
+  }
+
   state = {
     data: {
       riderInterviews: []
     }
-  }
+  };
 
   async componentDidMount() {
     firebaseClient.setup();
     const data = await firebaseClient.loadDatabase();
     this.setState({ data });
-    data.riderInterviews.sort(function(a, b){
+    data.riderInterviews.sort(function(a, b) {
       var dateA = new Date(a.date),
-        dateB = new Date(b.date)
+        dateB = new Date(b.date);
       return dateB - dateA;
     });
   }
 
-  
   render() {
     return (
       <div>
