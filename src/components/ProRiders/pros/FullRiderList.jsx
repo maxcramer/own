@@ -11,29 +11,28 @@ import '../proRiders.css';
 class FullRiderList extends Component {
   constructor() {
     super();
+    this.state = {
+      data: {
+        riderInterviews: []
+      }
+    };
   }
 
-  state = {
-    data: {
-      riderInterviews: []
-    }
-  };
 
-  async componentDidMount() {
+  async componentDidMount(){
     firebaseClient.setup();
     const data = await firebaseClient.loadDatabase();
     this.setState({ data });
-    data.riderInterviews.sort(function(a, b) {
+    this.state.data.riderInterviews.sort(function(a, b) {
       var dateA = new Date(a.date),
-      dateB = new Date(b.date)
+        dateB = new Date(b.date);
       return dateB - dateA;
-      
     });
   }
 
   render() {
     return (
-      <div>
+      <div onLoad={() => this.componentDidMount()}>
         <ul className="pro_rider_list">
           {this.state.data.riderInterviews.map(r => (
             <div key={r.Sponsors} className="interview_home_container">
