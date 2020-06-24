@@ -7,13 +7,13 @@ import './postStyle.css';
 class FullPostList extends React.Component {
     constructor() {
         super()
+        this.state = {
+            data: {
+                articles: []
+            }
+        }
     }
 
-	state = {
-		data: {
-			articles: []
-		}
-    }
     
 	async componentDidMount() {
         firebaseClient.setup()
@@ -28,7 +28,7 @@ class FullPostList extends React.Component {
     
     render() {
           return (
-              <div>
+              <div onLoad={() => this.componentDidMount()}>
         <ul className="post_list">
             { 
                 this.state.data.articles.map(a => (
