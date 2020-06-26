@@ -22,12 +22,12 @@ class FullRiderList extends Component {
   async componentDidMount(){
     firebaseClient.setup();
     const data = await firebaseClient.loadDatabase();
-    this.setState({ data });
-    this.state.data.riderInterviews.sort(function(a, b) {
+    data.riderInterviews.sort(function (a, b){
       var dateA = new Date(a.date),
         dateB = new Date(b.date);
       return dateB - dateA;
     });
+    this.setState({ data });
   }
 
   render() {
