@@ -18,17 +18,17 @@ class FullPostList extends React.Component {
 	async componentDidMount() {
         firebaseClient.setup()
 		const data = await firebaseClient.loadDatabase();
-        this.setState({ data });
         data.articles.sort(function (a, b){
             var dateA = new Date(a.date), dateB = new Date(b.date)
             return dateB - dateA;
         });
+        this.setState({ data });
     }
     
     
     render() {
           return (
-              <div onLoad={() => this.componentDidMount()}>
+              <div>
         <ul className="post_list">
             { 
                 this.state.data.articles.map(a => (

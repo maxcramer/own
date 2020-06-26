@@ -32,7 +32,7 @@ class FullRiderList extends Component {
 
   render() {
     return (
-      <div onLoad={() => this.componentDidMount()}>
+      <div>
         <ul className="pro_rider_list">
           {this.state.data.riderInterviews.map(r => (
             <div key={r.Sponsors} className="interview_home_container">
