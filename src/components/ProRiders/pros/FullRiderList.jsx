@@ -1,21 +1,18 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
-
-// import {Riders} from '../../../Data/Riders';
-// import sortRiders from './SortRiders';
 
 import firebaseClient from '../../../firebaseClient';
 import '../proRiders.css';
 
 
-class FullRiderList extends Component {
+class FullRiderList extends React.Component {
   constructor() {
-    super();
+    super()
     this.state = {
       data: {
         riderInterviews: []
       }
-    };
+    }
   }
 
 
@@ -24,7 +21,7 @@ class FullRiderList extends Component {
     const data = await firebaseClient.loadDatabase();
     data.riderInterviews.sort(function (a, b){
       var dateA = new Date(a.date),
-        dateB = new Date(b.date);
+        dateB = new Date(b.date)
       return dateB - dateA;
     });
     this.setState({ data });
@@ -35,8 +32,8 @@ class FullRiderList extends Component {
       <div>
         <ul className="pro_rider_list">
           {this.state.data.riderInterviews.map(r => (
-            <div key={r.Sponsors} className="interview_home_container">
-              <li>
+            <div className="interview_home_container">
+              <li key={r.Name}>
                 <div className="pro_rider_interview">
                   <img className="rider_image" src={r.Logo} alt="" />
                   <div className="rider_info">
