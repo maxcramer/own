@@ -23,8 +23,8 @@ function FullPostList() {
             setArticles(articles);
         }
         fetchData();
-    }, [])
-    
+    }, []
+    )
 if(articles) {
 
     return (
