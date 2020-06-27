@@ -29,11 +29,11 @@ class App extends Component {
     this.setState({ sideDrawerOpen: false });
   }
 
-  async componentDidMount() {
-    firebaseClient.setup()
-	const data = await firebaseClient.loadDatabase();
-    this.setState({ database: data });
-  }
+  // async componentDidMount() {
+  //   firebaseClient.setup()
+	// const data = await firebaseClient.loadDatabase();
+  //   this.setState({ database: data });
+  // }
 
     render() {
 
