@@ -21,10 +21,10 @@ function FullPostList() {
         async function fetchData() {
             const articles = await getPostList();
             setArticles(articles);
-            console.log("running")
         }
         fetchData();
-    })
+    }, [])
+    
 if(articles) {
 
     return (
