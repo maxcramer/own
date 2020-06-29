@@ -24,6 +24,13 @@ export const createPostList = () => {
         })
 }
 
+export const createRiderList = () => {
+    return db.collection('riderInterviews')
+    .add({
+        created: firebase.firestore.FieldValue.serverTimestamp(),
+    })
+}
+
 export const getPostList = async () => {
     const { docs } = await db
       .collection('articles')
@@ -33,3 +40,5 @@ export const getPostList = async () => {
       console.log("these are the posts", posts);
     return posts;
     };
+
+
