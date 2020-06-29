@@ -1,37 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
+import { getRiderList } from '../../../services/firestoreService';
 
 import firebaseClient from '../../../firebaseClient';
 import '../proRiders.css';
 
 
-class FullRiderList extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      data: {
-        riderInterviews: []
-      }
+function FullRiderList()  {
+  // constructor() {
+  //   super()
+  //   this.state = {
+  //     data: {
+  //       riderInterviews: []
+  //     }
+  //   }
+  // }
+
+  const [interviews, setInterviews] = useState();
+
+  useEffect(() => {
+    async function fetchData() {
+      const interviews = await getRiderList();
+      setInterviews(interviews);
     }
-  }
-
-
-  async componentDidMount(){
-    firebaseClient.setup();
-    const data = await firebaseClient.loadDatabase();
-    data.riderInterviews.sort(function (a, b){
-      var dateA = new Date(a.date),
-        dateB = new Date(b.date)
-      return dateB - dateA;
-    });
-    this.setState({ data });
-  }
-
-  render() {
+    fetchData();
+  }, [])
+  
+  if(interviews) {
     return (
       <div>
         <ul className="pro_rider_list">
-          {this.state.data.riderInterviews.map(r => (
+          {interviews.map(r => (
             <div className="interview_home_container">
               <li key={r.Name}>
                 <div className="pro_rider_interview">
@@ -59,6 +58,10 @@ class FullRiderList extends React.Component {
         </ul>
       </div>
     );
+  } else {
+    return (
+      <p>Loading Interviews</p>
+    )
   }
 };
 
