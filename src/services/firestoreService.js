@@ -42,3 +42,12 @@ export const getPostList = async () => {
     };
 
 
+export const getRiderList = async () => {
+    const { docs } = await db
+    .collection('riderInterviews')
+    .orderBy('date', 'desc')
+    .get()
+    const riderInterviews = docs.map(doc => doc.data())
+    console.log("These are the rider Interviews", riderInterviews);
+    return riderInterviews
+}
