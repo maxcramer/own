@@ -31,8 +31,8 @@ function FullRiderList()  {
       <div>
         <ul className="pro_rider_list">
           {interviews.map(r => (
-            <div className="interview_home_container">
-              <li key={r.Name}>
+            <div key={r.Name} className="interview_home_container">
+              <li>
                 <div className="pro_rider_interview">
                   <img className="rider_image" src={r.Logo} alt="" />
                   <div className="rider_info">
