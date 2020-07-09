@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom'
 import { getRiderList } from '../../../services/firestoreService';
+
 import firebaseClient from '../../../firebaseClient';
 
 import '../proRiders.css';
