@@ -42,6 +42,7 @@ function Post () {
           <Link className="read_more_tag" to={'/postlist'}>
           See All Articles
           </Link>
+          <p>{article.likes}</p>
           <ConnectedCounter />
         </div>
         </div>

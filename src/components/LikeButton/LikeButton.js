@@ -19,18 +19,19 @@ function ArticlesLikeButton () {
       const match = articles.find(article => article.id === parseInt(id));
       console.log('trying to console log article likes', match.likes) 
       setArticle(match);  
+   
     }
+    
     fetchData();
   }, [id])
 
   return (
-    
     <div>
-      <p>{id.likes}</p>
-      <button>
-        this is a button
-      </button>
-    </div>
+  {/* <p>{setArticles.likes}</p> */}
+  <button>
+    this is a button
+  </button>
+</div>
   )
 }
 
