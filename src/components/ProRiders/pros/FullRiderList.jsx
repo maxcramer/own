@@ -7,15 +7,6 @@ import '../proRiders.css';
 
 
 function FullRiderList()  {
-  // constructor() {
-  //   super()
-  //   this.state = {
-  //     data: {
-  //       riderInterviews: []
-  //     }
-  //   }
-  // }
-
   const [interviews, setInterviews] = useState();
 
   useEffect(() => {

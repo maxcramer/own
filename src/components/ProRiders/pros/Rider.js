@@ -1,30 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
-
+import React, { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom'
+import { getRiderList } from '../../../services/firestoreService';
 import firebaseClient from '../../../firebaseClient';
 
 import '../proRiders.css';
 import IG from '../../../Images/Instagram-Icon.png'
 
-class Rider extends React.Component {
-    state = {
-        data: {
-            riderInterviews: []
-        }
-    }
+function Rider () {
+    const [riders, setRiders] = useState();
+    const [rider, setRider] = useState();
+    let { id } = useParams();
 
-    async componentDidMount() {
-        firebaseClient.setup()
-        const data = await firebaseClient.loadDatabase();
+    useEffect(() => {
+      async function fetchData() {
+        const riders = await getRiderList();
+        setRiders(riders);
+        const match = riders.find(rider => rider.id === parseInt(id));
+        console.log('match', match);
+        setRider(match);
+      }
+      fetchData();
+    }, [id])
 
-        this.setState({ data });
-    }
-
-    render() {
-        const riderInterview = this.state.data.riderInterviews.find(
-            interview => (interview.id === parseInt(this.props.match.params.id))
-        );
-        if (!riderInterview) {
+        if (!rider) {
           return <div>Sorry but no Rider was found</div>;
         } else {
             return (
@@ -32,11 +30,11 @@ class Rider extends React.Component {
                 <div className="interview_single_page_title_container">
                   <div className="title_without_date">
                     <h2 className="interview_single_page_name">
-                      {riderInterview.Name}
+                      {rider.Name}
                     </h2>
                     <a
                       className="interview_single_page_ig_link_tag"
-                      href={riderInterview.IG}
+                      href={rider.IG}
                     >
                       <img
                         className="interview_single_page_ig_link"
@@ -46,24 +44,23 @@ class Rider extends React.Component {
                     </a>
                   </div>
                   <p className="interview_single_page_upload_date">
-                    Uploaded on {new Date(riderInterview.date).toDateString()}
+                    Uploaded on {new Date(rider.date).toDateString()}
                   </p>
                 </div>
                 <div className="interview_single_page_rider_info">
                   <h3 className="interview_single_page_font_weight">
-                    Sponsorship: {riderInterview.Sponsors}
+                    Sponsorship: {rider.Sponsors}
                   </h3>
                   <h3 className="interview_single_page_font_weight">
-                    Location: {riderInterview.location}
+                    Location: {rider.location}
                   </h3>
                 </div>
                 <div className="interview_single_page_content">
                   <img
                     className="interview_single_page_img"
-                    src={riderInterview.Logo}
-                    alt=""
+                    src={rider.Logo}
                   />
-                  <p>{riderInterview.Interview}</p>
+                  <p>{rider.Interview}</p>
                 </div>
                 <div className="interview_single_page_cta">
                   <Link className="under_article_nav_button" to={'/prolist'}>
@@ -74,8 +71,6 @@ class Rider extends React.Component {
             );
 
         }
-
-    }
 
 }
 

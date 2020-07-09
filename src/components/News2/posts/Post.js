@@ -8,7 +8,6 @@ import ConnectedCounter from '../../LikeButton/LikeButton';
 import './postStyle.css';
 
 function Post () {
-
     const [articles, setArticles] = useState();
     const [article, setArticle] = useState();
     let { id } = useParams();
