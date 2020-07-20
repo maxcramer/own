@@ -13,7 +13,6 @@ function HeadlineArticle () {
             const articles = await getPostList();
             setArticles(articles);
             const match = articles[0];
-            console.log('match top article', match);
             setArticle(match);
         }
         fetchData();

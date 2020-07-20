@@ -37,7 +37,6 @@ export const getPostList = async () => {
       .orderBy('date', 'desc')
       .get();
       const posts = docs.map(doc => doc.data())
-      console.log("these are the posts", posts);
     return posts;
     };
 
