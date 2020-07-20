@@ -5,18 +5,31 @@ import { getPostList } from '../../../services/firestoreService';
 import './SubArticles.css';
 
 function SubArticleThree () {
-    
-        if(subArticleThree) {
+    const [articles, setArticles] = useState();
+    const [article, setArticle] = useState();
+    let { id } = useParams;
+
+    useEffect(() => {
+        async function fetchData() {
+            const articles = await getPostList();
+            setArticles(articles);
+            const match = articles[3];
+            setArticle(match);
+        }
+        fetchData();
+    }, [id])
+
+        if(article) {
             return (
                 <div className="single_Sub_Article">
-                    <h2>{subArticleThree.Title}</h2>
-                    <img className="Sub_Article_Img" src={subArticleThree.image} alt="" />
+                    <h2>{article.Title}</h2>
+                    <img className="Sub_Article_Img" src={article.image} alt="" />
                     <div className="Sub_Article_Auth_Date">
-                        <h4 className="Sub_Article_name">By {subArticleThree.name}</h4>
-                        <p className="Sub_Article_Date">Uploaded {subArticleThree.date.toLocaleString()}</p>
+                        <h4 className="Sub_Article_name">By {article.Author}</h4>
+                        <p className="Sub_Article_Date">Uploaded {new Date(article.date).toDateString()}</p>
                     </div>
-                    <p className="Sub_Article_Content">{subArticleThree.Content}</p>  
-                    <Link className="read_more_tag" to={`/postlist/${subArticleThree.id}`}>Read More</Link> 
+                    <p className="Sub_Article_Content">{article.Content}</p>  
+                    <Link className="read_more_tag" to={`/postlist/${article.id}`}>Read More</Link> 
                 </div>
             )
         } else {
