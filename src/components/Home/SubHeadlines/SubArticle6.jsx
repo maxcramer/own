@@ -23,7 +23,7 @@ function SubArticleSix () {
                     <h2>{article.Title}</h2>
                     <img className="Sub_Article_Img" src={article.image} alt="" />
                     <div className="Sub_Article_Auth_Date">
-                        <h4 className="Sub_Article_name">By {article.name}</h4>
+                        <h4 className="Sub_Article_name">By {article.Author}</h4>
                         <p className="Sub_Article_Date">Uploaded {new Date(article.date).toDateString()}</p>
                     </div>
                     <p className="Sub_Article_Content">{article.Content}</p>
