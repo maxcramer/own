@@ -2,26 +2,22 @@ import React, { useState, useEffect } from 'react';
 import {Link, useParams} from 'react-router-dom';
 import { getPostList } from '../../../services/firestoreService'
 
-// import {Articles} from '../../../Data/Articles';
 import './HeadlineArticle.css';
 
 function HeadlineArticle () {
     const [articles, setArticles] = useState();
     const [article, setArticle] = useState();
-    let { id } = useParams();
 
     useEffect(() => {
         async function fetchData() {
             const articles = await getPostList();
             setArticles(articles);
-            const match = articles.find(article => article[0] === parseInt(id)[0]);
+            const match = articles[0];
             console.log('match top article', match);
             setArticle(match);
         }
         fetchData();
-    }, [id])
-
-        // const firstArticle = article.sort((a, b) => b.date - a.date)[0]
+    }, [])
         if(article) {
             return (
                 <div className="headline_container">
@@ -42,7 +38,7 @@ function HeadlineArticle () {
             )
 
         } else {
-            return null;
+            return <div>Articles Loading</div>;
         }
     };
 
