@@ -1,30 +1,41 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { getPostList } from '../../../services/firestoreService';
 
-import { Articles } from '../../../Data/Articles';
 import './SubArticles.css';
 
-class SubArticleTwo extends React.Component {
-    render() {
-        const subArticleTwo = Articles.articles.sort((a, b) => b.date - a.date)[2]
-        if(subArticleTwo) {
+function SubArticleTwo () {
+    const [articles, setArticles] = useState();
+    const [article, setArticle] = useState();
+    let { id } = useParams();
+
+    useEffect(() => {
+        async function fetchData() {
+            const articles = await getPostList();
+            setArticles(articles);
+            const match = articles[2];
+            setArticle(match);
+        }
+        fetchData();
+    }, [id])
+
+    if(article) {
             return (
                 <div className="single_Sub_Article">
-                    <h2>{subArticleTwo.Title}</h2>
-                    <img className="Sub_Article_Img" src={subArticleTwo.image} alt="" />
+                    <h2>{article.Title}</h2>
+                    <img className="Sub_Article_Img" src={article.image} alt="" />
                     <div className="Sub_Article_Auth_Date">
-                        <h4 className="Sub_Article_name">By {subArticleTwo.name}</h4>
-                        <p className="Sub_Article_Date">Uploaded {subArticleTwo.date.toLocaleString()}</p>
+                        <h4 className="Sub_Article_name">By {article.Author}</h4>
+                        <p className="Sub_Article_Date">Uploaded {new Date(article.date).toDateString()}</p>
                     </div>
-                    <p className="Sub_Article_Content">{subArticleTwo.Content}</p> 
-                    <Link className="read_more_tag" to={`/postlist/${subArticleTwo.id}`}>Read More</Link> 
+                    <p className="Sub_Article_Content">{article.Content}</p> 
+                    <Link className="read_more_tag" to={`/postlist/${article.id}`}>Read More</Link> 
                 </div>
             )
 
         } else {
-            return null;
+            return <div>Loading Article 2</div>;
         }
-    }
 };
 
 export default SubArticleTwo;

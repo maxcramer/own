@@ -27,7 +27,7 @@ function HeadlineArticle () {
                     <div className="headline_text">
                         <h2 className="headline_title">{article.Title}</h2>
                         <div className="headline_info">
-                            <h4 className="mobile_name">By {article.name}</h4>
+                            <h4 className="mobile_name">By {article.Author}</h4>
                             <p className="mobile_date">Uploaded on {new Date(article.date).toDateString()}</p>
                         </div>
                         <p className="headline_article">{article.Content}</p>
