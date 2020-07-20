@@ -1,11 +1,11 @@
-import React from 'react'; import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'; 
+import { Link, useParams } from 'react-router-dom';
+import { getPostList } from '../../../services/firestoreService';
 
-import { Articles } from '../../../Data/Articles';
 import './SubArticles.css';
 
-class SubArticleThree extends React.Component {
-    render() {
-        const subArticleThree = Articles.articles.sort((a, b) => b.date - a.date)[3]
+function SubArticleThree () {
+    
         if(subArticleThree) {
             return (
                 <div className="single_Sub_Article">
@@ -22,7 +22,6 @@ class SubArticleThree extends React.Component {
         } else {
             return null;
         }
-    }
 };
 
 export default SubArticleThree;
