@@ -14,7 +14,7 @@ function HeadlineArticle () {
         async function fetchData() {
             const articles = await getPostList();
             setArticles(articles);
-            const match = articles.find(article => article.id === parseInt(id)[0]);
+            const match = articles.find(article => article[0] === parseInt(id)[0]);
             console.log('match top article', match);
             setArticle(match);
         }
