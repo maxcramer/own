@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Articles } from '../../../Data/Articles';
 import './SubArticles.css';
 
-class SubArticleFive extends React.Component {
-    render() {
-        const subArticleFive = Articles.articles.sort((a, b) => b.date - a.date)[5]
+function SubArticleFive () {
+
+    
             if(subArticleFive) {
             return (
                     <div className="single_Sub_Article">
@@ -23,8 +22,7 @@ class SubArticleFive extends React.Component {
         } else {
             return null;
         }
-        }    
-    } 
+};    
 
 
 export default SubArticleFive;
