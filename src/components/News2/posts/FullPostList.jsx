@@ -6,15 +6,6 @@ import firebaseClient from '../../../firebaseClient';
 import './postStyle.css';
 
 function FullPostList() {
-//   constructor() {
-//     super();
-//     this.state = {
-//       data: {
-//         articles: []
-//       }
-//     };
-//   }
-
     const [articles, setArticles] = useState();
 
     useEffect(() => {
