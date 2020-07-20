@@ -32,7 +32,7 @@ function HeadlineArticle () {
                         <h2 className="headline_title">{article.Title}</h2>
                         <div className="headline_info">
                             <h4 className="mobile_name">By {article.name}</h4>
-                            <p className="mobile_date">Uploaded on {article.date.toLocaleString()}</p>
+                            <p className="mobile_date">Uploaded on {new Date(article.date).toDateString()}</p>
                         </div>
                         <p className="headline_article">{article.Content}</p>
                         <Link className="read_more_tag" to={`/postlist/${article.id}`}>Read More</Link>
