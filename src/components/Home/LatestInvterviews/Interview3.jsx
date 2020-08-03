@@ -4,10 +4,10 @@ import { getRiderList } from '../../../services/firestoreService';
 
 import IG from '../../../Images/Instagram-Icon.png'
 
-class InterviewThree extends React.Component {
-    render() {
-        const recentInterviewThree = Riders.riders.sort((a, b) => b.dateUpload - a.dateUpload)[2]
-        return (
+function InterviewThree () {
+
+
+    return (
             <div className="pro_rider_interview">
                 <img className="rider_image" src={recentInterviewThree.Logo} alt="" />
                 <div className="rider_info">
@@ -24,7 +24,6 @@ class InterviewThree extends React.Component {
                 </div>
             </div>
         )
-    }
 };
 
 export default InterviewThree;
