@@ -8,7 +8,7 @@ import IG from '../../../Images/Instagram-Icon.png'
 function InterviewOne () {
     const [riderInterviews, setRiderInterviews] = useState();
     const [riderInterview, setRiderInterview] = useState();
-    let { id } = useParams()
+    let { id } = useParams();
 
     useEffect(() => {
         async function fetchData() {
