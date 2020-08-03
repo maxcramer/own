@@ -25,7 +25,7 @@ function InterviewTwo () {
         <img className="rider_image" src={riderInterview.Logo} alt="" />
         <div className="rider_info">
           <div className="rider_name_location">
-            <h2 className="rider_name">{riderInterview.Title}</h2>
+            <h2 className="rider_name">{riderInterview.Name}</h2>
             <h6 className="upload_date">Date Uploaded: {new Date(riderInterview.date).toDateString()}</h6>
           </div>
           <div className="sponsor_location">
