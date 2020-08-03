@@ -5,8 +5,19 @@ import { getRiderList } from '../../../services/firestoreService';
 import IG from '../../../Images/Instagram-Icon.png'
 
 function InterviewThree () {
+    const [riderInterviews, setRiderInterviews] = useState();
+    const [riderInterview, setRiderInterview] = useState();
+    let { id } = useParams();
 
-
+    useEffect(() => {
+        async function fetchData() {
+            const riderInterviews = await getRiderList();
+            setRiderInterviews(riderInterviews);
+            const match = riderInterviews[2];
+            setRiderInterview(match);
+        }
+        fetchData();
+    }, [id])
     return (
             <div className="pro_rider_interview">
                 <img className="rider_image" src={recentInterviewThree.Logo} alt="" />
