@@ -30,7 +30,7 @@ function InterviewTwo () {
           </div>
           <div className="sponsor_location">
             <h4 className="sponsors">
-              Sponsors: {riderInterview.Sponsonrs}
+              Sponsors: {riderInterview.Sponsors}
             </h4>
             <h4 className="location">
               Location: {riderInterview.location}

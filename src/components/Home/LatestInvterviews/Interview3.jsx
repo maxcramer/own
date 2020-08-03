@@ -28,7 +28,7 @@ function InterviewThree () {
                         <h6 className="upload_date">Date Uploaded: {new Date(riderInterview.date).toDateString()}</h6>
                     </div>
                     <div className="sponsor_location">
-                        <h4 className="sponsors">Sponsors: {riderInterview.Sponsonrs}</h4>
+                        <h4 className="sponsors">Sponsors: {riderInterview.Sponsors}</h4>
                         <h4 className="location">Location: {riderInterview.location}</h4>
                     </div>
                     <p className="interview">{riderInterview.Interview}</p>
