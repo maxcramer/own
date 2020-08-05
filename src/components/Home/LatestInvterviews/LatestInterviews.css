@@ -4,7 +4,7 @@
 
 .rider_image {
     height: 200px;
-    width: 200px;
+    width: 300px;
 }
 
 .pro_rider_interview {
@@ -18,7 +18,7 @@
 .rider_info {
     display: flex;
     flex-direction: column;
-    margin: 0 5%;
+    margin: 0 2%;
 }
 
 .rider_name_location {
