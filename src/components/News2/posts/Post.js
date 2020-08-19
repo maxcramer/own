@@ -12,6 +12,15 @@ function Post () {
     const [article, setArticle] = useState();
     let { id } = useParams();
 
+    const LikeButton = ({likes, setLikes}) => (
+      <div>
+        <button>
+          Like
+        </button>
+      </div>
+    );
+
+
     useEffect(() => {
         async function fetchData() {
             const articles = await getPostList();
