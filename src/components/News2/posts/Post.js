@@ -8,19 +8,12 @@ import {addLikeToPost} from '../../../firebaseClient';
 // import ConnectedCounter from '../../LikeButton/LikeButton';
 import './postStyle.css';
 
-class Post extends React.Component{
-  constructor() {
-    super();
-    this.state = {
-      likes: ""
-    };
-  }
 
-  render() {
-
+function Post () {
     const [articles, setArticles] = useState();
     const [article, setArticle] = useState();
     let { id } = useParams();
+    // this.setState = {likes: 0};
 
     useEffect(() => {
         async function fetchData() {
@@ -32,6 +25,18 @@ class Post extends React.Component{
         }
           fetchData();
     }, [id])
+
+    // this.state = {
+    //   likes: 0
+    // };
+
+  // const updateLikes = e => {
+  //   this.setState({
+  //     [e.target.likes]: e.target.value
+  //   })
+  // }
+
+  
 
 
 		if(!article) {
@@ -62,7 +67,6 @@ class Post extends React.Component{
         </div>
       );
   }
-}
 }
 
 export default Post; 
