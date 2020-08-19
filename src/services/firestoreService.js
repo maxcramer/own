@@ -50,3 +50,22 @@ export const getRiderList = async () => {
     console.log("These are the rider Interviews", riderInterviews);
     return riderInterviews
 }
+
+export const addLikeToPost = async postId => {
+    console.log("button clicked")
+}
+
+// export const LikeButton = ({likes, setLikes}) => (
+//     <div>
+//       <button onClick={() => setLikes(likes +1 )}>
+//         Like
+//       </button>
+//     </div>
+//   );
+
+// export const ConnectedLikes = ((props, ref) => ({
+//     likes: 'likes',
+//     setLikes: likes => ref('likes').set(likes + 1),
+//   }))();
+
+
