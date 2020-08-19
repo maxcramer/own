@@ -4,7 +4,7 @@ import { getPostList } from '../../../services/firestoreService';
 
 
 import firebaseClient from '../../../firebaseClient';
-import ConnectedCounter from '../../LikeButton/LikeButton';
+// import ConnectedCounter from '../../LikeButton/LikeButton';
 import './postStyle.css';
 
 function Post () {
@@ -19,6 +19,11 @@ function Post () {
         </button>
       </div>
     );
+
+    const ConnectedLikes = getPostList((props, ref) => ({
+      likes: 'likes',
+      setLikes: likes => ref('likes').set(likes),
+    }))(LikeButton)
 
 
     useEffect(() => {
@@ -53,7 +58,7 @@ function Post () {
           </Link>
           <div>
           <p>{article.likes}</p>
-          <button>Like</button>
+          <ConnectedLikes />
             
           </div>
         </div>
