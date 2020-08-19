@@ -8,12 +8,11 @@ import {addLikeToPost} from '../../../firebaseClient';
 // import ConnectedCounter from '../../LikeButton/LikeButton';
 import './postStyle.css';
 
-
 function Post () {
     const [articles, setArticles] = useState();
     const [article, setArticle] = useState();
     let { id } = useParams();
-    // this.setState = {likes: 0};
+    const [likes, setLikes] = useState();
 
     useEffect(() => {
         async function fetchData() {
@@ -35,8 +34,6 @@ function Post () {
   //     [e.target.likes]: e.target.value
   //   })
   // }
-
-  
 
 
 		if(!article) {
@@ -60,7 +57,7 @@ function Post () {
           <div>
           </div>
           <button>
-            LIKES
+            LIKES 
           </button>
           <p>{article.likes}</p>
         </div>
