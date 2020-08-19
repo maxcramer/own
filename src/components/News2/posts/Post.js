@@ -23,7 +23,7 @@ function Post () {
     const ConnectedLikes = getPostList((props, ref) => ({
       likes: 'likes',
       setLikes: likes => ref('likes').set(likes),
-    }))(LikeButton)
+    }))(LikeButton);
 
 
     useEffect(() => {
