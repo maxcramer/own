@@ -14,7 +14,7 @@ function Post () {
 
     const LikeButton = ({likes, setLikes}) => (
       <div>
-        <button>
+        <button onClick={() => setLikes(likes +1 )}>
           Like
         </button>
       </div>
