@@ -4,25 +4,25 @@ import { getPostList } from '../../../services/firestoreService';
 
 
 import firebaseClient from '../../../firebaseClient';
-import {addLikeToPost} from '../../../firebaseClient';
+import { addLikeToPost } from '../../../firebaseClient';
 // import ConnectedCounter from '../../LikeButton/LikeButton';
 import './postStyle.css';
 
 function Post () {
-    const [articles, setArticles] = useState();
-    const [article, setArticle] = useState();
+    const [articles, setArticles] = useState([]);
+    const [article, setArticle] = useState(null);
     let { id } = useParams();
     const [likes, setLikes] = useState();
 
     useEffect(() => {
         async function fetchData() {
-            const articles = await getPostList();
-            setArticles(articles);
-            const match = articles.find(article => article.id === parseInt(id));
+            const results = await getPostList();
+            const match = results.find(article => article.id === parseInt(id));
             console.log('match', match);
             setArticle(match);
+            setArticles(results);
         }
-          fetchData();
+        fetchData();
     }, [id])
 
     // this.state = {
