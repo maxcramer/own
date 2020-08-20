@@ -39,7 +39,7 @@ if(articles) {
                 <p className="post_date_name">
                   Uploaded on {new Date(a.date).toDateString()}
                 </p>
-                <Link className="read_more_tag" to={`/postlist/${a.id}`}>
+                <Link className="read_more_tag" to={`/postlist/${a._id}`}>
                   Read More
                 </Link>
               </div>

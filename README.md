@@ -2,17 +2,16 @@
 A new site for all things Onewheel, built in react and hosted on Firebase.
 
 ## Factsheet
-| **Category**            | **Value**                    |
-|-------------------------|------------------------------|
-| **Project Type**        | React Web App                |
-| **Live URL**            | http://onewheelnews.web.app/ |
-| **Firebase App**        | onewheelnews                 |
+| **Category**            | **Value**                       |
+|-------------------------|---------------------------------|
+| **Project Type**        | React Web App & Cloud Functions |
+| **Live URL**            | http://onewheelnews.web.app/    |
+| **Firebase App**        | onewheelnews                    |
 | **Dependencies**        | Hosting, Database, Cloud Functions |
 
-## Roadmap
-- deploy to hosting on merge master branch
-- store articles in firebase and load into the UI
-- cloud function to update article like count on click
+## Sections
+- **Cloud Functions:** simple API functionality for this service
+- **Web App:** react web app to render the site
 
 ## Notes & Caveats
 

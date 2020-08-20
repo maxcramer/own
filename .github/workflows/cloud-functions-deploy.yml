@@ -1,13 +1,13 @@
-name: firebase-deploy
+name: cloud-functions-deploy
 
 on:
   push:
     branches:
-      - master
-
+    - master
+    paths:
+    - 'cloud-functions/**'
 
 jobs:
-
   build-and-deploy:
 
     runs-on: ubuntu-latest
@@ -24,17 +24,15 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-
-    - name: Build project
+    - name: Install dependencies
       run: |
-        npm install
-        npm run build
-      env:
-        CI: "" #this is needed for the build to pass if there are warnings but no errors
+        cd cloud-functions/functions
+        npm ci
 
     - name: Deploy to Firebase
       uses: w9jds/firebase-action@master
       with:
-        args: deploy --only hosting
+        args: deploy --only functions
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        PROJECT_PATH: 'cloud-functions'
