@@ -27,7 +27,7 @@ function SubArticleSix () {
                         <p className="Sub_Article_Date">Uploaded {new Date(article.date).toDateString()}</p>
                     </div>
                     <p className="Sub_Article_Content">{article.Content}</p>
-                    <Link className="read_more_tag" to={`/postlist/${article.id}`}>Read More</Link>
+                    <Link className="read_more_tag" to={`/postlist/${article._id}`}>Read More</Link>
                 </div>
             )
 

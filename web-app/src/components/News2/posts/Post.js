@@ -33,8 +33,8 @@ function Post () {
 		} else {
       return (
         <div className="single_post_page">
-        <img className="single_post_img" src={article.image} alt="" />
-        <h1 className="single_post_title">{article.Title}</h1>
+          <img className="single_post_img" src={article.image} alt="" />
+          <h1 className="single_post_title">{article.Title}</h1>
         <div className="single_post_name_upload">
           <h3 className="single_post_name">By {article.Author}</h3>
           <h3 className="single_post_name">
