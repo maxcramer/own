@@ -39,7 +39,7 @@ function InterviewTwo () {
           <p className="interview">{riderInterview.Interview}</p>
           <Link
             className="read_interview"
-            to={`/prolist/${riderInterview.id}`}
+            to={`/prolist/${riderInterview._id}`}
           >
             Read Interview
           </Link>

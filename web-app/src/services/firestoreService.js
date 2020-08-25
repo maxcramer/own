@@ -36,7 +36,7 @@ export const getRiderList = async () => {
   const { docs } = await db
     .collection('riderInterviews')
     .orderBy('date', 'desc')
-    .get()
+    .get();
     const interviews = docs.map(doc => {
       return {
         ...doc.data(),

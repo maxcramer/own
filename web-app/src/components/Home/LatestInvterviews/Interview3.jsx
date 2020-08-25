@@ -32,7 +32,7 @@ function InterviewThree () {
                         <h4 className="location">Location: {riderInterview.location}</h4>
                     </div>
                     <p className="interview">{riderInterview.Interview}</p>
-                    <Link className="read_interview" to={`/prolist/${riderInterview.id}`}>Read Interview</Link>
+                    <Link className="read_interview" to={`/prolist/${riderInterview._id}`}>Read Interview</Link>
                 </div>
             </div>
         )

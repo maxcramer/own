@@ -7,7 +7,7 @@ import IG from '../../../Images/Instagram-Icon.png'
 
 function Rider () {
     const [rider, setRider] = useState(null);
-    const [likeButtonClicked, setLikeButton] = useState(false);
+    // const [likeButtonClicked, setLikeButton] = useState(false);
     let { id } = useParams();
 
     useEffect(() => {
