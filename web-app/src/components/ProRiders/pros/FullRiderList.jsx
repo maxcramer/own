@@ -38,7 +38,7 @@ function FullRiderList()  {
                       <h4 className="location">Location: {r.location}</h4>
                     </div>
                     <p className="interview">{r.Interview}</p>
-                    <Link className="read_interview" to={`/prolist/${r.id}`}>
+                    <Link className="read_interview" to={`/prolist/${r._id}`}>
                       Read Interview
                     </Link>
                   </div>
