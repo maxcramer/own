@@ -18,8 +18,8 @@ exports.addLikeToArticle = functions.https.onCall(async (articleId, context) => 
     });
 });
 
-exports.addLikeToInterview = functions.https.onCall(async (interviewID, context) => {
-    const interviewRef = admin.firestore().collection('riderInterviews').doc(interviewID);
+exports.addLikeToInterview = functions.https.onCall(async (interviewId, context) => {
+    const interviewRef = admin.firestore().collection('riderInterviews').doc(interviewId);
     const interviewSnapShot = await interviewRef.get();
     const interview = interviewSnapShot.data();
         await interviewRef.update({

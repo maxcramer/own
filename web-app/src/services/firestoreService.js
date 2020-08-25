@@ -32,16 +32,34 @@ export const getPostList = async () => {
   return posts;
 };
 
-
 export const getRiderList = async () => {
   const { docs } = await db
-      .collection('riderInterviews')
-      .orderBy('date', 'desc')
-      .get()
-  const riderInterviews = docs.map(doc => doc.data())
-  console.log("These are the rider Interviews", riderInterviews);
-  return riderInterviews
+    .collection('riderInterviews')
+    .orderBy('date', 'desc')
+    .get()
+    const interviews = docs.map(doc => {
+      return {
+        ...doc.data(),
+        _id: doc.id
+      }
+    })
+    return interviews
 };
+
+
+// export const getRiderList = async () => {
+//   const { docs } = await db
+//       .collection('riderInterviews')
+//       .orderBy('date', 'desc')
+//       .get()
+//   const riderInterviews = docs.map(doc => {
+//     return {
+//       ...doc.data(),
+//       _id: doc.id
+//     }
+//   })
+//   return riderInterviews
+// };
 
 export const addLikeToArticle = async articleId => {
   const addLikeToArticle = firebase.functions().httpsCallable('addLikeToArticle');

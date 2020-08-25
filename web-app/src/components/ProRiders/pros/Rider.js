@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom'
-import { getRiderList } from '../../../services/firestoreService';
-
-import firebaseClient from '../../../firebaseClient';
+import { getRiderList, addLikeToInterview } from '../../../services/firestoreService';
 
 import '../proRiders.css';
 import IG from '../../../Images/Instagram-Icon.png'
 
 function Rider () {
-    const [riders, setRiders] = useState();
-    const [rider, setRider] = useState();
+    const [rider, setRider] = useState(null);
+    const [likeButtonClicked, setLikeButton] = useState(false);
     let { id } = useParams();
 
     useEffect(() => {
-      async function fetchData() {
-        const riders = await getRiderList();
-        setRiders(riders);
-        const match = riders.find(rider => rider.id === parseInt(id));
-        console.log('match', match);
+      const fetchData = async () => {
+        const results = await getRiderList();
+        const match = results.find(rider => rider._id === id);
+        console.log('match: ', match)
         setRider(match);
       }
       fetchData();
