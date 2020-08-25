@@ -48,3 +48,7 @@ export const addLikeToArticle = async articleId => {
   await addLikeToArticle(articleId);
 }
 
+export const addLikeToInterview = async interviewID => {
+  const addLikeToInterview = firebase.functions().httpsCallable('addLikeToInterivew');
+  await addLikeToInterview(interviewID);
+}
