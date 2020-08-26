@@ -7,8 +7,17 @@ import IG from '../../../Images/Instagram-Icon.png'
 
 function Rider () {
     const [rider, setRider] = useState(null);
-    // const [likeButtonClicked, setLikeButton] = useState(false);
+    const [likeButtonClicked, setLikeButtonClicked] = useState(false);
     let { id } = useParams();
+
+    const onLikeButtonClick = () => {
+      addLikeToInterview(id);
+      setRider({
+        ...rider,
+        likes: rider.likes + 1
+      });
+      setLikeButtonClicked(true)
+    }
 
     useEffect(() => {
       const fetchData = async () => {
