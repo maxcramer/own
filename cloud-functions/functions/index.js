@@ -24,5 +24,5 @@ exports.addLikeToInterview = functions.https.onCall(async (interviewId, context)
     const interview = interviewSnapShot.data();
         await interviewRef.update({
             likes: interview.likes + 1
-        })
+        });
 });
