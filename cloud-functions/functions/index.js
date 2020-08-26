@@ -19,10 +19,15 @@ exports.addLikeToArticle = functions.https.onCall(async (articleId, context) => 
 });
 
 exports.addLikeToInterview = functions.https.onCall(async (interviewId, context) => {
+    console.log('interviewId: ', interviewId);
     const interviewRef = admin.firestore().collection('riderInterviews').doc(interviewId);
+    console.log('interviewRef: ', interviewRef);
     const interviewSnapShot = await interviewRef.get();
+    console.log('interviewSnapShot: ', interviewSnapShot);
     const interview = interviewSnapShot.data();
-        await interviewRef.update({
-            likes: interview.likes + 1
-        });
+    console.log('interview: ', interview);
+    await interviewRef.update({
+        likes: interview.likes + 1
+    });
+    console.log('Done!?');
 });
