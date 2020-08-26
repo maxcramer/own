@@ -73,6 +73,12 @@ function Rider () {
                   <Link className="under_article_nav_button" to={'/prolist'}>
                     All Interviews
                   </Link>
+                  <div>
+                  </div>
+                  <button disabled={likeButtonClicked} onClick={onLikeButtonClick}>
+                    LIKES 
+                  </button>
+                  <p>{rider.likes}</p>
                 </div>
               </div>
             );
