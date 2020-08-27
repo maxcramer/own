@@ -76,9 +76,9 @@ function Rider () {
                   </Link>
                   <div>
                   </div>
-                  <button id="like_btn" disabled={likeButtonClicked} onClick={onLikeButtonClick}>
+                  <a id="like_btn" disabled={likeButtonClicked} onClick={onLikeButtonClick}>
                     <Heart />
-                  </button>
+                  </a>
                   <p>{rider.likes}</p>
                 </div>
               </div>
