@@ -136,6 +136,16 @@
     justify-content: space-between;
 }
 
+#like_btn {
+    background: white;
+    border: none;
+}
+
+#heart_icon {
+    height: 30px;
+    fill: red;
+}
+
 @media (max-width: 950px) {
     .interview_single_page_title_container {
         height: 45px;

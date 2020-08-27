@@ -4,6 +4,7 @@ import { getRiderList, addLikeToInterview } from '../../../services/firestoreSer
 
 import '../proRiders.css';
 import IG from '../../../Images/Instagram-Icon.png'
+import heartBtn from '../../../Images/heart-btn.svg'
 
 function Rider () {
     const [rider, setRider] = useState(null);
@@ -75,8 +76,8 @@ function Rider () {
                   </Link>
                   <div>
                   </div>
-                  <button disabled={likeButtonClicked} onClick={onLikeButtonClick}>
-                    LIKES 
+                  <button id="like_btn" disabled={likeButtonClicked} onClick={onLikeButtonClick}>
+                    <img id="heart_icon" src={heartBtn} /> 
                   </button>
                   <p>{rider.likes}</p>
                 </div>
