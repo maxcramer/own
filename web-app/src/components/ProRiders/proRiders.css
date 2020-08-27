@@ -142,9 +142,11 @@
    
 }
 
-#Capa_1 {
+/* #Capa_1 {
     fill: red;
-    max-height: 30px;}
+    max-height: 30px;
+} */
+
 
 @media (max-width: 950px) {
     .interview_single_page_title_container {
