@@ -139,17 +139,12 @@
 #like_btn {
     background: white;
     border: none;
-    fill: blue;
-}
-
-#heart_icon {
-    height: 30px;
-    /* fill: red; */
+   
 }
 
 #Capa_1 {
-    fill: blue !important;
-}
+    fill: red;
+    max-height: 30px;}
 
 @media (max-width: 950px) {
     .interview_single_page_title_container {
