@@ -18,9 +18,7 @@ function Rider () {
         likes: rider.likes + 1
       });
       setLikeButtonClicked(true)
-      Heart.disabled = "fill: green";
     }
-
 
     useEffect(() => {
       const fetchData = async () => {

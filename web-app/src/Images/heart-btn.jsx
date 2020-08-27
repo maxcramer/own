@@ -2,12 +2,23 @@ import React, { Component } from 'react';
 import { string, number } from 'prop-types';
 
 export default class Heart extends Component{
-    render() {
+    constructor(props) {
+        super(props)
+        this.state = {
+            fillColor: "red"
+        }
+    }
 
+    heartClick = (e) => {
+        this.setState({
+            fillColor: "#AB0202"
+        })
+    }
+    render() {
         const {color, size} = this.props 
 
         return (
-            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg style={{fill: this.state.fillColor}} onClick={this.heartClick} version="1.1" className="Red" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width={size} height={size} viewBox="0 0 510 510" xmlSpace="preserve" fill={color}>
 <g>
 	<g id="favorite">

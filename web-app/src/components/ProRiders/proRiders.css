@@ -138,14 +138,8 @@
 
 #like_btn {
     background: white;
-    border: none;
-   
+    border: none;   
 }
-
-/* #Capa_1 {
-    fill: red;
-    max-height: 30px;
-} */
 
 
 @media (max-width: 950px) {
