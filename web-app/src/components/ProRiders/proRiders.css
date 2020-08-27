@@ -139,11 +139,16 @@
 #like_btn {
     background: white;
     border: none;
+    fill: blue;
 }
 
 #heart_icon {
     height: 30px;
-    fill: red;
+    /* fill: red; */
+}
+
+#Capa_1 {
+    fill: blue !important;
 }
 
 @media (max-width: 950px) {

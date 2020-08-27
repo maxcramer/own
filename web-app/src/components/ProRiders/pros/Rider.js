@@ -3,8 +3,8 @@ import { Link, useParams } from 'react-router-dom'
 import { getRiderList, addLikeToInterview } from '../../../services/firestoreService';
 
 import '../proRiders.css';
-import IG from '../../../Images/Instagram-Icon.png'
-import heartBtn from '../../../Images/heart-btn.svg'
+import IG from '../../../Images/Instagram-Icon.png';
+import Heart from '../../../Images/heart-btn.jsx';
 
 function Rider () {
     const [rider, setRider] = useState(null);
@@ -77,7 +77,7 @@ function Rider () {
                   <div>
                   </div>
                   <button id="like_btn" disabled={likeButtonClicked} onClick={onLikeButtonClick}>
-                    <img id="heart_icon" src={heartBtn} /> 
+                    <Heart />
                   </button>
                   <p>{rider.likes}</p>
                 </div>
