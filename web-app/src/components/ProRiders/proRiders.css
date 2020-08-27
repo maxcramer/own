@@ -134,13 +134,17 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-end;
 }
 
 #like_btn {
     background: white;
     border: none;   
     cursor: pointer;
+}
+
+#like_btn:focus {
+    outline: 0;
 }
 
 .like_btn_count {

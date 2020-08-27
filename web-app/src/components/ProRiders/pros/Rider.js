@@ -75,9 +75,9 @@ function Rider () {
                     All Interviews
                   </Link>
                   <div className="like_btn_count">
-                    <a id="like_btn" disabled={likeButtonClicked} onClick={onLikeButtonClick}>
+                    <button id="like_btn" disabled={likeButtonClicked} onClick={onLikeButtonClick}>
                       <Heart />
-                    </a>
+                    </button>
                     <p className="intv_likes">{rider.likes}</p>
                   </div>
                 </div>
