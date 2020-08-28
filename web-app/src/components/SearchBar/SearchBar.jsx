@@ -12,26 +12,19 @@ function SearchBar() {
   const [posts, setPosts] = useState([]);
   const [results, setResults] = useState([]);
   
-  const handleChange = event => {
-    results(event.target.value);
-  };
-
   // THIS DOESNT WORK
   const clearSearch = () => {
     const inputElement = document.getElementById('input');
     inputElement.value = '';
-    setResults([...posts, ...riders])
+    console.log("search being cleared:", inputElement.value)
+    setResults([])
  };
 
  const filterResults = event => {
   const searchTerm = event.target.value;
-  console.log('searchTerm: ', searchTerm);
-  const postResults = posts.filter(post => post.Title.toLowerCase().includes(searchTerm));
-  console.log('postResults: ', postResults);
-  console.log('posts:', posts)
-  const riderResults = riders.filter(rider => rider.Name.toLowerCase().includes(searchTerm));
-  console.log('riderResults: ', riderResults);
-  console.log('riders:', riders)
+
+  const postResults = posts.filter(post => post.Title.toLowerCase().includes(searchTerm.toLowerCase()));
+  const riderResults = riders.filter(rider => rider.Name.toLowerCase().includes(searchTerm.toLowerCase()));
 
   setResults([...postResults, ...riderResults]);
 }
@@ -53,28 +46,6 @@ function SearchBar() {
       setResults([...riders, ...posts])
     }
     loadData();
-
-  
-//  if (searchTerm !== "") {
-//       const results1 = fetchPosts.articles.filter(article =>
-//         article.Title.toString()
-//           .toLowerCase()
-//           .includes(searchTerm.toLocaleLowerCase())
-//       );
-//       const results2 = fetchRiders.riders.filter(rider =>
-//         rider.Title.toString()
-//           .toLowerCase()
-//           .includes(searchTerm.toLocaleLowerCase())
-//       );
-//       const result = results1.concat(results2);
-//       fullSearchResults.sort((a, b) =>
-//         a.Title > b.Title ? 1 : b.Title > a.Title ? -1 : 0
-//       );
-//       console.log(fullSearchResults);
-//       return setSearchResults(result);
-//     } 
-
-
     setResults([]);
   }, []);
   return (
@@ -97,6 +68,7 @@ function SearchBar() {
                   : `/postlist/${result._id}`
               }
             >
+              {result.Name}
               {result.Title}
             </Link>
           </li>
