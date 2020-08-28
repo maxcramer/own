@@ -1,65 +1,104 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import SearchImg from '../../Images/search-icon.png';
-import { Articles } from '../../Data/Articles';
-import { Riders } from '../../Data/Riders';
+import { getRiderList, getPostList } from '../../services/firestoreService'
 import './SearchBar.css';
 
 
+
 function SearchBar() {
-  const [searchTerm, setSearchTerm] = React.useState('');
-  const [searchResults, setSearchResults] = React.useState([]);
+  const [riders, setRiders] = useState([]);
+  const [posts, setPosts] = useState([]);
+  const [results, setResults] = useState([]);
+  
   const handleChange = event => {
-    setSearchTerm(event.target.value);
+    results(event.target.value);
   };
+
   const clearSearch = () => {
-    setSearchTerm('');
-    setSearchResults([]);
-  };
+    const inputElement = document.getElementById('input');
+    inputElement.value = '';
+    setResults([...posts, ...riders])
+ };
+
+ const filterResults = event => {
+  const searchTerm = event.target.value;
+  console.log('searchTerm: ', searchTerm);
+  const postResults = posts.filter(post => post.Title.includes(searchTerm));
+  console.log('postResults: ', postResults);
+  console.log('posts:', posts)
+  const riderResults = riders.filter(rider => rider.Name.includes(searchTerm));
+  console.log('riderResults: ', riderResults);
+  console.log('riders:', riders)
+
+  setResults([...postResults, ...riderResults]);
+}
+
   React.useEffect(() => {
- if (searchTerm !== "") {
-      const results1 = Articles.articles.filter(article =>
-        article.Title.toString()
-          .toLowerCase()
-          .includes(searchTerm.toLocaleLowerCase())
-      );
-      const results2 = Riders.riders.filter(rider =>
-        rider.Title.toString()
-          .toLowerCase()
-          .includes(searchTerm.toLocaleLowerCase())
-      );
-      const fullSearchResults = results1.concat(results2);
-      fullSearchResults.sort((a, b) =>
-        a.Title > b.Title ? 1 : b.Title > a.Title ? -1 : 0
-      );
-      console.log(fullSearchResults);
-      return setSearchResults(fullSearchResults);
-    } 
-    setSearchResults([]);
-  }, [searchTerm]);
+  
+    const fetchRiders = async () => {
+      const ridersResponse = await getRiderList();
+      setRiders(ridersResponse);
+    }
+    
+    const fetchPosts = async () => {
+      const postsResponse = await getPostList();
+      setPosts(postsResponse);
+      // console.log('posts', posts);
+    }
+    // fetchRiders()
+    // fetchPosts()
+
+    const loadData = async() => {
+      await Promise.all([fetchRiders(), fetchPosts()]);
+      setResults([...riders, ...posts])
+    }
+    loadData();
+
+    
+//  if (searchTerm !== "") {
+//       const results1 = fetchPosts.articles.filter(article =>
+//         article.Title.toString()
+//           .toLowerCase()
+//           .includes(searchTerm.toLocaleLowerCase())
+//       );
+//       const results2 = fetchRiders.riders.filter(rider =>
+//         rider.Title.toString()
+//           .toLowerCase()
+//           .includes(searchTerm.toLocaleLowerCase())
+//       );
+//       const result = results1.concat(results2);
+//       fullSearchResults.sort((a, b) =>
+//         a.Title > b.Title ? 1 : b.Title > a.Title ? -1 : 0
+//       );
+//       console.log(fullSearchResults);
+//       return setSearchResults(result);
+//     } 
+    setResults([]);
+  }, []);
   return (
     <div>
       <input
         type="text"
         placeholder="Search"
-        value={searchTerm}
+        // value={searchTerm}
         id="input"
-        onChange={handleChange}
+        onChange={filterResults}
       />
       {/* <img src={SearchImg} alt=""/> */}
       <ul id="search-results-full-list" className="search-results">
-        {searchResults.map(fullSearchResults => (
-          <li className="search-results-list-item" key={fullSearchResults.id}>
+        {results.map(result => (
+          <li className="search-results-list-item" key={result._id}>
             <Link
               onClick={clearSearch}
               to={
-                fullSearchResults.Interview
-                  ? `/prolist/${fullSearchResults.id}`
-                  : `/postlist/${fullSearchResults.id}`
+                results.Interview
+                  ? `/prolist/${result._id}`
+                  : `/postlist/${result._id}`
               }
             >
-              {fullSearchResults.Title}
+              {result.Title}
             </Link>
           </li>
         ))}
