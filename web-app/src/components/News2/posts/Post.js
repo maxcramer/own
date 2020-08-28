@@ -3,6 +3,8 @@ import { Link, useParams } from 'react-router-dom';
 import { getPostList, addLikeToArticle } from '../../../services/firestoreService';
 import './postStyle.css';
 
+import Heart from '../../../Images/heart-btn';
+
 function Post () {
     const [article, setArticle] = useState(null);
     const [likeButtonClicked, setLikeButtonClicked] = useState(false);
@@ -48,8 +50,8 @@ function Post () {
           </Link>
           <div>
           </div>
-          <button disabled={likeButtonClicked} onClick={onLikeButtonClick}>
-            LIKES 
+          <button id="like_btn" disabled={likeButtonClicked} onClick={onLikeButtonClick}>
+            <Heart />
           </button>
           <p>{article.likes}</p>
         </div>

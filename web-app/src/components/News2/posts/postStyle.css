@@ -102,6 +102,12 @@
     justify-content: space-between;
 }
 
+#like_btn {
+    background: white;
+    border: none;   
+    cursor: pointer;
+}
+
 @media (max-width: 950px) {
     .post_image {
         width: 50%;
