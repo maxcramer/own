@@ -17,7 +17,7 @@ function SearchBar() {
     const inputElement = document.getElementById('input');
     inputElement.value = '';
     console.log("search being cleared:", inputElement.value)
-    setResults([])
+    setResults([...posts, ...riders])
  };
 
  const filterResults = event => {
@@ -63,9 +63,7 @@ function SearchBar() {
             <Link
               onClick={clearSearch}
               to={
-                results.Interview
-                  ? `/prolist/${result._id}`
-                  : `/postlist/${result._id}`
+                results.content ? `/prolist/${result._id}` : `/postlist/${result._id}`
               }
             >
               {result.Name}
