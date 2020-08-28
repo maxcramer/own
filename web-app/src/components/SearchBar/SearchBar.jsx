@@ -16,6 +16,7 @@ function SearchBar() {
     results(event.target.value);
   };
 
+  // THIS DOESNT WORK
   const clearSearch = () => {
     const inputElement = document.getElementById('input');
     inputElement.value = '';
@@ -25,10 +26,10 @@ function SearchBar() {
  const filterResults = event => {
   const searchTerm = event.target.value;
   console.log('searchTerm: ', searchTerm);
-  const postResults = posts.filter(post => post.Title.includes(searchTerm));
+  const postResults = posts.filter(post => post.Title.toLowerCase().includes(searchTerm));
   console.log('postResults: ', postResults);
   console.log('posts:', posts)
-  const riderResults = riders.filter(rider => rider.Name.includes(searchTerm));
+  const riderResults = riders.filter(rider => rider.Name.toLowerCase().includes(searchTerm));
   console.log('riderResults: ', riderResults);
   console.log('riders:', riders)
 
@@ -45,10 +46,7 @@ function SearchBar() {
     const fetchPosts = async () => {
       const postsResponse = await getPostList();
       setPosts(postsResponse);
-      // console.log('posts', posts);
     }
-    // fetchRiders()
-    // fetchPosts()
 
     const loadData = async() => {
       await Promise.all([fetchRiders(), fetchPosts()]);
@@ -56,7 +54,7 @@ function SearchBar() {
     }
     loadData();
 
-    
+  
 //  if (searchTerm !== "") {
 //       const results1 = fetchPosts.articles.filter(article =>
 //         article.Title.toString()
@@ -75,6 +73,8 @@ function SearchBar() {
 //       console.log(fullSearchResults);
 //       return setSearchResults(result);
 //     } 
+
+
     setResults([]);
   }, []);
   return (
@@ -82,7 +82,6 @@ function SearchBar() {
       <input
         type="text"
         placeholder="Search"
-        // value={searchTerm}
         id="input"
         onChange={filterResults}
       />
