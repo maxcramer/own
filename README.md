@@ -14,6 +14,7 @@ A new site for all things Onewheel, built in react and hosted on Firebase.
 - **Web App:** react web app to render the site
 
 ## Notes & Caveats
+- change links on search bar 
 - change on home page articles 2 - 6 into map func rather than individual components
 - changer on home page interviews 1-3 into map func rather than individual components
 
