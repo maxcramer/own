@@ -17,12 +17,13 @@ function SearchBar() {
     const inputElement = document.getElementById('input');
     inputElement.value = '';
     console.log("search being cleared:", inputElement.value)
-    setResults([...posts, ...riders])
+    setResults([]) // this needs to be empty or all 
+    // posts and interviews are visible in search results 
+    // on click because we are using concat on all results. was using method ... to join
  };
 
  const filterResults = event => {
   const searchTerm = event.target.value;
-
   const postResults = posts.filter(post => post.Title.toLowerCase().includes(searchTerm.toLowerCase()));
   const riderResults = riders.filter(rider => rider.Name.toLowerCase().includes(searchTerm.toLowerCase()));
 
@@ -63,7 +64,7 @@ function SearchBar() {
             <Link
               onClick={clearSearch}
               to={
-                results.content ? `/prolist/${result._id}` : `/postlist/${result._id}`
+                result.Interview ? `/prolist/${result._id}` : `/postlist/${result._id}`
               }
             >
               {result.Name}
