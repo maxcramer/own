@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, Router } from 'react-router-dom';
 import SearchImg from '../../Images/search-icon.png';
 import { getRiderList, getPostList } from '../../services/firestoreService'
 import './SearchBar.css';
@@ -14,20 +14,31 @@ function SearchBar() {
   
   // THIS DOESNT WORK
   const clearSearch = () => {
-    const inputElement = document.getElementById('input');
+    let inputElement = document.getElementById('input');
     inputElement.value = '';
-    console.log("search being cleared:", inputElement.value)
-    setResults([]) // this needs to be empty or all 
+    console.log("search being cleared:", setResults);
+    setResults([]) 
+    // ^^^ this needs to be empty or all 
     // posts and interviews are visible in search results 
     // on click because we are using concat on all results. was using method ... to join
  };
+
+// onResultClick {
+//   ...
+//   Router.go(link)
+//   }
 
  const filterResults = event => {
   const searchTerm = event.target.value;
   const postResults = posts.filter(post => post.Title.toLowerCase().includes(searchTerm.toLowerCase()));
   const riderResults = riders.filter(rider => rider.Name.toLowerCase().includes(searchTerm.toLowerCase()));
-
   setResults([...postResults, ...riderResults]);
+  console.log(results);
+}
+
+const onResultClick = result => {
+  clearSearch();
+  const link = result.Interview ? `/prolist/${result._id}` : `/postlist/${result._id}`;
 }
 
   React.useEffect(() => {
@@ -44,7 +55,7 @@ function SearchBar() {
 
     const loadData = async() => {
       await Promise.all([fetchRiders(), fetchPosts()]);
-      setResults([...riders, ...posts])
+      setResults([])
     }
     loadData();
     setResults([]);
@@ -62,7 +73,7 @@ function SearchBar() {
         {results.map(result => (
           <li className="search-results-list-item" key={result._id}>
             <Link
-              onClick={clearSearch}
+              onClick={onResultClick(result)}
               to={
                 result.Interview ? `/prolist/${result._id}` : `/postlist/${result._id}`
               }
