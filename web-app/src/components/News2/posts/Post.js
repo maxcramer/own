@@ -48,12 +48,12 @@ function Post () {
           <Link className="read_more_tag" to={'/postlist'}>
           See All Articles
           </Link>
-          <div>
+          <div className="like_btn_count">
+            <button id="like_btn" disabled={likeButtonClicked} onClick={onLikeButtonClick}>
+              <Heart />
+            </button>
+            <p className="artc_likes">{article.likes}</p>
           </div>
-          <button id="like_btn" disabled={likeButtonClicked} onClick={onLikeButtonClick}>
-            <Heart />
-          </button>
-          <p>{article.likes}</p>
         </div>
         </div>
       );

@@ -98,7 +98,7 @@
 .cta_single_post {
     display: flex;
     flex-direction: row;
-    align-items: end;
+    align-items: flex-end;
     justify-content: space-between;
 }
 
@@ -106,6 +106,20 @@
     background: white;
     border: none;   
     cursor: pointer;
+}
+
+#like_btn:focus {
+    outline: 0;
+}
+
+.like_btn_count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artc_likes {
+    margin: 0;
 }
 
 @media (max-width: 950px) {
