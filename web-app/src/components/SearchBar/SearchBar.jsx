@@ -28,6 +28,9 @@ function SearchBar() {
 //   Router.go(link)
 //   }
 
+
+
+
  const filterResults = event => {
   const searchTerm = event.target.value;
   const postResults = posts.filter(post => post.Title.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -37,13 +40,12 @@ function SearchBar() {
 }
 
 const onResultClick = result => {
-  // clearSearch();
   const link = result.Interview ? `/prolist/${result._id}` : `/postlist/${result._id}`;
-  const input = document.getElementById('input').value = '';
 }
 
+
   React.useEffect(() => {
-  
+    
     const fetchRiders = async () => {
       const ridersResponse = await getRiderList();
       setRiders(ridersResponse);
@@ -53,6 +55,7 @@ const onResultClick = result => {
       const postsResponse = await getPostList();
       setPosts(postsResponse);
     }
+
 
     const loadData = async() => {
       await Promise.all([fetchRiders(), fetchPosts()]);
@@ -69,7 +72,7 @@ const onResultClick = result => {
         id="input"
         onChange={filterResults}
       />
-      {/* <img src={SearchImg} alt=""/> */}
+      <div id="search-results-container-div">
       <ul id="search-results-full-list" className="search-results">
         {results.map(result => (
           <li className="search-results-list-item" key={result._id}>
@@ -85,6 +88,8 @@ const onResultClick = result => {
           </li>
         ))}
       </ul>
+      </div>
+
     </div>
   );
 }

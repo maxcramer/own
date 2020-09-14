@@ -17,3 +17,11 @@
 .search-results-list-item {
     padding: 5px !important;
 }
+
+#search-results-full-list {
+    display: flex;
+}
+
+.hideSearch {
+    display: none;
+}
