@@ -17,6 +17,7 @@ A new site for all things Onewheel, built in react and hosted on Firebase.
 - change links on search bar 
 - change on home page articles 2 - 6 into map func rather than individual components
 - changer on home page interviews 1-3 into map func rather than individual components
+- If no image found, then display set image (either logo or ? image)
 
 ### Relevant Reading
 - https://blog.pshrmn.com/simple-react-router-v4-tutorial/
