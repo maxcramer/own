@@ -13,15 +13,15 @@ function SearchBar() {
   const [results, setResults] = useState([]);
   
   // THIS DOESNT WORK
-  const clearSearch = () => {
-    let inputElement = document.getElementById('input');
-    inputElement.value = '';
-    console.log("search being cleared:", setResults);
-    setResults([]) 
+  // const clearSearch = () => {
+  //   let inputElement = document.getElementById('input');
+  //   inputElement.value = '';
+  //   console.log("search being cleared:", setResults);
+  //   setResults([]) 
     // ^^^ this needs to be empty or all 
     // posts and interviews are visible in search results 
     // on click because we are using concat on all results. was using method ... to join
- };
+//  };
 
 // onResultClick {
 //   ...
@@ -37,8 +37,9 @@ function SearchBar() {
 }
 
 const onResultClick = result => {
-  clearSearch();
+  // clearSearch();
   const link = result.Interview ? `/prolist/${result._id}` : `/postlist/${result._id}`;
+  const input = document.getElementById('input').value = '';
 }
 
   React.useEffect(() => {
