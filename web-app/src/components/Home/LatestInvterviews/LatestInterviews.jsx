@@ -7,15 +7,11 @@ import IG from '../../../Images/Instagram-Icon.png'
 
 function InterviewOne () {
     const [interviews, setInterviews] = useState();
-    // const [riderInterview, setRiderInterview] = useState();
-    // let { id } = useParams();
 
     useEffect(() => {
         async function fetchData() {
             const interviews = await getRiderList();
-            // setRiderInterviews(riderInterviews);
-            // const match = riderInterviews[0];
-            setInterviews(interviews);
+            setInterviews(interviews.slice(0, 3));
         }
         fetchData();
     }, [])

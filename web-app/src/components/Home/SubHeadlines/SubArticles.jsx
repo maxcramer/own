@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import {Link, useParams} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getPostList } from '../../../services/firestoreService';
 
 import './SubArticles.css';
 
 function SubArticleOne () {
     const [articles, setArticles] = useState();
-    // const [article, setArticle] = useState();
-    // let { id } = useParams();
 
     useEffect(() => {
         async function fetchData() {
             const articles = await getPostList();
-            // setArticles(articles);
-            // const match = articles.find[1 -];
             setArticles(articles.slice(1, 7));
         }
         fetchData();
