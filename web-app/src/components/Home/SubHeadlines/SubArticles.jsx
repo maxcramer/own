@@ -23,7 +23,7 @@ function SubArticleOne () {
                 <div>
                     <ul>
                         {articles.map(a => (
-                                            <div className="single_Sub_Article">
+                                            <div key={a._id} className="single_Sub_Article">
                                             <h2>{a.Title}</h2>
                                             <img className="Sub_Article_Img" src={a.image} alt=""/>
                                             <div className="Sub_Article_Auth_Date">

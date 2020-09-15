@@ -6,36 +6,46 @@ import './LatestInterviews.css';
 import IG from '../../../Images/Instagram-Icon.png'
 
 function InterviewOne () {
-    const [riderInterviews, setRiderInterviews] = useState();
-    const [riderInterview, setRiderInterview] = useState();
-    let { id } = useParams();
+    const [interviews, setInterviews] = useState();
+    // const [riderInterview, setRiderInterview] = useState();
+    // let { id } = useParams();
 
     useEffect(() => {
         async function fetchData() {
-            const riderInterviews = await getRiderList();
-            setRiderInterviews(riderInterviews);
-            const match = riderInterviews[0];
-            setRiderInterview(match);
+            const interviews = await getRiderList();
+            // setRiderInterviews(riderInterviews);
+            // const match = riderInterviews[0];
+            setInterviews(interviews);
         }
         fetchData();
-    }, [id])
-    if(riderInterview) {
+    }, [])
+    
+    if(interviews) {
         return (
-            <div className="pro_rider_interview">
-                <img className="rider_image" src={riderInterview.Logo} alt=""/>
-                <div className="rider_info">
-                    <div className="rider_name_location">
-                        <h2 className="rider_name">{riderInterview.Name}</h2>
-                        <h6 className="upload_date">Date Uploaded: {new Date(riderInterview.date).toDateString()}</h6>
+            <div>
+                <ul>
+                    {interviews.map(r => (
+                        <div key={r._id} className="pro_rider_interview">
+                            <li>
+                            <img className="rider_image" src={r.Logo} alt=""/>
+                        <div className="rider_info">
+                            <div className="rider_name_location">
+                                <h2 className="rider_name">{r.Name}</h2>
+                                <h6 className="upload_date">Date Uploaded: {new Date(r.date).toDateString()}</h6>
+                            </div>
+                            <div className="sponsor_location">
+                                <h4 className="sponsors">Sponsors: {r.Sponsors}</h4>
+                                <h4 className="location">Location: {r.location}</h4>   
+                            </div>
+                            <p className="interview">{r.Interview}</p>  
+                            <Link className="read_interview" to={`/prolist/${r._id}`}>Read Interview</Link>
+                        </div>
+                            </li>
                     </div>
-                    <div className="sponsor_location">
-                        <h4 className="sponsors">Sponsors: {riderInterview.Sponsors}</h4>
-                        <h4 className="location">Location: {riderInterview.location}</h4>   
-                    </div>
-                    <p className="interview">{riderInterview.Interview}</p>  
-                    <Link className="read_interview" to={`/prolist/${riderInterview._id}`}>Read Interview</Link>
-                </div>
+        ))}
+                </ul>
             </div>
+            
         )
     } else {
         return <div>Latest rider interview loading</div>
