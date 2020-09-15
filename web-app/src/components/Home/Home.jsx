@@ -1,6 +1,6 @@
 import React from 'react';
 import HeadlineArticle from './HeadlineArticle/HeadlineArticle';
-import SubArticles from './SubHeadlines/SubHeadlinesComponent';
+import SubArticles from './SubHeadlines/SubArticles';
 import LatestInterviews from './LatestInvterviews/LatestInterviewComponent';
 import {Link} from 'react-router-dom';
 import './Home.css';
