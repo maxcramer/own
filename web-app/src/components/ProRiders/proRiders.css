@@ -14,8 +14,6 @@
 .pro_rider_interview {
     display: flex; 
     flex-direction: row;
-    padding-bottom: 3%;
-    margin: 5% 0;
     border-bottom: 0.5px solid lightgray;
 }
 
