@@ -16,10 +16,10 @@ function SubArticleOne () {
     }, [])
         if(articles) {
             return (
-                <div>
-                    <ul>
+                    <ul id="Sub_Article_Container">
                         {articles.map(a => (
-                                            <div key={a._id} className="single_Sub_Article">
+                            <li key={a._id} className="single_Sub_Article">
+                                <div>
                                             <h2>{a.Title}</h2>
                                             <img className="Sub_Article_Img" src={a.image} alt=""/>
                                             <div className="Sub_Article_Auth_Date">
@@ -28,11 +28,11 @@ function SubArticleOne () {
                                             </div>
                                             <p className="Sub_Article_Content">{a.Content}</p>     
                                             <Link className="read_more_tag" to={`/postlist/${a._id}`}>Read More</Link>          
-                                        </div>
+                                </div>
+                            </li>
+                                            
                         ))}
                     </ul>
-                </div>
-
             )
 
         } else {

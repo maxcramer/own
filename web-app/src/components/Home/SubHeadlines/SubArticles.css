@@ -1,11 +1,18 @@
-.Sub_Articles {
+#Sub_Article_Container {
     display: flex;
     flex-direction: row;
-    max-width: 1360px;
-    margin: 0 9%;
     flex-wrap: wrap;
     justify-content: space-around;
+    max-width: 1360px;
+    margin: 0 9%;
+    padding-left: 0;
 }
+
+/* .Sub_Articles {
+    display: flex;
+    flex-direction: row;
+
+} */
 
 .single_Sub_Article {
     display: flex;
@@ -13,6 +20,7 @@
     width: 30%;
     padding: 0% 1.5% 1.5% 1.5%;
     height: 440px;
+    margin: 30px 0;
 }
 
 .Sub_Article_Img {
