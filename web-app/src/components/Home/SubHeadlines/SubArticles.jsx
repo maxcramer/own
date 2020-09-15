@@ -13,8 +13,8 @@ function SubArticleOne () {
         async function fetchData() {
             const articles = await getPostList();
             // setArticles(articles);
-            // const match = articles[1];
-            setArticles(articles);
+            // const match = articles.find[1 -];
+            setArticles(articles.slice(1, 7));
         }
         fetchData();
     }, [])
