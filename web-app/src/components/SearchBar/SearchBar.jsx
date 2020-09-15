@@ -29,8 +29,6 @@ function SearchBar() {
 //   }
 
 
-
-
  const filterResults = event => {
   const searchTerm = event.target.value;
   const postResults = posts.filter(post => post.Title.toLowerCase().includes(searchTerm.toLowerCase()));
