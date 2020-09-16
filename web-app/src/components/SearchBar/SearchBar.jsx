@@ -37,8 +37,11 @@ function SearchBar() {
   console.log(results);
 }
 
-const onResultClick = result => {
-  const link = result.Interview ? `/prolist/${result._id}` : `/postlist/${result._id}`;
+const onResultClick = () => {
+  console.log("this runs alot");
+  // setRiders([])
+  // setPosts([])
+  setResults([])
 }
 
 
@@ -75,7 +78,7 @@ const onResultClick = result => {
         {results.map(result => (
           <li className="search-results-list-item" key={result._id}>
             <Link
-              onClick={onResultClick(result)}
+              onClick={onResultClick}
               to={
                 result.Interview ? `/prolist/${result._id}` : `/postlist/${result._id}`
               }
