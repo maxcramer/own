@@ -14,8 +14,8 @@ A new site for all things Onewheel, built in react and hosted on Firebase.
 - **Web App:** react web app to render the site
 
 ## Notes & Caveats
-- Make Search Bar clear input on item selected & clear suggestions box, current behaviour: all still visable after item selected & loaded
 - If no image found, then display set image (either logo or ? image)
+- sort styling on home page for MOBILE
 
 ### Relevant Reading
 - https://blog.pshrmn.com/simple-react-router-v4-tutorial/
