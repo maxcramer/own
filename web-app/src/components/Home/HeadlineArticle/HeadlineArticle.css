@@ -41,7 +41,7 @@
 }
 
 .article_bottom_border {
-        border-bottom: 0.5px solid lightgrey;
+        /* border-bottom: 0.5px solid lightgrey; */
         padding-bottom: 10px;
 }
 
@@ -109,6 +109,10 @@
 
     .mobile_date {
         margin: 4px 0;
+    }
+
+    .article_bottom_border {
+        border-bottom: 1px solid lightgray;
     }
 
 }
