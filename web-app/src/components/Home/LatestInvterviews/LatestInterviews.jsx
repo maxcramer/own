@@ -33,7 +33,7 @@ function InterviewOne () {
                                 <h4 className="sponsors">Sponsors: {r.Sponsors}</h4>
                                 <h4 className="location">Location: {r.location}</h4>   
                             </div>
-                            <p className="interview">{r.Interview}</p>  
+                            <p className="latest_interview_interview ">{r.Interview}</p>  
                             <Link className="read_interview" to={`/prolist/${r._id}`}>Read Interview</Link>
                         </div>
                             </li>

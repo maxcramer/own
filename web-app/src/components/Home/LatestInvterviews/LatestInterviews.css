@@ -23,9 +23,9 @@ ul {
 .pro_rider_interview {
     display: flex; 
     flex-direction: row;
-    padding-bottom: 1%;
+    padding-bottom: 4%;
     border-bottom: 0.5px solid lightgray;
-    margin: 3% 0;
+    margin: 4% 0;
 }
 
 .rider_info {
@@ -61,7 +61,7 @@ ul {
     height: 30px;
 }
 
-.interview {
+.latest_interview_interview {
     height: 90px;
     overflow: hidden;
     margin-top: 3px;
@@ -115,6 +115,8 @@ ul {
 
     .pro_rider_interview {
         flex-direction: column !important;
+        padding-bottom: 15px;
+        margin: 15px 0;
     }
 
     .rider_image {
@@ -138,16 +140,20 @@ ul {
     .sponsor_location {
         font-size: 15px;
         flex-direction: column !important;
-        height: 65px !important;
+        /* height: 65px !important; */
         align-items: unset !important;
     }
 
     .location {
-        margin-top: 5px;
+        /* margin-top: 5px; */
     }
 
     .rider_info {
         margin: 0 !important;
+    }
+
+    .latest_interview_interview {
+        height: 80px;
     }
 
 }

@@ -162,7 +162,7 @@
     }
 
     .interview {
-        height: 75px;
+        /* height: 75px; */
     }
 
     .interview_single_page_rider_info {
@@ -211,7 +211,6 @@
     .sponsor_location {
         font-size: 15px;
         flex-direction: column !important;
-        height: 65px !important;
         align-items: unset !important;
     }
 

@@ -27,7 +27,9 @@ function SubArticleOne () {
                                                 <p className="Sub_Article_Date">Uploaded on {new Date(a.date).toDateString()}</p>
                                             </div>
                                             <p className="Sub_Article_Content">{a.Content}</p>     
-                                            <Link className="read_more_tag" to={`/postlist/${a._id}`}>Read More</Link>          
+                                            <div className="sub_Article_Bottom_border">
+                                                <Link className="read_more_tag" to={`/postlist/${a._id}`}>Read More</Link>          
+                                            </div>
                                 </div>
                             </li>
                                             
