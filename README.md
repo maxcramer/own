@@ -15,7 +15,6 @@ A new site for all things Onewheel, built in react and hosted on Firebase.
 
 ## Notes & Caveats
 - If no image found, then display set image (either logo or ? image)
-- sort styling on home page for MOBILE
 
 ### Relevant Reading
 - https://blog.pshrmn.com/simple-react-router-v4-tutorial/
