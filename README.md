@@ -15,6 +15,8 @@ A new site for all things Onewheel, built in react and hosted on Firebase.
 
 ## Notes & Caveats
 - If no image found, then display set image (either logo or ? image)
+- build login section
+- build comment section that can only be commented on if logged in, if not user can only see comments, use firebase login for this 
 
 ### Relevant Reading
 - https://blog.pshrmn.com/simple-react-router-v4-tutorial/
