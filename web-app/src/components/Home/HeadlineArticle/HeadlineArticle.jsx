@@ -30,8 +30,9 @@ function HeadlineArticle () {
                             <p className="mobile_date">Uploaded on {new Date(article.date).toDateString()}</p>
                         </div>
                         <p className="headline_article">{article.Content}</p>
-                        <Link className="read_more_tag" to={`/postlist/${article._id}`}>Read More</Link>
-    
+                        <div className="article_bottom_border">
+                            <Link className="read_more_tag" to={`/postlist/${article._id}`}>Read More</Link>
+                        </div>
                     </div>
                 </div>
             )
