@@ -208,6 +208,10 @@
         padding-bottom: 5px;
     }
 
+    .interview {
+        height: 80px;
+    }
+
     .sponsor_location {
         font-size: 15px;
         flex-direction: column !important;
