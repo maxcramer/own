@@ -3,16 +3,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: 1360px;
     margin: 0px 9% 4% 9%;
     padding-left: 0;
 }
-
-/* .Sub_Articles {
-    display: flex;
-    flex-direction: row;
-
-} */
 
 .single_Sub_Article {
     display: flex;
@@ -20,11 +13,12 @@
     width: 30%;
     padding: 0% 1.5% 1.5% 1.5%;
     height: 440px;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
 }
 
 .Sub_Article_Img {
-    height: 200px;
+    height: auto;
+    width: 100%;
 }
 
 .Sub_Article_Content {
